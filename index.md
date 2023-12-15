@@ -1,7 +1,6 @@
 ---
-title: Document Center
+title: Kurs Pythona w Autonomicznej Przestrzeni Edukacyjnej
 ---
-# Kurs Pythona w Autonomicznej Przestrzeni Edukacyjnej
 czwartki 19:00, Miejsce Aktywności Mieszkańców, ul. na Kozłówku 25
 
 ## Spis tematów w kursie podstawowym:

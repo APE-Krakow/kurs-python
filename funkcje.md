@@ -2,6 +2,7 @@
 layout: page
 title: "Funkcje"
 permalink: /funkcje
+theme: jekyll-theme-tactile
 ---
 
 # Funkcje

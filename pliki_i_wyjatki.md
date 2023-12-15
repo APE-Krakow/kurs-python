@@ -2,6 +2,7 @@
 layout: page
 title: "PLiki i Wyjątki"
 permalink: /pliki
+theme: jekyll-theme-tactile
 ---
 
 # Pliki i wyjątki
