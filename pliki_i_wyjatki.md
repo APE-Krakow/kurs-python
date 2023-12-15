@@ -1,3 +1,9 @@
+---
+layout: page
+title: "PLiki i Wyjątki"
+permalink: /pliki
+---
+
 # Pliki i wyjątki
 ## Otwieranie pliku
 Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Tryb dostępu określa w jaki sposób będzie zachowywał się plik:

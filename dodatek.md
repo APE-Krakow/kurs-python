@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Dodatek"
+permalink: /dodatek
+---
+
 # Dodatkowe informacje:
 ## Konwencje nazw
 Aby już po samej nazwie obiektu można było się zorientować co zawiera, przyjęły się określone zasady nazywania obiektów w programie. Co do zasady wszystkie dokumenty związane z programowaniem powinny być w języku angielskim 

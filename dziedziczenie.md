@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Dziedziczenie"
+permalink: /dziedziczenie
+---
+
 # Dziedziczenie
 Klasy mogą tworzyć wielowarstwową hierarchę przedstawiającą ich relacje do przedstawianych obiektów.
 Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco:
@@ -42,8 +48,6 @@ class Prostokat(FiguraGeometryczna):
         super().__init__(2*a + 2*b, a*b)
 ```
 
-## Klasa abstrakcyjna
-Czasem zdarza się, że chcemy aby dana klasa była tylko projektem. 
 ## Zadania:
 ### Zoo
 1. Stwórz bazową klasę zwierzę, która będzie posiadać pola takie jak kolor, liczbę nóg itp.

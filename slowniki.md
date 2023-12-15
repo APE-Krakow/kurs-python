@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Słowniki"
+permalink: /slowniki
+---
+
 # Słowniki (dictionary)
 ## Tworzenie słownika
 Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza.

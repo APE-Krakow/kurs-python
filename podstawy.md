@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Podstawy"
+permalink: /podstawy
+---
+
 # Podstawy
 ## Instalacja pythona:
 Windows: przez instalator pobrany ze strony (należy odznaczyć checkbox 'add to system path')

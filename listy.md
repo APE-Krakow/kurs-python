@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Listy"
+permalink: /listy
+---
+
 # Listy (list)
 ## Tworzenie list
 Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą polecenia `list`
