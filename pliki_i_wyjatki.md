@@ -4,7 +4,6 @@ permalink: /pliki
 theme: jekyll-theme-tactile
 ---
 
-# Pliki i wyjątki
 ## Otwieranie pliku
 Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Tryb dostępu określa w jaki sposób będzie zachowywał się plik:
 
@@ -18,7 +17,7 @@ Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą fu
 Należy pamiętać aby po zakończeniu obsługi pliku zamknąć go metodą `close()`.
 
 ## Odczytywanie danych z pliku
-Aby odczytać dane z pliku należy użyć metody `read()`
+Aby odczytać dane z pliku należy użyć metody `read(x)`, gdzie x określa ile znaków z pliku odczytamy. Aby odczytać całą linię tekstu należy użyć metody `readline()`.
 ## Zapisywanie danych do pliku
 Aby zapisać dane do pliku należy użyć metody `write()`
 
@@ -68,7 +67,7 @@ def divide_object(object, number):
 ```
 
 ## Pliki JSON
-Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. Przykładowy plik JSON:
+Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. W takim pliku można zapisywać podstawowe struktury danych Pythona, takie jak liczby całkowite i zmiennoprzecinkowe, ciągi znaków, listy i słowniki. Przykładowy plik JSON:
 
 ```
 {"menu": {

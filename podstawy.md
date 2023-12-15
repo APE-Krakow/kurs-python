@@ -4,14 +4,14 @@ permalink: /podstawy
 theme: jekyll-theme-tactile
 ---
 
-# Podstawy
 ## Instalacja pythona:
-Windows: przez instalator pobrany ze strony (należy odznaczyć checkbox 'add to system path')
+Windows: przez instalator pobrany ze [strony](https://www.python.org/downloads/) (należy odznaczyć checkbox 'add to system path')
 
 Linux: polecenie sudo apt install python3
 
-## Tryb interaktywny
-W tryb interaktywny wchodzimy poprzez polecenie `python`. Aby z niego wyjść używamy funkcji `exit()`
+## Tryby działania
+### Tryb interaktywny
+W tryb interaktywny wchodzimy poprzez polecenie `python`(Windows)/`python3`(Linux). Aby z niego wyjść używamy funkcji `exit()`
 W tym trybie działają wszystkie polecenia, takie jak:
 
 - utworzenie nowej zmiennej `a=5`
@@ -24,7 +24,7 @@ W tym trybie działają wszystkie polecenia, takie jak:
 - modulo (reszta z dzielenia) `a % b`
 - potęgowanie `a ** b`
 
-## Tryb skryptowy
+### Tryb skryptowy
 Aby przyspieszyć działanie pythona, można spisać wszystkie polecenia do pliku z rozszerzeniem `.py` a następnie wywołać pythona z katalogu w którym znajduje się plik poleceniem `python plik.py`. Można również podać bezpośrednią ścieżkę do pliku.
 Windows: `python C:\Users\username\plik.py`
 
@@ -74,6 +74,7 @@ Dane te zawsze mają jednak format tekstowy, aby odczytać liczbę należy dokon
 liczba = int(input("Podaj liczbę"))
 ```
 
+## Podejmowanie decyzji w programie
 ### Testy warunkowe
 Stwierdzeniem logicznym jest takie wyrażenie, które może być skonwertowane do typu logicznego bool (`True` albo `False`). Podstawowym typem testu warunkowego jest porównanie wartości zmiennych. W tym celu używa się następujących operatorów:
 
@@ -86,7 +87,7 @@ Stwierdzeniem logicznym jest takie wyrażenie, które może być skonwertowane d
 
 **ważne aby przy sprawdzaniu równości użyć podwójnego znaku `==`, w przeciwnym razie przypiszemy tylko jedną zmienną do drugiej, co zostanie odczytane jako `True`**
 
-## Instrukcje warunkowe
+### Instrukcje warunkowe
 Kolejne instrukcje wykonywane przez program można uzależnić od wyniku testu warunkowego za pomocą konstrukcji `if ... :`
 
 ```

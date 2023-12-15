@@ -4,7 +4,6 @@ permalink: /dziedziczenie
 theme: jekyll-theme-tactile
 ---
 
-# Dziedziczenie
 Klasy mogą tworzyć wielowarstwową hierarchę przedstawiającą ich relacje do przedstawianych obiektów.
 Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco:
 

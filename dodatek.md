@@ -1,10 +1,9 @@
 ---
-title: "Dodatek"
+title: "Dodatkowe informacje"
 permalink: /dodatek
 theme: jekyll-theme-tactile
 ---
 
-# Dodatkowe informacje:
 ## Konwencje nazw
 Aby już po samej nazwie obiektu można było się zorientować co zawiera, przyjęły się określone zasady nazywania obiektów w programie. Co do zasady wszystkie dokumenty związane z programowaniem powinny być w języku angielskim 
 
@@ -52,7 +51,7 @@ Konwersja:
 
 - `__str__(self)` - wywoływana przy konwersji na `string`, np. przy wywołaniu funkcji `print()`
 - `__int__(self)` - wywoływana przy konwersji na `int`
-- `__float__(self)` - wywoływana przy konwersji na float
+- `__float__(self)` - wywoływana przy konwersji na `float`
 
 Operacje matematyczne:
 
@@ -62,11 +61,11 @@ Operacje matematyczne:
 - `__floordiv__(self, other)` - dzielenie całkowite (operator `//`)
 - `__truediv__(self, other)` - dzielenie zmienniprzecinkowe (operator `/`)
 - `__mod__(self, other)` - modulo (operator %)
-- `__pow__` potęga (operator `**`)
+- `__pow__(self, other)` potęga (operator `**`)
 
 Konstruktor i destruktor:
 
-- __init__(self) - wywoływany przy tworzeniu obiektu
+- `__init__(self)` - wywoływany przy tworzeniu obiektu
 - `__del__(self)` - wywoływany przy usuwaniu obiektu z pamięci, albo za pomocą polecenia `del`, albo w momencie gdy zakończy się czas życia obiektu
 
 Operacje porównania:

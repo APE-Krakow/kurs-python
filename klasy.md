@@ -4,7 +4,6 @@ permalink: /klasy
 theme: jekyll-theme-tactile
 ---
 
-# Klasy
 Często istnieje potrzeba przechowywania danych o bardziej skomplikowanej strukturze niż na to pozwalają domyślnie wbudowane typy. W tym celu można stworzyć własne typy danych (nazywane klasami) i ich obiekty. Klasę tworzy się za pomocą słowa kluczowego `class` oraz stworzenie pól klasy przechowujących dane.
 
 ```

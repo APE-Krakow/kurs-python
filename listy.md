@@ -1,10 +1,9 @@
 ---
-title: "Listy"
+title: "Listy (list)"
 permalink: /listy
 theme: jekyll-theme-tactile
 ---
 
-# Listy (list)
 ## Tworzenie list
 Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą polecenia `list`
 
@@ -17,10 +16,12 @@ Aby odczytać zawartość listy, należy podać pozycję na liście którą chce
  
 **Uwaga - elementy listy są numerowane od 0 (element na początku ma numer 0, kolejny ma numer 1 itd.)**
 ## Operacje na listach
+### Dodawanie elementów
 Aby dodać element na końcu listy używamy metody `append()`:
 
 `dane.append("wzrost")`
 
+### Usuwanie elementów
 Aby usunąć element z końca listy, używamy metody `pop()`. Funkcja ta zwraca element który został usunięty:
 
 `a = dane.pop()`
@@ -33,6 +34,11 @@ Aby usunąć element z listy znając jego miejsce, używamy polecenia `del`:
 
 `del dane[2]`
 
+Aby usunąć z listy znany element używamy metody `remove()`:
+
+`dane.remove("imię")`
+
+### Statystyki listy
 Długość listy, czyli ilość elementów która się na niej znajduje, możemy odczytać funkcją `len()`, a sumę wszystkich elementów policzy funkcja `sum()`
 
 ```
@@ -41,10 +47,7 @@ len(dane) == 5
 sum(dane) == 15
 ```
 
-Aby usunąć z listy znany element używamy metody `remove()`:
-
-`dane.remove("imię")`
-
+### Łączenie list
 Aby połączyć dwie listy możemy użyć operatora `+` lub metody `extend()`:
 
 ```
@@ -53,6 +56,7 @@ lista_a.extend(lista_b)
 lista_c == lista_a
 ```
 
+### Inne operacje
 Aby posortować listę na stałe, możemy użyć metody `sort()`. Metoda `sorted()` zwraca posortowaną listę, ale nie wprowadza do niej stałych zmian. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna. 
 Podobnie działa kolei użycie metody `reverse()`, która odwraca utworzoną listę i metoda `reversed()`, która odwraca ją tymczasowo.
 
