@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Słowniki"
 permalink: /slowniki
 theme: jekyll-theme-tactile

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Dziedziczenie"
 permalink: /dziedziczenie
 theme: jekyll-theme-tactile

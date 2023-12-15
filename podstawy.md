@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Podstawy"
 permalink: /podstawy
 theme: jekyll-theme-tactile

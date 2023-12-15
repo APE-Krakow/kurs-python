@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Klasy"
 permalink: /klasy
 theme: jekyll-theme-tactile

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Listy"
 permalink: /listy
 theme: jekyll-theme-tactile

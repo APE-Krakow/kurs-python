@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Dodatek"
 permalink: /dodatek
 theme: jekyll-theme-tactile
