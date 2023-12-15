@@ -2,7 +2,7 @@ lsi: false
 safe: true
 incremental: false
 highlighter: rouge
-theme: jekyll-theme-modernist
+theme: jekyll-theme-tactile
 gist:
   noscript: false
 kramdown:

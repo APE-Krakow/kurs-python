@@ -6,18 +6,18 @@ czwartki 19:00, Miejsce Aktywności Mieszkańców, ul. na Kozłówku 25
 
 ## Spis tematów w kursie podstawowym:
 
-[podstawy](podstawy.md)
+[Podstawy](podstawy.md)
 
-[listy](listy.md)
+[Listy](listy.md)
 
-[słowniki](slowniki.md)
+[Słowniki](slowniki.md)
 
-[funkcje](funkcje.md)
+[Funkcje](funkcje.md)
 
-[klasy](klasy.md)
+[Klasy](klasy.md)
 
-[dziedziczenie](dziedziczenie.md)
+[Dziedziczenie](dziedziczenie.md)
 
-[pliki i wyjątki](pliki_i_wyjatki.md)
+[Pliki i wyjątki](pliki_i_wyjatki.md)
 
-[dodatkowe informacje](dodatek.md)
+[Dodatkowe informacje](dodatek.md)
