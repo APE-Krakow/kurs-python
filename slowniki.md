@@ -9,7 +9,7 @@ Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-v
 
 ```
 slownik = {"numer": 5, "litera": "a"}
-slownik2 = (numer=5, nazwa="test")
+slownik2 = dict(numer=5, nazwa="test")
 slownik["numer"] == 5
 ```
 
@@ -38,6 +38,7 @@ zbior2 = set("nerki", "trzustka",  "śledziona")
 Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()`
 
 ## Powtórzenie
+
 Nazwa | Znak | Polecenie | Edytowalne | Powtarzalne | Uporządkowane
 ---|---|---|---|---|---
 Lista | [] | `list()` | ✓ | ✓ | ✓
