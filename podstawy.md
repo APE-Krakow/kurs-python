@@ -7,7 +7,8 @@ theme: jekyll-theme-tactile
 ## Instalacja pythona:
 Windows: przez instalator pobrany ze [strony](https://www.python.org/downloads/) (należy odznaczyć checkbox 'add to system path')
 
-Linux: polecenie sudo apt install python3
+Ubuntu Linux: polecenie sudo apt install python3 python-as-python3
+Arch Linux: sudo pacman -S python3
 
 ## Tryby działania
 ### Tryb interaktywny
@@ -44,7 +45,7 @@ Aby dowiedzieć się jakiego typu jest zmienna `x`, używamy funkcji `type(x)`
 ## Operacje na tekście
 Aby połączyć dwie zmienne tekstowe możemy użyć zwykłego znaku +. Nie zadziała to jednak gdy jedna ze zmiennych nie jest tekstem, a na przykład liczbą. W takim wypadku musimy użyć funkcji konwersji, o nazwie takiej samej jak typ na który konwertujemy. Na przykład żeby skonwertować zmienną liczbową `a` na zmienną tekstową, należy użyć funkcji `str(a)`.
 
-```
+```python
 a = "numer"
 b = 3
 print(a + str(b))
@@ -52,7 +53,7 @@ print(a + str(b))
 
 Istnieje również wiele innych sposobów na które można łączyć dane i tekst (więcej o formatowaniu tekstu w dodatku na końcu):
 
-```
+```python
 a = 5
 b = "hello"
 print("Write ", b, " " , str(a))
@@ -64,13 +65,13 @@ print(f"Write {b} {str(a)}")
 ## Odczytywanie danych od użytkowników
 Funkcja `input` służy do przechwytywania danych wpisanych przez użytkownika terminalu.
 
-```
+```python
 a = input("Podaj datę urodzenia")
 ```
 
 Dane te zawsze mają jednak format tekstowy, aby odczytać liczbę należy dokonać konwersji:
 
-```
+```python
 liczba = int(input("Podaj liczbę"))
 ```
 
@@ -90,13 +91,13 @@ Stwierdzeniem logicznym jest takie wyrażenie, które może być skonwertowane d
 ### Instrukcje warunkowe
 Kolejne instrukcje wykonywane przez program można uzależnić od wyniku testu warunkowego za pomocą konstrukcji `if ... :`
 
-```
+```python
 if a > b:
     print("a jest większe")
 ```
 Do tej konstrukcji można dodać blok `else`, aby wykonać instrukcję jeżeli ostatni test zwrócił fałsz
 
-```
+```python
 if a > b:
     print("a jest większe")
 else:
@@ -104,7 +105,7 @@ else:
 ```
 Aby sprawdzić kilka warunków, można korzystać z bloku `elif` (od słów else + if)
 
-```
+```python
 if a > b:
     print("a jest większe")
 elif b > a:

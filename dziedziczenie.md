@@ -17,7 +17,7 @@ Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco
 
 W powyższym schemacie obiekt klasy Prostokąt jest jednocześnie obiektem klasy FiguraGeometryczna, który jest obiektem klasy ObiektGraficzny. Dzięki temu metody pozwalające na przykład na wyświetlanie obiektu na ekranie mogą być skoncentrowane w kodzie klasy ObiektGraficzny. Z drugiej strony dzięki takiemu podejściu, wszystkie figury geometryczne jakie stworzymy będą mogły być traktowane jako obiekty klasy FiguraGeometryczna, mimo że ich wewnętrzna struktura jest inna. Mechanizm który na to pozwala nazywa się dziedziczeniem.
 
-```
+```python
 class FiguraGeometryczna:
     def __init__():
         self.obwod = 0
@@ -34,7 +34,7 @@ O ile nie zmieniamy konstruktora klasy pochodnej, konstruktor klasy rodzica jest
 ## Konstruktor klasy rodzica
 Dostęp do pól i metod klasy rodzica możemy uzyskać w klasie potomnej za pomocą metody `super()`. W ten sposób możemy uruchomić nadpisane metody w klasie rodzica.
 
-```
+```python
 class FiguraGeometryczna:
     def __init__(obwod, pole):
         self.obwod = obwod

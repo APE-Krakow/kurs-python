@@ -7,7 +7,7 @@ theme: jekyll-theme-tactile
 ## Tworzenie list
 Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą polecenia `list`
 
-```
+```python
 dane = ["adres", "numer", "imię"]`
 dane = list("adres", "numer", "imię")
 ```
@@ -41,7 +41,7 @@ Aby usunąć z listy znany element używamy metody `remove()`:
 ### Statystyki listy
 Długość listy, czyli ilość elementów która się na niej znajduje, możemy odczytać funkcją `len()`, a sumę wszystkich elementów policzy funkcja `sum()`
 
-```
+```python
 dane = list(1,2,3,4,5)
 len(dane) == 5
 sum(dane) == 15
@@ -50,7 +50,7 @@ sum(dane) == 15
 ### Łączenie list
 Aby połączyć dwie listy możemy użyć operatora `+` lub metody `extend()`:
 
-```
+```python
 lista_c = lista_a + lista_b
 lista_a.extend(lista_b)
 lista_c == lista_a
@@ -60,7 +60,7 @@ lista_c == lista_a
 Aby posortować listę na stałe, możemy użyć metody `sort()`. Metoda `sorted()` zwraca posortowaną listę, ale nie wprowadza do niej stałych zmian. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna. 
 Podobnie działa kolei użycie metody `reverse()`, która odwraca utworzoną listę i metoda `reversed()`, która odwraca ją tymczasowo.
 
-```
+```python
 lista2 = lista1.copy()
 lista1.sort()
 lista1.reverse()
@@ -75,7 +75,7 @@ Aby wynik funkcji range zamienić na listę, należy użyć polecenia `list(rang
 ## Iteracja przez listę
 Aby wykonać jakąś operację na każdym elemencie listy, nieważne jaka jest jej długość, używamy pętli for.
 
-```
+```python
 lista_liczb = list(range(1,11))
 for liczba in lista_liczb:
     print(liczba**2)
@@ -84,7 +84,7 @@ Nie deklarujemy wartości zmiennej `liczba`, jest to zmienna pomocnicza. Przyjmu
 
 Drugim typem pętli jest pętla while. Wykonuje ona polecenia tak długo, dopóki jest spełniony warunek podany w poleceniu.
 
-```
+```python
 i = 0
 lista_liczb = list(range(1,11))
 while i < len(lista_liczb):
@@ -100,20 +100,24 @@ Listy składane to sposób na uproszczenie zapisu poprzez stworzenie listy bezpo
 
 **Uwaga: instrukcja tworzenia listy składanej musi znajdować się w kwadratowych nawiasach**
 
-``` 
+```python
 kwadraty = [i**2 for i in list(range(1,11))]
 ```
 
 ## Wycinki listy
 Można uzyskać dostęp do fragmentu listy, wskazując pierwszy element i element za ostatnim elementem wycinka:
 
-``wycinek = lista[2:5]``
+```python
+wycinek = lista[2:5]
+```
 
 Polecenie to utworzy wycinek od trzeciego do piątego elementu listy (elementy o numerach 2-4, ale musimy pamiętać że pierwszy element ma numer 0)
 
 Można pozostawić jeden koniec wycinka otwarty:
 
-``wycinek = lista [2:]``
+```python
+wycinek = lista [2:]
+```
 
 W ten sposób powstał wycinek od trzeciego elementu do końca.
 
@@ -123,7 +127,7 @@ Aby skopiować listę nie wystarczy użyć przypisania `nowa_lista = stara_lista
 ## Krotki (tuple)
 Krotka jest konstrukcją podobną do listy, ale jej elementy nie mogą być modyfikowane. Tworzy się ją za pomocą okrągłych nawiasów lub funkcji `tuple`. Główną funkcją krotki jest przechowywanie stałych i niezmiennych wartości.
 
-```
+```python
 krotka = (2, 5, 7)
 krotka2 = tuple(2, 5, 7)
 krotka[0] == 2  #True

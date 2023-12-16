@@ -24,7 +24,7 @@ Aby zapisać dane do pliku należy użyć metody `write()`
 ## Obsługa wyjątków
 W normalnej sytuacji jeżeli w programie wystąpi błąd, oznacza to że nastąpiła nieprzewidziana sytuacja, i dalsze kontynuowanie działania programu nie ma sensu. Program natychmiast zakańcza działanie i zwraca informację o błędzie. Czasem jednak błędy muszą być wzięte pod uwagę jako normalne zdarzenie w czasie działania, zwłaszcza jeżeli program ma wchodzić w interakcję z innymi programami, plikami, siecią czy użytkownikiem. W takim wypadku należy zaimplementować prawidłowe przywrócenie programu do działania po wystąpieniu błędu. Aby wystąpienie błędu nie zatrzymało działania programu, należy zastosować mechanizm wyjątków (*exception*). W momencie wystąpienia błędu program uruchamia specjalną procedurę, zwaną wyjątkiem, która pozwala przywrócić normalne działanie. Aby zastosować ten mechanizm, należy kod mogący "rzucić" wyjątek zamknąć w bloku *try/except*. Sekcja `try` uruchamia program, ale w razie jego awarii nie zatrzymuje się, tylko przechodzi do bloku `except`, gdzie uruchamia odpowiednią procedurę.
 
-```
+```python
 try:
     print(x)
 except:
@@ -33,7 +33,7 @@ except:
 
 Wyjątki mogą mieć własne nazwy, co pozwala na zareagowanie na różne rodzaje błędów które mogły wystąpić. Blok 'except' z podaną nazwą wyjątku zareaguje tylko na ten konkretny błąd, a bez podania nazwy wyjątku złapie wszystkie które pozostały. **Jeżeli wyjątek zostanie złapany, to jest usuwany. Dlatego blok `except` bez nazwy powinien być na końcu**
 
-```
+```python
 try:
     print(x)
 except NameError:
@@ -45,7 +45,7 @@ except:
 Dodatkowo do bloku *try/except* można dodać bloki `else` i `finally`, które zostaną wywołane odpowiednio jeżeli błąd nie wystąpił, oraz niezależnie od tego czy wystąpił czy nie.
 try -> except/else -> finally
 
-```
+```python
 try:
     f = open("filename")
 except:
@@ -58,7 +58,7 @@ finally:
 
 Aby rzucić wyjątek należy użyć polecenia `raise` i jednej z dostępnych klas wyjątków, opisującej błąd. Ogólnym typem wyjątku jest klasa `Exception`, istnieją także klasy do opisu innych błędów, np.: `ValueError`, `TypeError`, `ZeroDivisionError`, `FileNotFoundError`, `NameError`, `KeyError`, `IndexError` itp. Można także stworzyć własną klasę wyjątku.
 
-```
+```python
 def divide_object(object, number):
     if number == 0:
         raise ZeroDivisionError
@@ -69,7 +69,7 @@ def divide_object(object, number):
 ## Pliki JSON
 Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. W takim pliku można zapisywać podstawowe struktury danych Pythona, takie jak liczby całkowite i zmiennoprzecinkowe, ciągi znaków, listy i słowniki. Przykładowy plik JSON:
 
-```
+```json
 {"menu": {
   "id": "file",
   "value": "File",

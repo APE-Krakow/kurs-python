@@ -6,7 +6,7 @@ theme: jekyll-theme-tactile
 
 Często istnieje potrzeba przechowywania danych o bardziej skomplikowanej strukturze niż na to pozwalają domyślnie wbudowane typy. W tym celu można stworzyć własne typy danych (nazywane klasami) i ich obiekty. Klasę tworzy się za pomocą słowa kluczowego `class` oraz stworzenie pól klasy przechowujących dane.
 
-```
+```python
 class Wspolrzedne:
     x
     y
@@ -15,7 +15,7 @@ class Wspolrzedne:
 
 Klasa jest jednak tylko wzorcem na podstawie którego można tworzyć obiekty. Dopiero po stworzeniu obiektu danej klasy można odczytać wartość jego pól. Na podstawie jednej klasy można stworzyć dowolną ilość obiektów, z których każdy może przyjąć inne wartości pól.
 
-```
+```python
 nowe_wspolrzedne = Wspolrzedne()
 nowe_wspolrzedne.x = 5
 print(nowe_wspolrzedne.x)
@@ -24,7 +24,7 @@ print(nowe_wspolrzedne.x)
 ## Metody
 Metody to funkcje które są wbudowane w klasę i mogą być wywoływane na jej obiektach. Wywołana metoda ma dostęp do pól klasy za pomocą obiektu `self`. Obiekt ten jest odwołaniem do obiektu na którym jest wywołana metoda. Obiekt `self` musi być zawsze pierwszym argumentem metody klasy.
 
-```
+```python
 class Wspolrzedne:
     x = 5
     y = 7
@@ -43,7 +43,7 @@ print(nowe_wspolrzedne.x)
 ## Konstruktor
 Aby mieć wpływ na tworzenie obiektu, możemy edytować specjalną funkcję `__init__()`, która jest wywoływana przy tworzeniu każdego obiekty klasy. Ta funkcja nazywana jest konstruktorem. Jeżeli jakieś pole klasy zostaje zainicjowane w konstruktorze, to nie ma już później potrzeby deklarować go osobno.
 
-```
+```python
 class Wspolrzedne:
     def __init__(self, x, y, z):
         self.x = x

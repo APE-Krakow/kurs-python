@@ -27,7 +27,7 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 ### Dodatkowe sposoby zapisu
 Aby rozbić jednolinijkowy tekst na kilka linijek można połączyć je nawiasami:
 
-```
+```python
 tekst = ("jedna "
          "długa "
          "linijka "
@@ -36,7 +36,7 @@ tekst = ("jedna "
 
 Aby rozbić wielolinijkowy tekst na kilka linii, można użyć potrójnego cudzysłowu:
 
-```
+```python
 tekst = """Tekst posiadający
         wiele linijek
         może być bardzo długi"""

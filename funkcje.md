@@ -6,7 +6,7 @@ theme: jekyll-theme-tactile
 
 Często jeden fragment programu trzeba wykorzystać więcej niż jeden raz. Aby za każdym razem nie musieć pisać tych samych poleceń, możemy stworzyć funkcję i wywoływać ją za każdym razem kiedy chcemy skorzystać z jej działania. Funkcje tworzy się za pomocą słowa kluczowego `def`, a po nazwie funkcji muszą wystąpić okrągłe nawiasy:
 
-```
+```python
 def powitanie():
     imie = input("podaj swoje imię")
     print(f"witaj {imie}")
@@ -18,7 +18,7 @@ powitanie()
 ## Argumenty funkcji
 Funkcje mogą przyjmować od użytkownika dane, które wykorzystają w swoim działaniu. Argumenty te należy umieścić w okrągłym nawiasie:
 
-```
+```python
 def powitanie(imie, urodziny):
     if not urodziny:
         print(f"witaj {imie}")
@@ -35,7 +35,7 @@ Niektóre argumenty mogą posiadać wartości domyślne, które zostaną przyję
 
 Możliwe jest również wywołanie funkcji poprzez nazwanie wszystkich argumentów.
 
-```
+```python
 def powitanie(imie, urodziny=False):
     if not urodziny:
         print(f"witaj {imie}")
@@ -49,7 +49,7 @@ powitanie("Ania")
 ## Zwracanie wartości
 Po zakończeniu działania funkcji możliwe jest przekazanie informacji zwrotnej na temat jej działania za pomocą słowa kluczowego `return`.
 
-```
+```python
 def srednia(lista):
     return lista.sum() / len(lista)
 
@@ -60,7 +60,7 @@ print(srednia(oceny))
 ## Zwracanie więcej niż jednej wartości
 Funkcja może zwrócić wyłącznie jeden obiekt po zakończeniu działania. Aby ominąć to ograniczenie, funkcja może zwrócić krotkę zawierającą więcej niż jedną wartość. Aby odczytać te wartości można użyć funkcjonalności zwanej *rozpakowywaniem krotki*:
 
-```
+```python
 czas = (15, 30)
 (godzina, minuta) = czas
 print(godzina) #15
@@ -68,7 +68,7 @@ print(minuta) #30
 ```
 
 
-```
+```python
 def podaj godzine():
     return (15, 30)
 
@@ -78,7 +78,7 @@ def podaj godzine():
 ## Rekurencja i iteracja
 Aby funkcja mogła wykonać wiele operacji, można zastosować podejście rekurencyjne albo iteracyjne. Iteracja polega na stworzeniu wewnątrz funkcji pętli `for` lub `while`, wykonującej polecenia taką ilość razy jaka jest potrzebna. Podejście rekurencyjne polega na wywoływaniu funkcji przez samą siebie, w celu znalezienia ostatecznego wyniku.
 
-```
+```python
 def silnia(x):
     if x==0:
         return 1
@@ -89,7 +89,19 @@ def silnia(x):
 ```
 
 ## Importowanie
-Nie wszystkie funkcje są dostępne jako standardowe funkcje Pythona. Brakuje chociażby tak przydatnej funkcji jak pierwiastkowanie. Aby uzyskać dostęp do zewnętrznych bibliotek należy użyć słowa kluczowego `import`. Pozwala to na użycie funkcji które są zapisane w innych plikach. Większość z często używanych funkcji została już stworzona i znajduje się w Bibliotece Standardowej Pythona. Na przykład funkcja pierwiastkowania `sqrt()` znajduje się w bibliotece matematycznej `math`. Polecenie `from math import sqrt` pozwoli nam używać tej funkcji w programie. Aby zaimportować więcej funkcji można wymienić je po przecinku, np. `from math import sqrt, rand, factorial`. Przy importowaniu można nadać funkcji nową nazwę (alias) za pomocą słowa kluczowego `as`. Na przykład `from X import Y as Z`. Od tej pory funkcja Y jest dostępna, ale wyłącznie pod nazwą Z. Można również zaimportować całą bibliotekę na raz, ale wtedy każde jej polecenie należy poprzedzić prefiksem oznaczającym moduł, np.: `math.sqrt()`.
+### Import modułu
+Nie wszystkie funkcje są dostępne jako standardowe funkcje Pythona. Brakuje chociażby tak przydatnej funkcji jak pierwiastkowanie. Aby uzyskać dostęp do zewnętrznych bibliotek należy użyć słowa kluczowego `import`. Pozwala to na użycie funkcji które są zapisane w innych plikach. Większość z często używanych funkcji została już stworzona i znajduje się w Bibliotece Standardowej Pythona. Na przykład funkcja pierwiastkowania `sqrt()` znajduje się w module matematycznym `math`. Aby jej użyć, należy zaimportować moduł matematyczny, i wywoływać go przy uruchomieniu funkcji.
+
+```python
+import math
+math.sqrt()
+```
+
+### Import poszczególnych funkcji
+Polecenie `from math import sqrt` pozwoli nam używać tej funkcji bez przedrostka `math`. Aby zaimportować więcej funkcji można wymienić je po przecinku, np. `from math import sqrt, factorial, abs`.Przy importowaniu można nadać funkcji nową nazwę (alias) za pomocą słowa kluczowego `as`. Na przykład `from X import Y as Z`. Od tej pory funkcja Y jest dostępna, ale wyłącznie pod nazwą Z.
+
+### Import własnych modułów
+Każdy plik stworzony przez użytkownika jest  traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu.
 
 ## Zadania:
 1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz liczbę, i sprawdza czy liczba ta mieści się w przedziale.
@@ -102,5 +114,4 @@ Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i 
 4. Napisz funkcję rekurencyjną i iteracyjną wypisującą kolejne elementy ciągu Fibonacciego. Ciąg ten składa się z liczb, z których każda jest sumą dwóch poprzednich, a dwiema pierwszymi liczbami ciągu są jedynki.
 1, 1, 2, 3, 5, 8, 13, 21, ...
 
-5. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie prosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować jakąś liczbę, należy użyć funkcji `random(początek, koniec)` z biblioteki `math`.
-
+5. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie prosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować jakąś liczbę, należy użyć funkcji `randrange(początek, koniec+1)` z biblioteki `random`.
