@@ -4,6 +4,8 @@ permalink: /dziedziczenie
 theme: jekyll-theme-tactile
 ---
 
+[Wróć do strony głównej](index.md)
+
 Klasy mogą tworzyć wielowarstwową hierarchę przedstawiającą ich relacje do przedstawianych obiektów.
 Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco:
 

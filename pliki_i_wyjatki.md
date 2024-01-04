@@ -4,6 +4,8 @@ permalink: /pliki
 theme: jekyll-theme-tactile
 ---
 
+[Wróć do strony głównej](index.md)
+
 ## Otwieranie pliku
 Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Tryb dostępu określa w jaki sposób będzie zachowywał się plik:
 
@@ -14,7 +16,17 @@ Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą fu
 - a (append only) - plik do dopisu. Nowe dane będą umieszczone na końcu pliku. Jeżeli plik wcześniej nie istniał to zostanie utworzony.
 - a+ (append and read) - plik do dopisu i odczytu. Nowe dane będą umieszczone na końcu pliku. Jeżeli plik wcześniej nie istniał to zostanie utworzony.
 
+Dodatkowo plik można otworzyć jako:
+* t - plik tekstowy (domyślnie) - tekst czytelny dla człowieka
+* b - plik binarny - dane w formie zer i jedynek czytelne tylko dla innych programów
+
+
 Należy pamiętać aby po zakończeniu obsługi pliku zamknąć go metodą `close()`.
+
+```python
+file = open("database.txt", "rt")
+file close()
+```
 
 ## Odczytywanie danych z pliku
 Aby odczytać dane z pliku należy użyć metody `read(x)`, gdzie x określa ile znaków z pliku odczytamy. Aby odczytać całą linię tekstu należy użyć metody `readline()`.
@@ -82,5 +94,9 @@ Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego s
   }
 }}
 ```
+
+## Zadania
+### Bank
+1. Stwórz program bankowy który będzie pozwalał na wykonywanie podstawowych operacji finansowych. Stan konta powinien być przechowywany w specjalnie nazwanym pliku.
 
 

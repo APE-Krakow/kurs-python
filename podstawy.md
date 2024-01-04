@@ -4,6 +4,8 @@ permalink: /podstawy
 theme: jekyll-theme-tactile
 ---
 
+[Wróć do strony głównej](index.md)
+
 ## Instalacja pythona:
 Windows: przez instalator pobrany ze [strony](https://www.python.org/downloads/) (należy odznaczyć checkbox 'add to system path')
 

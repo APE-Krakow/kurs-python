@@ -4,6 +4,8 @@ permalink: /listy
 theme: jekyll-theme-tactile
 ---
 
+[Wróć do strony głównej](index.md)
+
 ## Tworzenie list
 Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą polecenia `list`
 

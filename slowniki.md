@@ -4,6 +4,8 @@ permalink: /slowniki
 theme: jekyll-theme-tactile
 ---
 
+[Wróć do strony głównej](index.md)
+
 ## Tworzenie słownika
 Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza.
 
