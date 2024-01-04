@@ -7,12 +7,13 @@ theme: jekyll-theme-tactile
 [Wróć do strony głównej](index.md)
 
 ## Tworzenie słownika
-Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza.
+Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza w nawiasie kwadratowym. Aby utworzyć nowy wpis w słowniku wystarczy użyć nawiasów kwadratowych i dodać zawartość nowego elementu.
 
 ```python
 slownik = {"numer": 5, "litera": "a"}
 slownik2 = dict(numer=5, nazwa="test")
-slownik["numer"] == 5
+slownik["slowo"] = "test"
+#{"numer": 5, "litera "a", "slowo": "test"}
 ```
 
 ## Iteracja przez słownik

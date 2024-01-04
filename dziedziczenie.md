@@ -62,5 +62,5 @@ Dodaj do klasy metodę info, która wypisze podstawowe informacje o zwierzęciu.
 3. Stwórz klasę kwadrat, upraszczającą jeszcze bardziej klasę prostokąt.
 
 ### Galeria
-1. Stwórz klasę do obsługi cyfrowej galerii sztuki. Powinna ona zawierać listę na którą będą wpisywani użytkownicy, oraz słownik do którego będą wpisywane dzieła sztuki (emotikony) oraz tytuły. Do klasy dodaj metodę pozwalającą na wypisanie wszystkich użytkowników.
-2. Stwórz hierarchię klas reprezentującą użytkowników systemu do wystawiania dzieł sztuki. Podstawowy użytkownik powinien posiadać uprawnienia do wyświetlania obrazów. Użytkownik artysta powinien mieć również możliwość dodawania obrazów. Użytkownik kurator powinien mieć możliwość tworzenia wystaw z utworzonych obrazów (wystawa to stworzenie podzbioru słownika z dziełami sztuki i wyświetlenie go).
+1. Stwórz klasę do obsługi cyfrowej galerii sztuki. Powinna ona zawierać listę na którą będą wpisywani użytkownicy, oraz słownik do którego będą wpisywane dzieła sztuki (emotikony) oraz tytuły. Do klasy dodaj metodę pozwalającą na wypisanie wszystkich użytkowników wraz z ich poziomem uprawnień.
+2. Stwórz hierarchię klas reprezentującą użytkowników systemu do wystawiania dzieł sztuki. Podstawowy użytkownik powinien posiadać uprawnienia do wyświetlania obrazów po podaniu ich tytułu. Użytkownik artysta powinien mieć również możliwość dodawania obrazów. Użytkownik kurator powinien mieć możliwość tworzenia wystaw z utworzonych obrazów (wystawa to stworzenie podzbioru słownika z dziełami sztuki i wyświetlenie go).

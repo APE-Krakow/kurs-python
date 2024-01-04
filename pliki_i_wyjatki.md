@@ -6,7 +6,8 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
-## Otwieranie pliku
+## Pliki
+### Otwieranie pliku
 Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Tryb dostępu określa w jaki sposób będzie zachowywał się plik:
 
 - r (read only) - plik tylko do odczytu. Jest to domyślny tryb dostępu
@@ -25,13 +26,20 @@ Należy pamiętać aby po zakończeniu obsługi pliku zamknąć go metodą `clos
 
 ```python
 file = open("database.txt", "rt")
-file close()
+file.close()
 ```
 
-## Odczytywanie danych z pliku
+### Odczytywanie danych z pliku
 Aby odczytać dane z pliku należy użyć metody `read(x)`, gdzie x określa ile znaków z pliku odczytamy. Aby odczytać całą linię tekstu należy użyć metody `readline()`.
-## Zapisywanie danych do pliku
-Aby zapisać dane do pliku należy użyć metody `write()`
+### Zapisywanie danych do pliku
+Aby zapisać dane do pliku należy użyć metody `write(x)`, gdzie x jest danymi które dopisujemy do pliku.
+
+```python
+file = open("numbers.txt", "r+t")
+old_data = file.readline()
+file.write(new_data)
+file.close()
+```
 
 ## Obsługa wyjątków
 W normalnej sytuacji jeżeli w programie wystąpi błąd, oznacza to że nastąpiła nieprzewidziana sytuacja, i dalsze kontynuowanie działania programu nie ma sensu. Program natychmiast zakańcza działanie i zwraca informację o błędzie. Czasem jednak błędy muszą być wzięte pod uwagę jako normalne zdarzenie w czasie działania, zwłaszcza jeżeli program ma wchodzić w interakcję z innymi programami, plikami, siecią czy użytkownikiem. W takim wypadku należy zaimplementować prawidłowe przywrócenie programu do działania po wystąpieniu błędu. Aby wystąpienie błędu nie zatrzymało działania programu, należy zastosować mechanizm wyjątków (*exception*). W momencie wystąpienia błędu program uruchamia specjalną procedurę, zwaną wyjątkiem, która pozwala przywrócić normalne działanie. Aby zastosować ten mechanizm, należy kod mogący "rzucić" wyjątek zamknąć w bloku *try/except*. Sekcja `try` uruchamia program, ale w razie jego awarii nie zatrzymuje się, tylko przechodzi do bloku `except`, gdzie uruchamia odpowiednią procedurę.
@@ -97,6 +105,9 @@ Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego s
 
 ## Zadania
 ### Bank
-1. Stwórz program bankowy który będzie pozwalał na wykonywanie podstawowych operacji finansowych. Stan konta powinien być przechowywany w specjalnie nazwanym pliku.
+1. Stwórz program bankowy który będzie pozwalał na wykonywanie podstawowych operacji finansowych. Na początku niech bank posiada jednego użytkownika. Stan konta powinien być przechowywany w specjalnie nazwanym pliku. Dodaj metody pozwalające na zwiększenie i zmniejszenie stanu konta. Program powinien zachowywać stan konta użytkownika nawet jeżeli zostanie wyłączony i włączony później.
+2. Aby bank mógł przechowywać informacje o większej ilości użytkowników, zmień system przechowywania danych kont na plik JSON. Dodaj możliwość przelewów z konta jednego użytkownika na konto innego użytkownika.
+3. W wypadku błędnej operacji dodaj mechanizm wyjątków który zapobiegnie wykonaniu niemożliwej operacji bankowej.
+3. Dodaj system autoryzacji, który przed wykonaniem każdego przelewu będzie wymagał od użytkownika podania hasła. Hasło powinno być ustawiane w momencie utworzenia konta użytkownika.
 
 
