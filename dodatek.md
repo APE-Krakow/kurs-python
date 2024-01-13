@@ -13,7 +13,7 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 * nazwa powinna zawierać małe litery i podkreślniki, np. `address_data`
 * długość nazwy zmiennej powinna być wprost proporcjonalna do czasu jej trwania, tj. zmienna globalna wykorzystywana wielokrotnie powinna nazywać się `main_database_server_address`, a zmienna wewnętrzna użyta kilka razy może nazywać się `server`
 * nazwy jednoliterowe powinny być używane tylko jako liczniki, np. `i, j, k` albo `n`
-* zmienne typu `bool` najlepiej aby miały nazwę w formie przymiotnika, np. `is_palindrome`, `communication_available`
+* zmienne typu `bool` najlepiej aby miały nazwę w formie przymiotnika, np. `is_palindrome`, `emergency_communication_available`
 
 ### Funkcje:
 * nazwy funkcji powinny spełniać te same wymagania co nazwy zmiennych
@@ -21,13 +21,14 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 * argumenty funkcji są zmiennymi lokalnymi więc ich nazwy powinny być krótkie
 
 ### Klasy:
-* nazwy klas powinny być zapisane używając CamelCase, np. `WindowManager`
-
+* nazwy klas powinny być zapisane używając CamelCase, np. `WindowManager`, `MainDatabaseConnection`
+* jeżeli jakaś klasa jest tylko interfejsem po którym pozostałe klasy mają dziedziczyć, na początku jego nazwy można dodać "I", np. `IGamePlayer`
+* podobnie jak we wszystkich pozostałych obiektach, im bardziej powszechnie używana jest klasa, jej nazwa powinna być bardziej szczegółowa
 
 ## Formatowanie tekstu
 pass
 
-### Dodatkowe sposoby zapisu
+## Dodatkowe sposoby zapisu
 Aby rozbić jednolinijkowy tekst na kilka linijek można połączyć je nawiasami:
 
 ```python
@@ -50,7 +51,7 @@ tekst = """Tekst posiadający
 pass
 
 ## Przeciążanie metod
-Wiele funkcji w pythonie zachowuje się inaczej, jeżeli zostanie wywołana dla różmych obiektów. Na przykład funkcja `print()` działa inaczej dla ciągów znakowych, a inaczej dla list. Dzieje się tak dlatego, że każdy obiekt ma w sobie zakodowaną metodę definiującą w jaki sposób zamienić go na tekst nadający się do wyświetlenia na ekranie. Posiadają go także obiekty definiowane przez użytkownika. (Jeżeli nie zostaną zdefiniowane ręcznie, to interpreter stworzy je automatycznie). Znając nazwy tych metod można zdefiniować w jaki sposób nasz obiekt zachowa się przy wywołaniu funkcji.
+Wiele funkcji w pythonie zachowuje się inaczej, jeżeli zostanie wywołana dla różnych obiektów. Na przykład funkcja `print()` działa inaczej dla ciągów znakowych, a inaczej dla list. Dzieje się tak dlatego, że każdy obiekt ma w sobie zakodowaną metodę definiującą w jaki sposób zamienić go na tekst nadający się do wyświetlenia na ekranie. Posiadają go także obiekty definiowane przez użytkownika. (Jeżeli nie zostaną zdefiniowane ręcznie, to interpreter stworzy je automatycznie). Znając nazwy tych metod można zdefiniować w jaki sposób nasz obiekt zachowa się przy wywołaniu funkcji.
 
 Konwersja:
 
@@ -64,7 +65,7 @@ Operacje matematyczne:
 - `__sub__(self, other)` - odejmowanie
 - `__mul__(self, other)` - mnożenie
 - `__floordiv__(self, other)` - dzielenie całkowite (operator `//`)
-- `__truediv__(self, other)` - dzielenie zmienniprzecinkowe (operator `/`)
+- `__truediv__(self, other)` - dzielenie zmiennoprzecinkowe (operator `/`)
 - `__mod__(self, other)` - modulo (operator %)
 - `__pow__(self, other)` potęga (operator `**`)
 
