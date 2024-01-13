@@ -46,7 +46,7 @@ file.close()
 ```
 
 ## Usuwanie danych z pliku
-Aby usunąć dane, należy użyć metody `truncate()`. Metoda ta działa tak samo jak `read()` - jeżeli nie poda się żadnych danych, to usuwa całą zawartość pliku.
+Aby usunąć dane, należy użyć metody `truncate()`. Metoda ta działa tak samo jak `read(x)` - argument `x` określa ilość znaków do usunięcia, a w wypadku pozostawienia pustego pola usuwany jest cały plik.
 
 ### Przesuwanie uchwytu
 Do przesuwania uchwytu w pliku bez zmieniania jego zawartości służy metoda `seek(start, przesunięcie)`. Jako start należy podać z którego miejsca chcemy zacząć przesunięcie, a następnie podać o ile chcemy przesunąć uchwyt. Metoda ta nie pozwala jednak przesuwać się w tył pliku.
@@ -169,7 +169,7 @@ import json
 with open("zajezdnie.json") as zajezdnie_plik:
     zajezdnie = json.load(zajezdnie_plik)
     tramwaj = zajezdnie["Zajezdnia Nowa Huta"].pop()
-    zajezdnie["Zajezdnia Podgórze].append(tramwaj)
+    zajezdnie["Zajezdnia Podgórze"].append(tramwaj)
     zajezdnie.plik.truncate()
     json.dump(zajezdnie_plik, zajezdnie)    
 ```
@@ -181,7 +181,7 @@ with open("zajezdnie.json") as zajezdnie_plik:
 3. Dodaj do obu programów procedury obsługi wyjątków.
 
 ### Zajezdnia
-1. Stwórz własne klasę która będzie reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni.
+1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni.
 2. Dodaj obsługę wyjątków która zapewni że nie będzie można wykonać niemożliwych operacji matematycznych.
 
 ### Bank
