@@ -1,5 +1,5 @@
 ---
-title: "PLiki i Wyjątki"
+title: "Pliki i Wyjątki"
 permalink: /pliki
 theme: jekyll-theme-tactile
 ---
@@ -8,18 +8,17 @@ theme: jekyll-theme-tactile
 
 ## Pliki
 ### Otwieranie pliku
-Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Tryb dostępu określa w jaki sposób będzie zachowywał się plik:
+Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Po otwarciu pliku otrzymujemy *uchwyt* do pliku, czyli wskaźnik na dane miejsce w pliku, które pozwala na odczytywanie lub zapisywanie do niego. Uchwyt do pliku można traktować jako kursor. Każda operacja przesuwa ten wskaźnik o tyle znaków ile zostało użytych w poleceniu. Tryb dostępu określa w jaki sposób będzie zachowywał się plik i w którym miejscu zostanie umieszczony uchwyt:
 
-- r (read only) - plik tylko do odczytu. Jest to domyślny tryb dostępu
-- r+ (read and write) - plik do odczytu i zapisu
-- w (write only) - plik tylko do zapisu. Jeżeli plik wcześniej nie istniał to zostanie utworzony.
-- w+ (write and read) - plik do zapisu i odczytu. 
-- a (append only) - plik do dopisu. Nowe dane będą umieszczone na końcu pliku. Jeżeli plik wcześniej nie istniał to zostanie utworzony.
-- a+ (append and read) - plik do dopisu i odczytu. Nowe dane będą umieszczone na końcu pliku. Jeżeli plik wcześniej nie istniał to zostanie utworzony.
+- `r` (read only) - plik tylko do odczytu. Uchwyt jest umieszczany na początku pliku. Jest to domyślny tryb dostępu
+- `w` (write only) - plik tylko do zapisu. Jeżeli plik wcześniej nie istniał to zostanie utworzony. Jeżeli plik wcześniej istniał to jego zawartość zostaje usunięta. Uchwyt jest umieszczany na początku pliku.
+- `a` (append only) - plik do dopisu. Nowe dane będą umieszczone na końcu pliku. Jeżeli plik wcześniej nie istniał to zostanie utworzony.
+
+Jeżeli do nazwy trybu dodamy `+`, to pozwoli on na wszystkie operacje (np. tryb r+ pozwoli również na zapis)
 
 Dodatkowo plik można otworzyć jako:
-* t - plik tekstowy (domyślnie) - tekst czytelny dla człowieka
-* b - plik binarny - dane w formie zer i jedynek czytelne tylko dla innych programów
+* `t` - plik tekstowy (domyślnie) - tekst czytelny dla człowieka
+* `b` - plik binarny - dane w formie zer i jedynek czytelne tylko dla innych programów
 
 
 Należy pamiętać aby po zakończeniu obsługi pliku zamknąć go metodą `close()`.
@@ -29,15 +28,46 @@ file = open("database.txt", "rt")
 file.close()
 ```
 
+**Uwaga!** Należy unikać otwarcia kilku uchwytów na raz, ponieważ może to spowodować zapisywanie jednocześnie kilku rzeczy w tym samym miejscu
+
 ### Odczytywanie danych z pliku
-Aby odczytać dane z pliku należy użyć metody `read(x)`, gdzie x określa ile znaków z pliku odczytamy. Aby odczytać całą linię tekstu należy użyć metody `readline()`.
+Metoda `read(size)` służy do odczytywania danych z pliku. Domyślnie odczytuje cały plik, ale można podać jako jej argument liczbę znaków którą ma odczytać. Aby odczytać tylko jedną linię tekstu można użyć metody `readline(size)`. Tutaj również można podać maksymalną ilość znaków która ma być odczytana. Z kolei metoda readlines() odczyta wszystkie linie tekstu i zapisze je w tablicy.
 ### Zapisywanie danych do pliku
 Aby zapisać dane do pliku należy użyć metody `write(x)`, gdzie x jest danymi które dopisujemy do pliku.
+
+**Uwaga!** Ze względu na wewnętrzny mechanizm odczytu, po odczytaniu tylko części pliku i przejściu do zapisu, uchwyt i tak przeniesie się na koniec dlatego zazwyczaj najlepiej jest ręcznie pozycjonować kursor przez zapisem.
+
 
 ```python
 file = open("numbers.txt", "r+t")
 old_data = file.readline()
 file.write(new_data)
+file.close()
+```
+
+## Usuwanie danych z pliku
+Aby usunąć dane, należy użyć metody `truncate()`. Metoda ta działa tak samo jak `read()` - jeżeli nie poda się żadnych danych, to usuwa całą zawartość pliku.
+
+### Przesuwanie uchwytu
+Do przesuwania uchwytu w pliku bez zmieniania jego zawartości służy metoda `seek(start, przesunięcie)`. Jako start należy podać z którego miejsca chcemy zacząć przesunięcie, a następnie podać o ile chcemy przesunąć uchwyt. Metoda ta nie pozwala jednak przesuwać się w tył pliku.
+
+Możemy wybrać jeden z trzech punktów początkowych:
+- 0 - początek pliku
+- 1 - obecna pozycja w pliku
+- 2 - koniec pliku
+
+Aby przesunąć uchwyt na początek pliku wystarczy użyć metody `seek(0,0)`, a na koniec `seek(2,0)`.
+
+Do odczytania bieżącej pozycji uchwytu służy metoda `tell()`.
+
+Aby odczytać liczbę z pliku a następnie powiększyć ją o jeden i zapisać znowu, można się posłużyć następującym kodem:
+
+```python
+file = open("secret_number.txt", "r+t")
+old_number = int(file.read())
+file.seek(0,0)
+file.truncate()
+file.write(str(old_number+1))
 file.close()
 ```
 
@@ -86,28 +116,78 @@ def divide_object(object, number):
         return object/number
 ```
 
+### Zabezpieczanie zasobu
+Aby otworzyć jakiś zasób (plik, port sieciowy itp.) w sposób gwarantujący bezpieczne rozwiązanie błędów i automatyczne zamknięcie zasobu, można użyć słowa kluczowego `with`. Tworzy on osobny blok kodu w którym możemy korzystać z zasobu, a po jego opuszczeniu zasób jest zamykany. Jeżeli przy otwieraniu wystąpił błąd, blok kodu nie zostanie wykonany. Dodatkowo można użyć słowa kluczowego `as`, by nadać własną nazwę zasobowi.
+
+```python
+with open("database.txt", "r+") as data:
+    data.write(...)
+```
+
+Na końcu bloku `with` nie ma potrzeby zamykać pliku gdyż dzieje się to automatycznie.
+
+
 ## Pliki JSON
-Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. W takim pliku można zapisywać podstawowe struktury danych Pythona, takie jak liczby całkowite i zmiennoprzecinkowe, ciągi znaków, listy i słowniki. Przykładowy plik JSON:
+Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. W takim pliku można zapisywać **podstawowe** struktury danych Pythona, takie jak liczby całkowite i zmiennoprzecinkowe, ciągi znaków, listy i słowniki. Przykładowy plik JSON:
 
 ```json
-{"menu": {
-  "id": "file",
-  "value": "File",
-  "popup": {
-    "menuitem": [
-      {"value": "New", "onclick": "CreateNewDoc()"},
-      {"value": "Open", "onclick": "OpenDoc()"},
-      {"value": "Close", "onclick": "CloseDoc()"}
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "hobbies": ["running", "sky diving", "singing"],
+    "age": 35,
+    "children": [
+        {
+            "firstName": "Alice",
+            "age": 6
+        },
+        {
+            "firstName": "Bob",
+            "age": 8
+        }
     ]
-  }
-}}
+}
+```
+
+### Zapisywanie danych do JSON
+Aby zapisać dane do formatu JSON, należy użyć metody `json.dump(data, write_file)` (do zapisania danych do pliku) lub `json_string = json.dumps(data)` (do zapisania danych do zmiennej tekstowej).
+
+Aby odczytać dane z JSON do Pythona, należy użyć metody `data = json.load(read_file)` (do odczytania danych z pliku) lub `data = json.loads(json_string)` (do odczytania danych z dostępnej zmiennej tekstowej).
+
+Przykładowy plik zajezdnie.json:
+
+```json
+{
+    "Zajezdnia Nowa Huta": ["Lajkonik", "Krakowiak"],
+    "Zajezdnia Podgórze": ["Akwarium", "NGT-6", "GT8"]
+}
+```
+
+```python
+import json
+
+with open("zajezdnie.json") as zajezdnie_plik:
+    zajezdnie = json.load(zajezdnie_plik)
+    tramwaj = zajezdnie["Zajezdnia Nowa Huta"].pop()
+    zajezdnie["Zajezdnia Podgórze].append(tramwaj)
+    zajezdnie.plik.truncate()
+    json.dump(zajezdnie_plik, zajezdnie)    
 ```
 
 ## Zadania
+### Zaszyfrowany plik
+1. Napisz program do tworzenia zaszyfrowanych wiadomości. Użytkownik powinien podać zwykłą wiadomość tekstową, a program powinien ją zaszyfrować w dowolny sposób i zapisać do pliku. Metoda szyfrowania może być dowolna (np. wstawianie co drugi znak losowego znaku tekstowego).
+2. Napisz program deszyfrujący wiadomości z poprzedniego podpunktu.
+3. Dodaj do obu programów procedury obsługi wyjątków.
+
+### Zajezdnia
+1. Stwórz własne klasę która będzie reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni.
+2. Dodaj obsługę wyjątków która zapewni że nie będzie można wykonać niemożliwych operacji matematycznych.
+
 ### Bank
 1. Stwórz program bankowy który będzie pozwalał na wykonywanie podstawowych operacji finansowych. Na początku niech bank posiada jednego użytkownika. Stan konta powinien być przechowywany w specjalnie nazwanym pliku. Dodaj metody pozwalające na zwiększenie i zmniejszenie stanu konta. Program powinien zachowywać stan konta użytkownika nawet jeżeli zostanie wyłączony i włączony później.
 2. Aby bank mógł przechowywać informacje o większej ilości użytkowników, zmień system przechowywania danych kont na plik JSON. Dodaj możliwość przelewów z konta jednego użytkownika na konto innego użytkownika.
 3. W wypadku błędnej operacji dodaj mechanizm wyjątków który zapobiegnie wykonaniu niemożliwej operacji bankowej.
-3. Dodaj system autoryzacji, który przed wykonaniem każdego przelewu będzie wymagał od użytkownika podania hasła. Hasło powinno być ustawiane w momencie utworzenia konta użytkownika.
+4. Dodaj system autoryzacji, który przed wykonaniem każdego przelewu będzie wymagał od użytkownika podania hasła. Hasło powinno być ustawiane w momencie utworzenia konta użytkownika. Procedurę wpisywania hasła zabezpiecz poprzez wyjątek.
 
 

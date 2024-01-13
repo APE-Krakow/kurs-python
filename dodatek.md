@@ -23,9 +23,10 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 ### Klasy:
 * nazwy klas powinny być zapisane używając CamelCase, np. `WindowManager`
 
-## Przekazywanie zmiennych
 
 ## Formatowanie tekstu
+pass
+
 ### Dodatkowe sposoby zapisu
 Aby rozbić jednolinijkowy tekst na kilka linijek można połączyć je nawiasami:
 
@@ -45,6 +46,8 @@ tekst = """Tekst posiadający
 ```
 
 ## Dokumentacja
+
+pass
 
 ## Przeciążanie metod
 Wiele funkcji w pythonie zachowuje się inaczej, jeżeli zostanie wywołana dla różmych obiektów. Na przykład funkcja `print()` działa inaczej dla ciągów znakowych, a inaczej dla list. Dzieje się tak dlatego, że każdy obiekt ma w sobie zakodowaną metodę definiującą w jaki sposób zamienić go na tekst nadający się do wyświetlenia na ekranie. Posiadają go także obiekty definiowane przez użytkownika. (Jeżeli nie zostaną zdefiniowane ręcznie, to interpreter stworzy je automatycznie). Znając nazwy tych metod można zdefiniować w jaki sposób nasz obiekt zachowa się przy wywołaniu funkcji.
