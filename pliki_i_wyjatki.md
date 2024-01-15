@@ -81,7 +81,7 @@ except:
     print("Wystąpił błąd")
 ```
 
-Wyjątki mogą mieć własne nazwy, co pozwala na zareagowanie na różne rodzaje błędów które mogły wystąpić. Blok 'except' z podaną nazwą wyjątku zareaguje tylko na ten konkretny błąd, a bez podania nazwy wyjątku złapie wszystkie które pozostały. **Jeżeli wyjątek zostanie złapany, to jest usuwany. Dlatego blok `except` bez nazwy powinien być na końcu**
+Wyjątki mogą mieć własne nazwy, co pozwala na zareagowanie na różne rodzaje błędów które mogły wystąpić. Blok 'except' z podaną nazwą wyjątku zareaguje tylko na ten konkretny błąd, a bez podania nazwy wyjątku złapie wszystkie które pozostały. **Jeżeli wyjątek zostanie złapany, to jest usuwany. Dlatego blok `except` bez nazwy powinien być na końcu** Dodatkowo pusty `except` powinien być rzadkością, ponieważ wszystkie możliwe błędy powinny być znane przed uruchomieniem programu.
 
 ```python
 try:
@@ -89,7 +89,7 @@ try:
 except NameError:
     print("brak zmiennej o podanej nazwie")
 except:
-    print("awaria w funkcji print")
+    print("nieznana awaria w funkcji print")
 ```
 
 Dodatkowo do bloku *try/except* można dodać bloki `else` i `finally`, które zostaną wywołane odpowiednio jeżeli błąd nie wystąpił, oraz niezależnie od tego czy wystąpił czy nie.
@@ -148,6 +148,8 @@ Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego s
     ]
 }
 ```
+
+**Uwaga!** w pliku JSON nie ma osobnego sposobu zapisu krotki, zostanie ona zapisana jako lista.
 
 ### Zapisywanie danych do JSON
 Aby zapisać dane do formatu JSON, należy użyć metody `json.dump(data, write_file)` (do zapisania danych do pliku) lub `json_string = json.dumps(data)` (do zapisania danych do zmiennej tekstowej).

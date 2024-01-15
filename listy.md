@@ -7,14 +7,15 @@ theme: jekyll-theme-tactile
 [Wróć do strony głównej](index.md)
 
 ## Tworzenie list
-Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą polecenia `list`
+Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą funkcji `list()`
 
 ```python
 dane = ["adres", "numer", "imię"]`
 dane = list("adres", "numer", "imię")
 ```
 
-Aby odczytać zawartość listy, należy podać pozycję na liście którą chcemy odczytać w nawiasach kwadratowych, np. `dane[0]` odczytują pierwszy obiekt z listy, a `dane[2] = "nazwisko"` zmienia zawartość trzeciego obiektu.
+Aby odczytać zawartość listy, należy podać adres elementu który chcemy odczytać w nawiasach kwadratowych, np. `dane[0]` odczytują pierwszy obiekt z listy, a `dane[2] = "nazwisko"` zmienia zawartość trzeciego obiektu.
+Podanie liczby ujemnej jako adresu sprawi że zaczniemy odczytywać od końca, np. `dane[-1]` to element ostatni.
  
 **Uwaga - elementy listy są numerowane od 0 (element na początku ma numer 0, kolejny ma numer 1 itd.)**
 ## Operacje na listach
@@ -45,8 +46,8 @@ Długość listy, czyli ilość elementów która się na niej znajduje, możemy
 
 ```python
 dane = list(1,2,3,4,5)
-len(dane) == 5
-sum(dane) == 15
+len(dane) # 5
+sum(dane) # 15
 ```
 
 ### Łączenie list
@@ -59,15 +60,15 @@ lista_c == lista_a
 ```
 
 ### Inne operacje
-Aby posortować listę na stałe, możemy użyć metody `sort()`. Metoda `sorted()` zwraca posortowaną listę, ale nie wprowadza do niej stałych zmian. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna. 
-Podobnie działa kolei użycie metody `reverse()`, która odwraca utworzoną listę i metoda `reversed()`, która odwraca ją tymczasowo.
+Aby posortować listę możemy użyć metody `sort()`. Po użyciu tej metody elementy w liście zostaną przeniesione na nowe miejsca. Jeżeli chcemy posortować listę tylko tymczasowo, możemy użyć funkcji `sorted()`, która tworzy kopię listy i ją sortuje. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna.
+Aby odwrócić kolejność elementów na liście używa się tej samej techniki. Metoda `reverse()` odwraca utworzoną listę, a funkcja `reversed()` odwraca ją tymczasowo.
 
 ```python
 lista2 = lista1.copy()
 lista1.sort()
 lista1.reverse()
-lista1 == lista2.sorted(reverse=True)
-lista1 != lista2
+lista1 == sorted(lista2, reverse=True) # True
+lista1 == lista2 # False
 ```
 
 ## Listy liczbowe
@@ -126,13 +127,13 @@ W ten sposób powstał wycinek od trzeciego elementu do końca.
 ## Kopiowanie listy
 Aby skopiować listę nie wystarczy użyć przypisania `nowa_lista = stara_lista`, ponieważ w ten sposób nadal istnieje jedna lista, ale o dwóch nazwach. Aby skopiować listę należy utworzyć wycinek od początku do końca listy `nowa_lista = stara_lista[:]`, lub skorzystać z metody `copy()`
 
-## Krotki (tuple)
+## Krotki (*tuple*)
 Krotka jest konstrukcją podobną do listy, ale jej elementy nie mogą być modyfikowane. Tworzy się ją za pomocą okrągłych nawiasów lub funkcji `tuple`. Główną funkcją krotki jest przechowywanie stałych i niezmiennych wartości.
 
 ```python
 krotka = (2, 5, 7)
 krotka2 = tuple(2, 5, 7)
-krotka[0] == 2  #True
+print(krotka[0]) #2
 krotka[2] = 8 #niedozwolone
 ```
 ## Zadania:

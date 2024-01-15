@@ -7,7 +7,7 @@ theme: jekyll-theme-tactile
 [Wróć do strony głównej](index.md)
 
 ## Instalacja pythona:
-Windows: przez instalator pobrany ze [strony](https://www.python.org/downloads/) (należy odznaczyć checkbox 'add to system path')
+Windows: przez instalator pobrany ze [strony](https://www.python.org/downloads/) (należy zaznaczyć checkbox 'add to system path')
 
 Ubuntu Linux: polecenie sudo apt install python3 python-as-python3
 Arch Linux: sudo pacman -S python3

@@ -107,6 +107,16 @@ Polecenie `from math import sqrt` pozwoli nam używać tej funkcji bez przedrost
 ### Import własnych modułów
 Każdy plik stworzony przez użytkownika jest  traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu.
 
+## Typy zmiennych
+Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przekazać do funkcji, można wskazać sugerowany typ w definicji funkcji. Nie ma on obecnie żadnego wpływu na działanie programu, jest jedynie sugestią dla innych programistów jak z niej korzystać. Można też wskazać jaki typ jest zwracany przez daną funkcję.
+
+```python
+def how_many_grater_than(data: list, value: int) -> int:
+    result = 0
+    [result +=1 for i in data if data > value]
+    return result
+```
+
 ## Zadania:
 1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz liczbę, i sprawdza czy liczba ta mieści się w przedziale.
 

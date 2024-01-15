@@ -1,7 +1,7 @@
 ---
 title: Kurs Pythona w Autonomicznej Przestrzeni Edukacyjnej
 ---
-czwartki 19:00, Miejsce Aktywności Mieszkańców, ul. na Kozłówku 25
+czwartki 18:00, Miejsce Aktywności Mieszkańców, ul. na Kozłówku 25
 
 ## Spis tematów w kursie podstawowym:
 

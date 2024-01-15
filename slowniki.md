@@ -1,19 +1,21 @@
 ---
-title: "Słowniki (dictionary)"
+title: "Słowniki"
 permalink: /slowniki
 theme: jekyll-theme-tactile
 ---
 
 [Wróć do strony głównej](index.md)
 
-## Tworzenie słownika
+## Tworzenie słownika (*dictionary*)
 Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza w nawiasie kwadratowym. Aby utworzyć nowy wpis w słowniku wystarczy użyć nawiasów kwadratowych i dodać zawartość nowego elementu.
 
 ```python
 slownik = {"numer": 5, "litera": "a"}
 slownik2 = dict(numer=5, nazwa="test")
 slownik["slowo"] = "test"
-#{"numer": 5, "litera "a", "slowo": "test"}
+
+# slownik {"numer": 5, "litera "a", "slowo": "test"}
+# slownik2 {"numer": 5, "nazwa": "test"}
 ```
 
 ## Iteracja przez słownik
@@ -30,15 +32,22 @@ for v in slownik.values():
     print(f"wartość: {v}")
 ```
 
-## Zbiory (set)
+## Zbiory (*set*)
 Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Elementy nie mogą się powtarzać i ich kolejność nie ma znaczenia. Elementów zbioru nie można edytować, ale można je usunąć lub dodać nowe. Zbiory również tworzy się korzystając z nawiasów klamrowych, można też użyć funkcji `set()`.
 
 ```python
-zbior = {"serce", "mózg", "wątroba"}
-zbior2 = set("nerki", "trzustka",  "śledziona")
+zbior = {"serce", "mózg", "wątroba", "serce"}
+zbior2 = set("nerki", "śledziona", "serce")
+# zbior {"serce", "mózg", "wątroba"}
+# zbior2 {"nerki", "śledziona", "serce"}
 ```
 
 Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()`
+
+```python
+czesc_wspolna = zbior.intersection(zbior2)
+print(czesc_wspolna) # "serce"
+```
 
 ## Powtórzenie
 
@@ -53,7 +62,6 @@ Zestaw | {} | `set()` | × | × | ×
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
-
 
 ### Forum internetowe
 1. Stwórz globalny słownik zawierający posty użytkowników. Kluczem może być tytuł posta, a wartością jego tekst.
