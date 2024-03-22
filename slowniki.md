@@ -68,4 +68,13 @@ Zestaw | {} | `set()` | × | × | ×
 2. Dodaj system komentarzy do postów. W tym celu zmień wartość każdego posta na kolejny słownik. Pierwszą wartością słownika powinien być tekst posta, a drugą lista z komentarzami.
 3. Napisz program który wyświetli wszystkie posty i komentarze pod nimi w odpowiedniej kolejności.
 
+### System polecania filmów
+Na pewnym portalu użytkownicy mogą oceniać filmy w skali od 1 do 5. Na podstawie tych ocen chcemy tworzyć rekomendacje filmów. Uważamy, że dwóch użytkowników ma podobny gust filmowy, jeśli obaj ocenili ten sam film na 4 lub 5.
+
+Film należy polecić użytkownikowi jeśli:
+- Nie ocenił jeszcze danego filmu
+- Użytkownik o podobnym guście ocenił film na 4 lub 5
+
+Dodaj system który pozwoli na wczytywanie bazy danych filmów z pliku json.
+
 

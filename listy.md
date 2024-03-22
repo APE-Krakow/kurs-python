@@ -96,7 +96,13 @@ while i < len(lista_liczb):
 ```
 
 Jak widać, pętla while jest bardziej skomplikowana w działaniu, ale dzięki takiej konstrukcji wiemy zawsze który element listy podlega zmianie w danym momencie. Szczególnym przypadkiem jest nieskończona pętla while, tworzona z warunku który jest zawsze prawdziwy:
-`while True:`
+
+```python
+while True:
+    decyzja = input("Czy chcesz zakończyć program?/n")
+    if decyzja == "Tak" or decyzja == "tak":
+        break
+```
 
 ## Lista składana
 Listy składane to sposób na uproszczenie zapisu poprzez stworzenie listy bezpośrednio w wyrażeniu for, i jednoczesnym wykorzystaniu zmiennej pomocniczej:

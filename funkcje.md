@@ -102,7 +102,15 @@ math.sqrt()
 ```
 
 ### Import poszczególnych funkcji
-Polecenie `from math import sqrt` pozwoli nam używać tej funkcji bez przedrostka `math`. Aby zaimportować więcej funkcji można wymienić je po przecinku, np. `from math import sqrt, factorial, abs`.Przy importowaniu można nadać funkcji nową nazwę (alias) za pomocą słowa kluczowego `as`. Na przykład `from X import Y as Z`. Od tej pory funkcja Y jest dostępna, ale wyłącznie pod nazwą Z.
+Polecenie `from math import sqrt` pozwoli nam używać tej funkcji bez przedrostka `math`. Aby zaimportować więcej funkcji można wymienić je po przecinku, np. `from math import sqrt, factorial, abs`. Przy importowaniu można nadać funkcji nową nazwę (alias) za pomocą słowa kluczowego `as`. Na przykład `from X import Y as Z`. Od tej pory funkcja Y jest dostępna, ale wyłącznie pod nazwą Z.
+
+```python
+import numpy as np
+from math import sqrt
+
+np.sqrt(16) #funkcja z numpy
+sqrt(16) #funkcja z math
+```
 
 ### Import własnych modułów
 Każdy plik stworzony przez użytkownika jest  traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu.
@@ -112,9 +120,7 @@ Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przek
 
 ```python
 def how_many_grater_than(data: list, value: int) -> int:
-    result = 0
-    [result +=1 for i in data if data > value]
-    return result
+    return len([i for i in data if i > value])
 ```
 
 ## Zadania:

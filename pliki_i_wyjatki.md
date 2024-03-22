@@ -117,7 +117,7 @@ def divide_object(object, number):
 ```
 
 ### Zabezpieczanie zasobu
-Aby otworzyć jakiś zasób (plik, port sieciowy itp.) w sposób gwarantujący bezpieczne rozwiązanie błędów i automatyczne zamknięcie zasobu, można użyć słowa kluczowego `with`. Tworzy on osobny blok kodu w którym możemy korzystać z zasobu, a po jego opuszczeniu zasób jest zamykany. Jeżeli przy otwieraniu wystąpił błąd, blok kodu nie zostanie wykonany. Dodatkowo można użyć słowa kluczowego `as`, by nadać własną nazwę zasobowi.
+Aby otworzyć jakiś zasób (plik, port sieciowy itp.) w sposób gwarantujący bezpieczne rozwiązanie błędów i automatyczne zamknięcie zasobu, można użyć słowa kluczowego `with`. Tworzy on osobny blok kodu w którym możemy korzystać z zasobu, a po jego opuszczeniu zasób jest zamykany. Zapobiega to błędom związanym z nieprawidłowym zamknięciem zasobu jeżeli w czasie obsługi pliku wystąpi błąd. Jeżeli w bloku `with` wystąpi wyjątek, nadal powinno się go obsłużyć. Dodatkowo można użyć słowa kluczowego `as`, by nadać własną nazwę zasobowi.
 
 ```python
 with open("database.txt", "r+") as data:
@@ -154,6 +154,8 @@ Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego s
 ### Zapisywanie danych do JSON
 Aby zapisać dane do formatu JSON, należy użyć metody `json.dump(data, write_file)` (do zapisania danych do pliku) lub `json_string = json.dumps(data)` (do zapisania danych do zmiennej tekstowej).
 
+**Ważne!** W jednym pliku JSON można tylko jeden raz użyć metody `dump`, gdyż wrzucenie dwóch zbiorów danych do jednego pliku spowoduje problem z odczytem. Aby zapisać więcej niż jeden element należy zamknąć je w liście.
+
 Aby odczytać dane z JSON do Pythona, należy użyć metody `data = json.load(read_file)` (do odczytania danych z pliku) lub `data = json.loads(json_string)` (do odczytania danych z dostępnej zmiennej tekstowej).
 
 Przykładowy plik zajezdnie.json:
@@ -183,7 +185,7 @@ with open("zajezdnie.json") as zajezdnie_plik:
 3. Dodaj do obu programów procedury obsługi wyjątków.
 
 ### Zajezdnia
-1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni.
+1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni. Opis przeciążania dodawania i odejmowania znajduje się tutaj.
 2. Dodaj obsługę wyjątków która zapewni że nie będzie można wykonać niemożliwych operacji matematycznych.
 
 ### Bank

@@ -115,6 +115,10 @@ elif b > a:
 else:
     print("a i b są równe")
 ```
+
+### Łączenie warunków
+Aby sprawdzić jednocześnie kilka warunków, możemy je połączyć za pomocą operatorów logicznych **i** oraz **lub** (`and`/`or`).
+
 ## Zadania:
 1. Stwórz program który będzie realizował dowolne działanie matematyczne: zapyta użytkownika o dwie liczby, wykona działanie i wypisze wynik.
 
