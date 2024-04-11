@@ -160,8 +160,8 @@ krotka[2] = 8 #niedozwolone
 4. Stwórz program który będzie usuwał z listy wszystkie rośliny których nazwa zaczyna się od samogłoski.
 5. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
 6. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
-    - znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
-    - wypisz pewną liczbę kolejnych potęg dwójki
-    - z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
-    - policz liczbę spacji w zdaniu
-    - znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+    1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
+    2. wypisz pewną liczbę kolejnych potęg dwójki
+    3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+    5. policz liczbę spacji w zdaniu
+    6. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
