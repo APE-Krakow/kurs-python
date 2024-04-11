@@ -10,8 +10,8 @@ theme: jekyll-theme-tactile
 Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą funkcji `list()`
 
 ```python
-dane = ["adres", "numer", "imię"]`
-dane = list("adres", "numer", "imię")
+dane = ["adres", "numer", "imię"]
+dane = list( ("adres", "numer", "imię") )
 ```
 
 Aby odczytać zawartość listy, należy podać adres elementu który chcemy odczytać w nawiasach kwadratowych, np. `dane[0]` odczytują pierwszy obiekt z listy, a `dane[2] = "nazwisko"` zmienia zawartość trzeciego obiektu.
@@ -23,6 +23,10 @@ Podanie liczby ujemnej jako adresu sprawi że zaczniemy odczytywać od końca, n
 Aby dodać element na końcu listy używamy metody `append()`:
 
 `dane.append("wzrost")`
+
+Aby dodać element w dowolnym miejscu listy, używamy metody `insert()`, dodając miejsce na liście na które chcemy dodać dane:
+
+`dane.insert(2, "numer telefonu")`
 
 ### Usuwanie elementów
 Aby usunąć element z końca listy, używamy metody `pop()`. Funkcja ta zwraca element który został usunięty:
@@ -113,6 +117,13 @@ Listy składane to sposób na uproszczenie zapisu poprzez stworzenie listy bezpo
 kwadraty = [i**2 for i in list(range(1,11))]
 ```
 
+W wyrażeniu listy składanej można również umieścić wyrażenia warunkowe:
+
+```python
+numbers = [1, 2, 5, 8, 10, 13]
+parzyste = [number for number in numbers if number % 2 == 0]
+```
+
 ## Wycinki listy
 Można uzyskać dostęp do fragmentu listy, wskazując pierwszy element i element za ostatnim elementem wycinka:
 
@@ -138,12 +149,19 @@ Krotka jest konstrukcją podobną do listy, ale jej elementy nie mogą być mody
 
 ```python
 krotka = (2, 5, 7)
-krotka2 = tuple(2, 5, 7)
+krotka2 = tuple((2, 5, 7))
 print(krotka[0]) #2
 krotka[2] = 8 #niedozwolone
 ```
 ## Zadania:
-1. Stwórz listę która będzie przechowywać nazwy trzech marek samochodów. Następnie dodaj do niej dwa samochody, jeden na końcu a drugi na początku listy.
-2. Stwórz program który dla każdego pojazdu znajdującego się na liście wypisze komunikat informujący że znajduje się on w kolekcji.
-3. Stwórz kopię listy samochodów, posortuj ją i policz marki samochodów zaczynające się na 'a'.
-4. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
+1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
+2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
+3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
+4. Stwórz program który będzie usuwał z listy wszystkie rośliny których nazwa zaczyna się od samogłoski.
+5. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
+6. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
+    - znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
+    - wypisz pewną liczbę kolejnych potęg dwójki
+    - z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+    - policz liczbę spacji w zdaniu
+    - znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
