@@ -162,8 +162,8 @@ krotka[2] = 8 #niedozwolone
 6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
 7. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
 8. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
-        1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
-        2. wypisz pewną liczbę kolejnych potęg dwójki
-        3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
-        5. policz liczbę spacji w zdaniu
-        6. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+    1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
+    2. wypisz pewną liczbę kolejnych potęg dwójki
+    3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+    5. policz liczbę spacji w zdaniu
+    6. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
