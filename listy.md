@@ -157,11 +157,13 @@ krotka[2] = 8 #niedozwolone
 1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
 2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
 3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
-4. Stwórz program który będzie usuwał z listy wszystkie rośliny których nazwa zaczyna się od samogłoski.
-5. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
-6. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
-    1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
-    2. wypisz pewną liczbę kolejnych potęg dwójki
-    3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
-    5. policz liczbę spacji w zdaniu
-    6. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
+5. Usuń z listy co drugi element, zaczynając od pierwszego.
+6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
+7. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
+8. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
+        1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
+        2. wypisz pewną liczbę kolejnych potęg dwójki
+        3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+        5. policz liczbę spacji w zdaniu
+        6. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
