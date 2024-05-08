@@ -80,11 +80,11 @@ Stwórz program który poleci filmy wybranemu użytkownikowi.
 Proponowany zbiór danych:
 
 ```python
-{Marcin: {"Challengers": 5, "Diuna": 3, "Incepcja": 3, "Avatar": 4, "Matrix": 4, "Pianista": 5, "Batman": 2, "Prestiż": 5},
-Ania: {"Avatar": 2, "Matrix": 2, "Shrek": 5, "Titanic": 4, "Incepcja": 3},
-Wojtek: {"Avatar": 1, "Incepcja": 4, "Lśnienie": 3, "Prestiż": 2, "Interstellar": 4, "Kiler": 5},
-Julia: {"Matrix": 2, "Shrek": 1, "Titanic": 3, "Incepcja": 4, "Batman": 5, "Interstellar": 2, "Kiler": 5, "Challengers": 5},
-Marcel: {"Matrix": 2, "Incepcja": 5},
-Kasia: {"Avatar": 3, "Matrix": 4, "Shrek": 5, "Titanic": 5, "Lśnienie": 5, "Prestiż": 5, "Incepcja": 3, "Batman": 4, "Interstellar": 4, "Kiler": 4, "Challengers": 2, "Diuna": 3}}
+{"Marcin": {"Challengers": 5, "Diuna": 3, "Incepcja": 3, "Avatar": 4, "Matrix": 4, "Pianista": 5, "Batman": 2, "Prestiż": 5},
+"Ania": {"Avatar": 2, "Matrix": 2, "Shrek": 5, "Titanic": 4, "Incepcja": 3},
+"Wojtek": {"Avatar": 1, "Incepcja": 4, "Lśnienie": 3, "Prestiż": 2, "Interstellar": 4, "Kiler": 5},
+"Julia": {"Matrix": 2, "Shrek": 1, "Titanic": 3, "Incepcja": 4, "Batman": 5, "Interstellar": 2, "Kiler": 5, "Challengers": 5},
+"Marcel": {"Matrix": 2, "Incepcja": 5},
+"Kasia": {"Avatar": 3, "Matrix": 4, "Shrek": 5, "Titanic": 5, "Lśnienie": 5, "Prestiż": 5, "Incepcja": 3, "Batman": 4, "Interstellar": 4, "Kiler": 4, "Challengers": 2, "Diuna": 3}}
 ```
 
