@@ -79,13 +79,13 @@ Stwórz program analizujący lotniska światowe. W tym celu:
 1. Wczytaj dane na temat lotnisk dostarczone z tym zadaniem.
 2. Przetwórz je na słownik grupujący nazwy lotnisk z liczbą pasów startowych które posiadają (liczba pasów powinna być kluczem).
 
-```
+```python
 pasy_startowe = [("Warszawa", 2),
                  ("Wiedeń", 2),
                  ("Frankfurt", 4),
                  ("Londyn", 2),
                  ("Madryt", 4),
-                 (Radom", 1)]
+                 ("Radom", 1)]
 ```
 
 ### Ćwiczenia ze słowników składanych:
