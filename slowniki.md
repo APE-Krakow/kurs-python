@@ -32,6 +32,14 @@ for v in slownik.values():
     print(f"wartość: {v}")
 ```
 
+## Słowniki składane
+Podobnie jak listy, słowniki można tworzyć w momencie ich deklaracji. Aby to zrobić należy użyć tego samego sposobu co przy listach składanych, ale z nawiasami klamrowymi. Należy rozdzielić klucz i wartość słownika dwukropkiem.
+
+```python
+# słownik łączący liczby i ich kwadraty
+{x: x ** 2 for x in range(10)}
+```
+
 ## Zbiory (*set*)
 Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Elementy nie mogą się powtarzać i ich kolejność nie ma znaczenia. Elementów zbioru nie można edytować, ale można je usunąć lub dodać nowe. Zbiory również tworzy się korzystając z nawiasów klamrowych, można też użyć funkcji `set()`.
 
@@ -42,11 +50,13 @@ zbior2 = set("nerki", "śledziona", "serce")
 # zbior2 {"nerki", "śledziona", "serce"}
 ```
 
-Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()`
+Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()`.
+Można również sprawdzić czy dany zbiór jest podzbiorem (`issubset()`), nadzbiorem (`issuperset()`), czy może zbiorem rozłącznym (`isdisjoint()`) innego zbioru.
 
 ```python
 czesc_wspolna = zbior.intersection(zbior2)
 print(czesc_wspolna) # "serce"
+print(zbior.isdisjoint(zbior2)) # False
 ```
 
 ## Powtórzenie
@@ -56,17 +66,32 @@ Nazwa | Znak | Polecenie | Edytowalne | Powtarzalne | Uporządkowane
 Lista | [] | `list()` | ✓ | ✓ | ✓
 Krotka | () | `tuple()` | × | ✓ | ✓
 Słownik | {} | `dict()` | ✓ | ×| ×
-Zestaw | {} | `set()` | × | × | ×
+Zbiór | {} | `set()` | × | × | ×
 
 ## Zadania:
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
+3. Dodaj opcję aby to użytkownik wpisywał nazwy składników jakie chce umieścić na pizzy, i na tej podstawie będą one usuwane z magazynu.
 
-### Forum internetowe
-1. Stwórz globalny słownik zawierający posty użytkowników. Kluczem może być tytuł posta, a wartością jego tekst.
-2. Dodaj system komentarzy do postów. W tym celu zmień wartość każdego posta na kolejny słownik. Pierwszą wartością słownika powinien być tekst posta, a drugą lista z komentarzami.
-3. Napisz program który wyświetli wszystkie posty i komentarze pod nimi w odpowiedniej kolejności.
+### Lotniska
+Stwórz program analizujący lotniska światowe. W tym celu:
+1. Wczytaj dane na temat lotnisk dostarczone z tym zadaniem.
+2. Przetwórz je na słownik grupujący nazwy lotnisk z liczbą pasów startowych które posiadają (liczba pasów powinna być kluczem).
+
+```
+pasy_startowe = [("Warszawa", 2),
+                 ("Wiedeń", 2),
+                 ("Frankfurt", 4),
+                 ("Londyn", 2),
+                 ("Madryt", 4),
+                 (Radom", 1)]
+```
+
+### Ćwiczenia ze słowników składanych:
+Za pomocą słowników składanych rozwiąż następujące zadania:
+1. Stwórz słownik łączący słowo z liczbą jego wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
+2. Dla listy osób zatrudnionych w firmie, przypisz każdej osobie domyślną wypłatę podaną przez użytkownika.
 
 ### System polecania filmów
 Na pewnym portalu użytkownicy mogą oceniać filmy w skali od 1 do 5. Na podstawie tych ocen chcemy tworzyć rekomendacje filmów. Uważamy, że dwóch użytkowników ma podobny gust filmowy, jeśli obaj ocenili ten sam film na 4 lub 5.
