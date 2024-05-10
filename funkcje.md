@@ -6,6 +6,7 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+# Funkcje
 Często jeden fragment programu trzeba wykorzystać więcej niż jeden raz. Aby za każdym razem nie musieć pisać tych samych poleceń, możemy stworzyć funkcję i wywoływać ją za każdym razem kiedy chcemy skorzystać z jej działania. Funkcje tworzy się za pomocą słowa kluczowego `def`, a po nazwie funkcji muszą wystąpić okrągłe nawiasy:
 
 ```python
@@ -37,7 +38,7 @@ powitanie("Ania", False)
 Niektóre argumenty mogą posiadać wartości domyślne, które zostaną przyjęte jeżeli użytkownik nie poda żadnej wartości danego argumentu.
 **Argumenty domyślne powinny znajdować się na samym końcu listy argumentów**
 
-Możliwe jest również wywołanie funkcji poprzez nazwanie wszystkich argumentów.
+Możliwe jest również wywołanie funkcji poprzez nazwanie wszystkich argumentów, nie muszą one wtedy być w odpowiedniej kolejności.
 
 ```python
 def powitanie(imie, urodziny=False):
@@ -71,7 +72,6 @@ print(godzina) #15
 print(minuta) #30
 ```
 
-
 ```python
 def podaj godzine():
     return (15, 30)
@@ -94,11 +94,11 @@ def silnia(x):
 
 ## Importowanie
 ### Import modułu
-Nie wszystkie funkcje są dostępne jako standardowe funkcje Pythona. Brakuje chociażby tak przydatnej funkcji jak pierwiastkowanie. Aby uzyskać dostęp do zewnętrznych bibliotek należy użyć słowa kluczowego `import`. Pozwala to na użycie funkcji które są zapisane w innych plikach. Większość z często używanych funkcji została już stworzona i znajduje się w Bibliotece Standardowej Pythona. Na przykład funkcja pierwiastkowania `sqrt()` znajduje się w module matematycznym `math`. Aby jej użyć, należy zaimportować moduł matematyczny, i wywoływać go przy uruchomieniu funkcji.
+Nie wszystkie funkcje są dostępne jako standardowe funkcje Pythona. Brakuje chociażby tak przydatnej funkcji jak pierwiastkowanie. Aby uzyskać dostęp do zewnętrznych bibliotek należy użyć słowa kluczowego `import`. Pozwala to na użycie funkcji które są zapisane w innych plikach. Większość z często używanych funkcji została już stworzona i znajduje się w __Bibliotece Standardowej__ Pythona. Na przykład funkcja pierwiastkowania `sqrt()` znajduje się w module matematycznym `math`. Aby jej użyć, należy zaimportować moduł matematyczny, i wywoływać go przy uruchomieniu funkcji.
 
 ```python
 import math
-math.sqrt()
+math.sqrt(16)
 ```
 
 ### Import poszczególnych funkcji
@@ -107,16 +107,18 @@ Polecenie `from math import sqrt` pozwoli nam używać tej funkcji bez przedrost
 ```python
 import numpy as np
 from math import sqrt
+from mymath import sqrt as mysqrt
 
-np.sqrt(16) #funkcja z numpy
-sqrt(16) #funkcja z math
+np.sqrt(16) # funkcja sqrt z numpy
+sqrt(16) # funkcja sqrt z math
+mysqrt(16) # funkcja sqrt z mymath
 ```
 
 ### Import własnych modułów
-Każdy plik stworzony przez użytkownika jest  traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu.
+Każdy plik stworzony przez użytkownika jest traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu.
 
 ## Typy zmiennych
-Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przekazać do funkcji, można wskazać sugerowany typ w definicji funkcji. Nie ma on obecnie żadnego wpływu na działanie programu, jest jedynie sugestią dla innych programistów jak z niej korzystać. Można też wskazać jaki typ jest zwracany przez daną funkcję.
+Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przekazać do funkcji, można wskazać sugerowany typ w definicji funkcji. Nie ma to żadnego wpływu na działanie programu, jest jedynie sugestią dla innych programistów jak z niej korzystać. Można też wskazać jaki typ jest zwracany przez daną funkcję.
 
 ```python
 def how_many_grater_than(data: list, value: int) -> int:
@@ -128,10 +130,10 @@ def how_many_grater_than(data: list, value: int) -> int:
 
 2. Napisz funkcję które będzie przyjmować listę liczb, usuwać z niej wszystkie zduplikowane wartości i zwraca wyczyszczoną listę.
 
-3. Napisz funkcje które będą mogły obsługiwać szyfr Cezara dla liczb na liście (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Jedna funkcja powinna umożliwiać zaszyfrowanie listy (powinna przyjmować listę oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowaną listę oraz liczbę o jaką trzeba wrócić).
+3. Napisz funkcje które będą mogły obsługiwać szyfr Cezara (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Nasz program powinien obsługiwać wiadomości będące liczbami list. Jedna funkcja powinna umożliwiać zaszyfrowanie listy (powinna przyjmować listę oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowaną listę oraz liczbę o jaką trzeba wrócić).
 Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i odszyfrowaniu ciąg liczb jest taki sam.
 
 4. Napisz funkcję rekurencyjną i iteracyjną wypisującą kolejne elementy ciągu Fibonacciego. Ciąg ten składa się z liczb, z których każda jest sumą dwóch poprzednich, a dwiema pierwszymi liczbami ciągu są jedynki.
 1, 1, 2, 3, 5, 8, 13, 21, ...
 
-5. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie prosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować jakąś liczbę, należy użyć funkcji `randrange(początek, koniec+1)` z biblioteki `random`.
+5. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie poprosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować liczbę z jakiegoś przedziału, należy użyć funkcji `randrange(start, end+1)` z biblioteki `random`. `start` i `end` to krawędzie przedziału z którego ma być wylosowana liczba.

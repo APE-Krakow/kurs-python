@@ -72,7 +72,7 @@ Zbiór | {} | `set()` | × | × | ×
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
-3. Dodaj opcję aby to użytkownik wpisywał nazwy składników jakie chce umieścić na pizzy, i na tej podstawie będą one usuwane z magazynu.
+3. Dodaj opcję aby to użytkownik wpisywał nazwy składników jakie chce umieścić na pizzy, i na tej podstawie będą one usuwane z magazynu. Jeżeli danego składnika już nie ma, wyświetl odpowiedni komunikat.
 
 ### Lotniska
 Stwórz program analizujący lotniska światowe. W tym celu:
@@ -80,18 +80,27 @@ Stwórz program analizujący lotniska światowe. W tym celu:
 2. Przetwórz je na słownik grupujący nazwy lotnisk z liczbą pasów startowych które posiadają (liczba pasów powinna być kluczem).
 
 ```python
-pasy_startowe = [("Warszawa", 2),
-                 ("Wiedeń", 2),
-                 ("Frankfurt", 4),
-                 ("Londyn", 2),
-                 ("Madryt", 4),
-                 ("Radom", 1)]
+[("Warszawa", 2),
+("Wiedeń", 2),
+("Frankfurt", 4),
+("Londyn", 2),
+("Madryt", 4),
+("Radom", 1)]
 ```
 
 ### Ćwiczenia ze słowników składanych:
 Za pomocą słowników składanych rozwiąż następujące zadania:
 1. Stwórz słownik łączący słowo z liczbą jego wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
 2. Dla listy osób zatrudnionych w firmie, przypisz każdej osobie domyślną wypłatę podaną przez użytkownika.
+3. Przekształć listę produktów i ich cen na słownik zawierający każdy produkt i jego cenę.
+
+```python
+[("chleb", 5.50),
+("pasta", 12.50),
+("mleko", 4.50),
+("kwiaty", 12),
+("pomidor", 5.20)]
+```
 
 ### System polecania filmów
 Na pewnym portalu użytkownicy mogą oceniać filmy w skali od 1 do 5. Na podstawie tych ocen chcemy tworzyć rekomendacje filmów. Uważamy, że dwóch użytkowników ma podobny gust filmowy, jeśli obaj ocenili ten sam film na 4 lub 5.
