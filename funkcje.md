@@ -6,7 +6,6 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
-# Funkcje
 Często jeden fragment programu trzeba wykorzystać więcej niż jeden raz. Aby za każdym razem nie musieć pisać tych samych poleceń, możemy stworzyć funkcję i wywoływać ją za każdym razem kiedy chcemy skorzystać z jej działania. Funkcje tworzy się za pomocą słowa kluczowego `def`, a po nazwie funkcji muszą wystąpić okrągłe nawiasy:
 
 ```python
@@ -21,7 +20,7 @@ powitanie()
 Aby stworzyć pustą funkcję (np. do wypełnienia później), zamiast jej ciała należy wpisać słowo kluczowe `pass`
 
 ## Argumenty funkcji
-Funkcje mogą przyjmować od użytkownika dane, które wykorzystają w swoim działaniu. Argumenty te należy umieścić w okrągłym nawiasie:
+Funkcje mogą przyjmować od użytkownika dane (argumenty), które wykorzystają w swoim działaniu. Argumenty te należy umieścić w okrągłym nawiasie:
 
 ```python
 def powitanie(imie, urodziny):
@@ -126,14 +125,16 @@ def how_many_grater_than(data: list, value: int) -> int:
 ```
 
 ## Zadania:
-1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz liczbę, i sprawdza czy liczba ta mieści się w przedziale.
+1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz inną liczbę, i sprawdza czy liczba ta mieści się w przedziale.
 
-2. Napisz funkcję które będzie przyjmować listę liczb, usuwać z niej wszystkie zduplikowane wartości i zwraca wyczyszczoną listę.
+2. Napisz funkcję która przyjmuje kilka danych na temat użytkownika, i zwraca słownik zawierający te dane. W wypadku jeżeli użytkownik nie poda jakiejś informacji, pole powinno być wypełnione przez "brak danych".
 
-3. Napisz funkcje które będą mogły obsługiwać szyfr Cezara (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Nasz program powinien obsługiwać wiadomości będące liczbami list. Jedna funkcja powinna umożliwiać zaszyfrowanie listy (powinna przyjmować listę oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowaną listę oraz liczbę o jaką trzeba wrócić).
+3. Napisz funkcję które będzie przyjmować listę liczb, usuwać z niej wszystkie zduplikowane wartości i zwraca wyczyszczoną listę.
+
+4. Napisz funkcje które będą mogły obsługiwać szyfr Cezara (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Nasz program powinien obsługiwać wiadomości będące liczbami list. Jedna funkcja powinna umożliwiać zaszyfrowanie listy (powinna przyjmować listę oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowaną listę oraz liczbę o jaką trzeba wrócić).
 Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i odszyfrowaniu ciąg liczb jest taki sam.
 
-4. Napisz funkcję rekurencyjną i iteracyjną wypisującą kolejne elementy ciągu Fibonacciego. Ciąg ten składa się z liczb, z których każda jest sumą dwóch poprzednich, a dwiema pierwszymi liczbami ciągu są jedynki.
+5. Napisz funkcję rekurencyjną i iteracyjną wypisującą kolejne elementy ciągu Fibonacciego. Ciąg ten składa się z liczb, z których każda jest sumą dwóch poprzednich, a dwiema pierwszymi liczbami ciągu są jedynki.
 1, 1, 2, 3, 5, 8, 13, 21, ...
 
-5. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie poprosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować liczbę z jakiegoś przedziału, należy użyć funkcji `randrange(start, end+1)` z biblioteki `random`. `start` i `end` to krawędzie przedziału z którego ma być wylosowana liczba.
+6. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie poprosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować liczbę z jakiegoś przedziału, należy użyć funkcji `randrange(start, end+1)` z biblioteki `random`. `start` i `end` to krawędzie przedziału z którego ma być wylosowana liczba.
