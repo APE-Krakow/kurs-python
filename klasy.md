@@ -10,9 +10,9 @@ Często istnieje potrzeba przechowywania danych o bardziej skomplikowanej strukt
 
 ```python
 class Wspolrzedne:
-    x
-    y
-    z
+    x = 0
+    y = 0
+    z = 0
 ```
 
 Klasa jest jednak tylko wzorcem na podstawie którego można tworzyć obiekty. Dopiero po stworzeniu obiektu danej klasy można odczytać wartość jego pól. Na podstawie jednej klasy można stworzyć dowolną ilość obiektów, z których każdy może przyjąć inne wartości pól.
@@ -28,9 +28,9 @@ Metody to funkcje które są wbudowane w klasę i mogą być wywoływane na jej 
 
 ```python
 class Wspolrzedne:
-    x = 5
-    y = 7
-    z = 4
+    x = 0
+    y = 0
+    z = 0
 
     def ustaw_wspolrzedne(self, x, y, z):
         self.x = x
@@ -61,6 +61,19 @@ print(nowe_wspolrzedne.suma())
 
 ## Dodatkowe funkcje obiektów
 Każdy obiekt może być usunięty za pomocą słowa kluczowego `del`
+
+```python
+start = Wspolrzedne(0, 0, 0)
+koniec = Wspolrzedne(23, 78, 56)
+del koniec
+```
+
+## Ćwiczenia:
+1. Stwórz klasę przechowującą dane o jakiejś roślinie. Może zawierać takie informacje jak gatunek, wiek, ile dni temu była podlana, itp.
+2. Dodaj do klasy `Roslina` metodę obliczającą, czy należy ją ponownie podlać.
+3. Dodaj metodę `podlej`, która wyzeruje ilość dni od ostatniego podlania.
+3. Zmień tworzenie obiektu `Roslina` na metodę `__init__()`.
+4. Dodaj funkcję globalną `zraszacz()`, która przyjmie całą listę roślin i podleje każdą z nich.
 
 ## Zadania:
 ### Szkoła

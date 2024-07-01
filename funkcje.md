@@ -55,7 +55,7 @@ Po zakończeniu działania funkcji możliwe jest przekazanie informacji zwrotnej
 
 ```python
 def srednia(lista):
-    return lista.sum() / len(lista)
+    return sum(lista) / len(lista)
 
 oceny = [2, 5, 6, 3, 2, 4]
 print(srednia(oceny))
