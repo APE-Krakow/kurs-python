@@ -114,7 +114,7 @@ mysqrt(16) # funkcja sqrt z mymath
 ```
 
 ### Import własnych modułów
-Każdy plik stworzony przez użytkownika jest traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu.
+Każdy plik stworzony przez użytkownika jest traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu. Na przykład aby zaimportować funkcję `show()` z pliku `graphics.py` należy skorzystać z `from graphics import show`.
 
 ## Typy zmiennych
 Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przekazać do funkcji, można wskazać sugerowany typ w definicji funkcji. Nie ma to żadnego wpływu na działanie programu, jest jedynie sugestią dla innych programistów jak z niej korzystać. Można też wskazać jaki typ jest zwracany przez daną funkcję.
@@ -123,6 +123,13 @@ Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przek
 def how_many_grater_than(data: list, value: int) -> int:
     return len([i for i in data if i > value])
 ```
+
+## Ćwiczenia:
+1. Stwórz funkcję która wykona dowolne równanie matematyczne i wypisze jego wynik.
+2. Dodaj możliwość aby to użytkownik wprowadził liczby do działania matematycznego poprzez argumenty.
+3. Jeżeli użytkownik nie poda liczby, niech zostanie użyta jakaś wartość domyślna.
+4. Zamiast wypisywać wynik na ekranie, niech funkcja zwraca wartość działania jako liczbę.
+5. Dodaj do funkcji kilka bardziej skomplikowanych działań matematycznych z biblioteki `math`.
 
 ## Zadania:
 1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz inną liczbę, i sprawdza czy liczba ta mieści się w przedziale.
