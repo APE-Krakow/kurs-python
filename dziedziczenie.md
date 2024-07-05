@@ -9,13 +9,15 @@ theme: jekyll-theme-tactile
 Klasy mogą tworzyć wielowarstwową hierarchę przedstawiającą ich relacje do przedstawianych obiektów.
 Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco:
 
-- ObiektGraficzny:
-    - FiguraGeometryczna:
-        - Prostokąt:
-            - Kwadrat
-        - Koło
-        - Trójkąt
-    - Obrazek
+```
+ObiektGraficzny:
+├─FiguraGeometryczna:
+│ ├─Prostokąt:
+│ │ └─Kwadrat
+│ ├─Koło
+│ └─Trójkąt
+└─Obrazek
+```
 
 W powyższym schemacie obiekt klasy Prostokąt jest jednocześnie obiektem klasy FiguraGeometryczna, który jest obiektem klasy ObiektGraficzny. Dzięki temu metody pozwalające na przykład na wyświetlanie obiektu na ekranie mogą być skoncentrowane w kodzie klasy ObiektGraficzny. Z drugiej strony dzięki takiemu podejściu, wszystkie figury geometryczne jakie stworzymy będą mogły być traktowane jako obiekty klasy FiguraGeometryczna, mimo że ich wewnętrzna struktura jest inna. Mechanizm który na to pozwala nazywa się dziedziczeniem.
 
@@ -48,6 +50,10 @@ class Prostokat(FiguraGeometryczna):
         self.b = b
         super().__init__(2*a + 2*b, a*b)
 ```
+
+## Ćwiczenia:
+1. Stwórz klasę reprezentującą miejscowość, oraz dziedziczące po niej klasy wieś i miasto. Miejscowość powinna zawierać informacje wspólne, takie jak nazwa, liczba mieszkańców i powierzchnia, a klasy potomne mogą zawierać dodatkowe dane takie jak imię sołtysa/burmistrza, czy gminę/powiat.
+2. Spraw aby klasy wsi i miasta w swoim konstruktorze wywoływały też konstruktor miejscowości.
 
 ## Zadania:
 ### Zoo
