@@ -10,13 +10,13 @@ Klasy mogą tworzyć wielowarstwową hierarchę przedstawiającą ich relacje do
 Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco:
 
 
-ObiektGraficzny:
-├─FiguraGeometryczna:
-│ ├─Prostokąt:
-│ │ └─Kwadrat
-│ ├─Koło
-│ └─Trójkąt
-└─Obrazek
+ObiektGraficzny:<br/>
+├─FiguraGeometryczna:<br/>
+│ ├─Prostokąt:<br/>
+│ │ └─Kwadrat<br/>
+│ ├─Koło<br/>
+│ └─Trójkąt<br/>
+└─Obrazek<br/>
 
 
 W powyższym schemacie obiekt klasy Prostokąt jest jednocześnie obiektem klasy FiguraGeometryczna, który jest obiektem klasy ObiektGraficzny. Dzięki temu metody pozwalające na przykład na wyświetlanie obiektu na ekranie mogą być skoncentrowane w kodzie klasy ObiektGraficzny. Z drugiej strony dzięki takiemu podejściu, wszystkie figury geometryczne jakie stworzymy będą mogły być traktowane jako obiekty klasy FiguraGeometryczna, mimo że ich wewnętrzna struktura jest inna. Mechanizm który na to pozwala nazywa się dziedziczeniem.
