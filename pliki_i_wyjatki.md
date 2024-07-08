@@ -20,6 +20,10 @@ Dodatkowo plik można otworzyć jako:
 * `t` - plik tekstowy (domyślnie) - tekst czytelny dla człowieka
 * `b` - plik binarny - dane w formie zer i jedynek czytelne tylko dla innych programów
 
+Tryby otwarcia pliku można łączyć, tworząc różne kombinacje, na przykład:
+- `rt` - plik tekstowy do odczytu
+- `r+b` - plik binarny do odczytu i zapisu
+- `wt` - plik tekstowy do zapisu
 
 Należy pamiętać aby po zakończeniu obsługi pliku zamknąć go metodą `close()`.
 
@@ -31,7 +35,7 @@ file.close()
 **Uwaga!** Należy unikać otwarcia kilku uchwytów na raz, ponieważ może to spowodować zapisywanie jednocześnie kilku rzeczy w tym samym miejscu
 
 ### Odczytywanie danych z pliku
-Metoda `read(size)` służy do odczytywania danych z pliku. Domyślnie odczytuje cały plik, ale można podać jako jej argument liczbę znaków którą ma odczytać. Aby odczytać tylko jedną linię tekstu można użyć metody `readline(size)`. Tutaj również można podać maksymalną ilość znaków która ma być odczytana. Z kolei metoda readlines() odczyta wszystkie linie tekstu i zapisze je w tablicy.
+Metoda `read(size)` służy do odczytywania danych z pliku. Domyślnie odczytuje cały plik, ale można podać jako jej argument liczbę znaków którą ma odczytać. Aby odczytać tylko jedną linię tekstu można użyć metody `readline(size)`. Tutaj również można podać maksymalną ilość znaków która ma być odczytana. Z kolei metoda `readlines()` odczyta wszystkie linie tekstu i zapisze je w tablicy.
 ### Zapisywanie danych do pliku
 Aby zapisać dane do pliku należy użyć metody `write(x)`, gdzie x jest danymi które dopisujemy do pliku.
 
@@ -78,7 +82,8 @@ W normalnej sytuacji jeżeli w programie wystąpi błąd, oznacza to że nastąp
 try:
     print(x)
 except:
-    print("Wystąpił błąd")
+    print("Wystąpił błąd w funkcji print")
+# dalszy ciąg programu wykonuje się bez zakłóceń
 ```
 
 Wyjątki mogą mieć własne nazwy, co pozwala na zareagowanie na różne rodzaje błędów które mogły wystąpić. Blok 'except' z podaną nazwą wyjątku zareaguje tylko na ten konkretny błąd, a bez podania nazwy wyjątku złapie wszystkie które pozostały. **Jeżeli wyjątek zostanie złapany, to jest usuwany. Dlatego blok `except` bez nazwy powinien być na końcu** Dodatkowo pusty `except` powinien być rzadkością, ponieważ wszystkie możliwe błędy powinny być znane przed uruchomieniem programu.
@@ -127,56 +132,14 @@ with open("database.txt", "r+") as data:
 Na końcu bloku `with` nie ma potrzeby zamykać pliku gdyż dzieje się to automatycznie.
 
 
-## Pliki JSON
-Aby wyeksportować dane należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. W takim pliku można zapisywać **podstawowe** struktury danych Pythona, takie jak liczby całkowite i zmiennoprzecinkowe, ciągi znaków, listy i słowniki. Przykładowy plik JSON:
 
-```json
-{
-    "firstName": "Jane",
-    "lastName": "Doe",
-    "hobbies": ["running", "sky diving", "singing"],
-    "age": 35,
-    "children": [
-        {
-            "firstName": "Alice",
-            "age": 6
-        },
-        {
-            "firstName": "Bob",
-            "age": 8
-        }
-    ]
-}
-```
-
-**Uwaga!** w pliku JSON nie ma osobnego sposobu zapisu krotki, zostanie ona zapisana jako lista.
-
-### Zapisywanie danych do JSON
-Aby zapisać dane do formatu JSON, należy użyć metody `json.dump(data, write_file)` (do zapisania danych do pliku) lub `json_string = json.dumps(data)` (do zapisania danych do zmiennej tekstowej).
-
-**Ważne!** W jednym pliku JSON można tylko jeden raz użyć metody `dump`, gdyż wrzucenie dwóch zbiorów danych do jednego pliku spowoduje problem z odczytem. Aby zapisać więcej niż jeden element należy zamknąć je w liście.
-
-Aby odczytać dane z JSON do Pythona, należy użyć metody `data = json.load(read_file)` (do odczytania danych z pliku) lub `data = json.loads(json_string)` (do odczytania danych z dostępnej zmiennej tekstowej).
-
-Przykładowy plik zajezdnie.json:
-
-```json
-{
-    "Zajezdnia Nowa Huta": ["Lajkonik", "Krakowiak"],
-    "Zajezdnia Podgórze": ["Akwarium", "NGT-6", "GT8"]
-}
-```
-
-```python
-import json
-
-with open("zajezdnie.json") as zajezdnie_plik:
-    zajezdnie = json.load(zajezdnie_plik)
-    tramwaj = zajezdnie["Zajezdnia Nowa Huta"].pop()
-    zajezdnie["Zajezdnia Podgórze"].append(tramwaj)
-    zajezdnie.plik.truncate()
-    json.dump(zajezdnie_plik, zajezdnie)    
-```
+## Ćwiczenia:
+1. Stwórz w notatniku plik z kilkoma imionami, możesz nazwać go `imiona.txt`. Następnie stwórz program który go otworzy i zamknie.
+2. Odczytaj z pliku kilka pierwszych imion i wypisz je na ekranie.
+3. Zapisz w pliku jakieś nowe imię.
+4. Usuń ostatnie imię z pliku.
+5. Przesuń kursor do środka pliku i zapisz tam nowe imię.
+6. Obsługa wyjątku
 
 ## Zadania
 ### Zaszyfrowany plik
@@ -187,11 +150,4 @@ with open("zajezdnie.json") as zajezdnie_plik:
 ### Zajezdnia
 1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni. Opis przeciążania dodawania i odejmowania znajduje się tutaj.
 2. Dodaj obsługę wyjątków która zapewni że nie będzie można wykonać niemożliwych operacji matematycznych.
-
-### Bank
-1. Stwórz program bankowy który będzie pozwalał na wykonywanie podstawowych operacji finansowych. Na początku niech bank posiada jednego użytkownika. Stan konta powinien być przechowywany w specjalnie nazwanym pliku. Dodaj metody pozwalające na zwiększenie i zmniejszenie stanu konta. Program powinien zachowywać stan konta użytkownika nawet jeżeli zostanie wyłączony i włączony później.
-2. Aby bank mógł przechowywać informacje o większej ilości użytkowników, zmień system przechowywania danych kont na plik JSON. Dodaj możliwość przelewów z konta jednego użytkownika na konto innego użytkownika.
-3. W wypadku błędnej operacji dodaj mechanizm wyjątków który zapobiegnie wykonaniu niemożliwej operacji bankowej.
-4. Dodaj system autoryzacji, który przed wykonaniem każdego przelewu będzie wymagał od użytkownika podania hasła. Hasło powinno być ustawiane w momencie utworzenia konta użytkownika. Procedurę wpisywania hasła zabezpiecz poprzez wyjątek.
-
 
