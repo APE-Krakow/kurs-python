@@ -153,6 +153,10 @@ krotka2 = tuple((2, 5, 7))
 print(krotka[0]) #2
 krotka[2] = 8 #niedozwolone
 ```
+
+## Ćwiczenia:
+1. Stwórz kilka list z dowolnymi danymi i spróbuj wypisać pierwszy, drugi, ostatni i przedostatni element.
+
 ## Zadania:
 1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
 2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.

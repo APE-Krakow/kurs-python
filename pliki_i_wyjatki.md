@@ -132,7 +132,6 @@ with open("database.txt", "r+") as data:
 Na końcu bloku `with` nie ma potrzeby zamykać pliku gdyż dzieje się to automatycznie.
 
 
-
 ## Ćwiczenia:
 1. Stwórz w notatniku plik z kilkoma imionami, możesz nazwać go `imiona.txt`. Następnie stwórz program który go otworzy i zamknie.
 2. Odczytaj z pliku kilka pierwszych imion i wypisz je na ekranie.

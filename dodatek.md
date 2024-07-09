@@ -26,7 +26,33 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 * podobnie jak we wszystkich pozostałych obiektach, im bardziej powszechnie używana jest klasa, jej nazwa powinna być bardziej szczegółowa
 
 ## Formatowanie tekstu
-pass
+Formatować tekst można za pomocą funkcji `format()` albo za pomocą tzw. *format stringów* (stringów typu `f""`). Obie metody są równoznaczne i stanowią po prostu różne formy zapisu tego samego.
+
+```python
+"{} to ładny kolor, {} też".format(color1, color2)
+f"{color1} to ładny kolor, {color2} też"
+```
+
+Dodatkowo *format string* pozwala na nazwanie kolejnych pól
+
+```python
+"Nazywam się {imie}. {imie} {nazwisko}".format(imie="James", nazwisko="Bond")
+```
+
+
+| litera | znaczenie        |
+|--------|------------------|
+|d       |liczba dziesiętna |
+|b       |format binarny    |
+|o       |format ósemkowy   |
+|x or X  |format szestnastkowy|
+|e or E  |notacja naukowa   |
+|f or F  |liczba zmiennoprzecinkowa|
+|g or G  |General format    |
+|c       |pojedynczy znak   |
+|r       |String (repr())   |
+|s       |String (str())    |
+|%       |wartość procentowa|
 
 ## Dodatkowe sposoby zapisu
 Aby rozbić jednolinijkowy tekst na kilka linijek można połączyć je nawiasami:
@@ -58,6 +84,7 @@ Konwersja:
 - `__str__(self)` - wywoływana przy konwersji na `string`, np. przy wywołaniu funkcji `print()`
 - `__int__(self)` - wywoływana przy konwersji na `int`
 - `__float__(self)` - wywoływana przy konwersji na `float`
+- `__repr__(self` - wywołane przy konwersji na tekst przy użyciu `repr()`
 
 Operacje matematyczne:
 
