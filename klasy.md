@@ -82,7 +82,9 @@ del koniec
 2. Stwórz klasę reprezentującą klasę szkolną. Może ona zawierać listę uczniów i wychowawcę oraz słownik zawierający poszczególne dni i frekwencję klasy na dany dzień. Dodaj metody pozwalające np. wypisać listę uczniów i średnią ocen klasy. Dodaj też metodę pozwalającą nauczycielowi sprawdzić obecność i zapisać frekwencję klasy.
 
 3. Stwórz klasę reprezentującą szkołę. Szkołą powinna składać się z listy klas. Dodaj możliwość sprawdzenia średniej ocen dla całej szkoły oraz frekwencję w całej szkole dla danego dnia, oraz dla całego kalendarza.
+
 ### Sklep
+[shop.py](https://github.com/APE-Krakow/tasks/blob/main/shop.py)
 1. Stwórz klasę która będzie reprezentować przedmiot w sklepie (posiada nazwę, cenę, dostępną ilość). Wartości powinny być inicjalizowane w konstruktorze. Stwórz kilka obiektów tej klasy. Następnie stwórz funkcję, która poda wartość dla podanej ilości produktów.
 
 2. Zmień działanie poprzedniej klasy, tak żeby podanie wartości produktów danego typu odbywało się z poziomu obiektu (poprzez metodę wbudowaną)
