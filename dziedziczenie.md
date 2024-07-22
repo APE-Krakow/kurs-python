@@ -12,10 +12,10 @@ Na przykład klasy reprezentujące obiekty w grze mogą wyglądać następująco
 
 ObiektGraficzny:<br/>
 ├─FiguraGeometryczna:<br/>
-│ ├─Prostokąt:<br/>
-│ │ └─Kwadrat<br/>
-│ ├─Koło<br/>
-│ └─Trójkąt<br/>
+│  ├─Prostokąt:<br/>
+│  │  └─Kwadrat<br/>
+│  ├─Koło<br/>
+│  └─Trójkąt<br/>
 └─Obrazek
 
 

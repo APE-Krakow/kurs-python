@@ -84,7 +84,7 @@ Konwersja:
 - `__str__(self)` - wywoływana przy konwersji na `string`, np. przy wywołaniu funkcji `print()`
 - `__int__(self)` - wywoływana przy konwersji na `int`
 - `__float__(self)` - wywoływana przy konwersji na `float`
-- `__repr__(self` - wywołane przy konwersji na tekst przy użyciu `repr()`
+- `__repr__(self)` - wywołane przy konwersji na tekst przy użyciu `repr()`
 
 Operacje matematyczne:
 
