@@ -39,20 +39,38 @@ Dodatkowo *format string* pozwala na nazwanie kolejnych pól
 "Nazywam się {imie}. {imie} {nazwisko}".format(imie="James", nazwisko="Bond")
 ```
 
+Aby w konkretny sposób dostosować zapis poszczególnych pól, możemy użyć specjalnych znaczników:
+### Wyrównanie:
+* `<` wyrównane do lewej, wartość domyślna dla typów tekstowych.
+* `>` wyrównane do prawej, wartość domyślna dla typów liczbowych.
+* `=` wyrównane do prawej, z wyjątkiem znaku, który jest wyrównany do lewej.
+* `^` wyśrodkowanie
+### Znak:
+* `+` Umieszcza `+` przed liczbami dodatnimi i `-` przed liczbami ujemnymi
+* `-` Nie umieszcza niczego przed liczbami dodatnimi i `-` przed liczbami ujemnymi (domyślne)
+* Pusta spacja umieszcza spację wiodącą przed liczbami dodatnimi i `-` przed liczbami ujemnymi.
+### Precyzja:
+`X.Y` służy do wyrównania długości pola. `X` oznacza długość całej zmiennej, a `Y` przedstawia ile cyfr po przecinku ma być wyświetlonych.
+### Typ:
+w zależności od typu zmiennej używane są specjalne sposoby do sformatowania tekstu. Dostępne typy to:
 
 | litera | znaczenie        |
 |--------|------------------|
 |d       |liczba dziesiętna |
 |b       |format binarny    |
 |o       |format ósemkowy   |
-|x or X  |format szestnastkowy|
-|e or E  |notacja naukowa   |
-|f or F  |liczba zmiennoprzecinkowa|
-|g or G  |General format    |
+|x lub X |format szestnastkowy|
+|e lub E |notacja naukowa   |
+|f lub F |liczba zmiennoprzecinkowa|
+|g lub G |zwykły format     |
 |c       |pojedynczy znak   |
 |r       |String (repr())   |
 |s       |String (str())    |
 |%       |wartość procentowa|
+
+### Przykłady:
+* liczba dziesiętna `x` wyśrodkowana na polu o szerokości 10 znaków: `{x:^10d}`
+* liczba zmiennoprzecinkowa `x`, z dwoma miejscami po przecinku i znakiem: `{x:+.2}`
 
 ## Dodatkowe sposoby zapisu
 Aby rozbić jednolinijkowy tekst na kilka linijek można połączyć je nawiasami:
@@ -71,10 +89,6 @@ tekst = """Tekst posiadający
         wiele linijek
         może być bardzo długi"""
 ```
-
-## Dokumentacja
-
-pass
 
 ## Przeciążanie metod
 Wiele funkcji w pythonie zachowuje się inaczej, jeżeli zostanie wywołana dla różnych obiektów. Na przykład funkcja `print()` działa inaczej dla ciągów znakowych, a inaczej dla list. Dzieje się tak dlatego, że każdy obiekt ma w sobie zakodowaną metodę definiującą w jaki sposób zamienić go na tekst nadający się do wyświetlenia na ekranie. Posiadają go także obiekty definiowane przez użytkownika. (Jeżeli nie zostaną zdefiniowane ręcznie, to interpreter stworzy je automatycznie). Znając nazwy tych metod można zdefiniować w jaki sposób nasz obiekt zachowa się przy wywołaniu funkcji.
