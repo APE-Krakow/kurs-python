@@ -19,4 +19,6 @@ wtorki 18:00, Miejsce Aktywności Mieszkańców, ul. na Kozłówku 25
 
 [Pliki i wyjątki](pliki_i_wyjatki.md)
 
+[Pliki JSON](json.md)
+
 [Dodatkowe informacje](dodatek.md)

@@ -147,6 +147,6 @@ Na końcu bloku `with` nie ma potrzeby zamykać pliku gdyż dzieje się to autom
 3. Dodaj do obu programów procedury obsługi wyjątków.
 
 ### Zajezdnia
-1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni. Opis przeciążania dodawania i odejmowania znajduje się tutaj.
+1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni. Opis przeciążania dodawania i odejmowania znajduje się [tutaj](dodatek.md).
 2. Dodaj obsługę wyjątków która zapewni że nie będzie można wykonać niemożliwych operacji matematycznych.
 
