@@ -5,6 +5,8 @@ wtorki 18:00, Miejsce Aktywności Mieszkańców, ul. na Kozłówku 25
 
 ## Spis tematów w kursie podstawowym:
 
+[Instalacja](instalacja.md)
+
 [Podstawy](podstawy.md)
 
 [Listy](listy.md)
