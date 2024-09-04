@@ -6,12 +6,6 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
-## Instalacja pythona:
-Windows: przez instalator pobrany ze [strony](https://www.python.org/downloads/) (należy zaznaczyć checkbox 'add to system path')
-
-Ubuntu Linux: polecenie sudo apt install python3 python-as-python3
-Arch Linux: sudo pacman -S python3
-
 ## Tryby działania
 ### Tryb interaktywny
 W tryb interaktywny wchodzimy poprzez polecenie `python`(Windows)/`python3`(Linux). Aby z niego wyjść używamy funkcji `exit()`

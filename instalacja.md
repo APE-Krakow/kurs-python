@@ -25,12 +25,14 @@ Po uruchomieniu Ubuntu należy uruchomić terminal skrótem **ctrl + alt + t**, 
 ```shell
 sudo apt update
 sudo apt upgrade
-sudo apt install python3 python-as-python3
+sudo apt install python3 python-is-python3
 ```
 
 ## Windows/Mac
 
 Aby zainstalować Pythona należy wejść na stronę [python.org](https://www.python.org/downloads/), wybrać swoją wersję systemu, pobrać instalator i uruchomić go.
+
+**Należy zaznaczyć checkbox 'add to system path'**
 
 ## Edytor
 Aby edytować programy można korzystać z dowolnego edytora tekstu, na
