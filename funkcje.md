@@ -132,7 +132,7 @@ def how_many_grater_than(data: list, value: int) -> int:
 5. Dodaj do funkcji kilka bardziej skomplikowanych działań matematycznych z biblioteki `math`.
 
 ## Zadania:
-1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz inną liczbę, i sprawdza czy liczba ta mieści się w przedziale.
+1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz inną liczbę, i sprawdza czy liczba ta mieści się w przedziale. [online](https://parsons.problemsolving.io/puzzle/9f8dae21faa4421da15e7d8ce1420ce0)
 
 2. Napisz funkcję która przyjmuje kilka danych na temat użytkownika, i zwraca słownik zawierający te dane. W wypadku jeżeli użytkownik nie poda jakiejś informacji, pole powinno być wypełnione przez "brak danych".
 

@@ -164,7 +164,7 @@ krotka[2] = 8 #niedozwolone
 4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
 5. Usuń z listy co drugi element, zaczynając od pierwszego.
 6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
-7. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi.
+7. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
 8. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
     1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
     2. wypisz pewną liczbę kolejnych potęg dwójki

@@ -35,7 +35,8 @@ file.close()
 **Uwaga!** Należy unikać otwarcia kilku uchwytów na raz, ponieważ może to spowodować zapisywanie jednocześnie kilku rzeczy w tym samym miejscu
 
 ### Odczytywanie danych z pliku
-Metoda `read(size)` służy do odczytywania danych z pliku. Domyślnie odczytuje cały plik, ale można podać jako jej argument liczbę znaków którą ma odczytać. Aby odczytać tylko jedną linię tekstu można użyć metody `readline(size)`. Tutaj również można podać maksymalną ilość znaków która ma być odczytana. Z kolei metoda `readlines()` odczyta wszystkie linie tekstu i zapisze je w tablicy.
+Metoda `read(size)` służy do odczytywania danych z pliku. Domyślnie odczytuje cały plik, ale można podać jako jej argument liczbę znaków którą ma odczytać. Aby odczytać tylko jedną linię tekstu można użyć metody `readline(size)`. Tutaj również można podać maksymalną ilość znaków która ma być odczytana. Z kolei metoda `readlines()` odczyta wszystkie linie tekstu i zapisze je w liście.
+
 ### Zapisywanie danych do pliku
 Aby zapisać dane do pliku należy użyć metody `write(x)`, gdzie x jest danymi które dopisujemy do pliku.
 
@@ -49,7 +50,7 @@ file.write(new_data)
 file.close()
 ```
 
-## Usuwanie danych z pliku
+### Usuwanie danych z pliku
 Aby usunąć dane, należy użyć metody `truncate()`. Metoda ta działa tak samo jak `read(x)` - argument `x` określa ilość znaków do usunięcia, a w wypadku pozostawienia pustego pola usuwany jest cały plik.
 
 ### Przesuwanie uchwytu
@@ -138,7 +139,7 @@ Na końcu bloku `with` nie ma potrzeby zamykać pliku gdyż dzieje się to autom
 3. Zapisz w pliku jakieś nowe imię.
 4. Usuń ostatnie imię z pliku.
 5. Przesuń kursor do środka pliku i zapisz tam nowe imię.
-6. Obsługa wyjątku
+6. Obsłuż wyjątek który mógłby wystąpić gdyby plik który chcemy otworzyć nie istniał.
 
 ## Zadania
 ### Zaszyfrowany plik

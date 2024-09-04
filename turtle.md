@@ -12,10 +12,10 @@ Pozwala on na stworzenie okna graficznego z wirtualną ikoną "żółwia", a nas
 
 Aby użyć modułu turtle musimy go zaimportować komendą `import`, a następnie każde polecenie powiązane z tą biblioteką musimy zaczynać od `turtle`.
 Podstawowe komendy służące do poruszania się po ekranie to:
-- `forward` lub `fd` / `backward` lub `bk` - porusza się naprzód lub do tyłu o określoną liczbę kroków
-- `left` lub `lt` / `right` lub `rt` - obraca się w lewo lub w prawo o określony kąt
+- `forward`; `fd` / `backward`; `bk` - porusza się naprzód lub do tyłu o określoną liczbę kroków
+- `left`; `lt` / `right`; `rt` - obraca się w lewo lub w prawo o określony kąt
 
-Program rysujący kąt prosty. Polecenie `turtle.done()` jest niezbędne aby program nie wyłączył się sam po zakończeniu rysowwania.
+Program rysujący kąt prosty. Polecenie `turtle.done()` jest niezbędne aby program nie wyłączył się sam po zakończeniu rysowania.
 
 ```python
 import turtle
@@ -25,6 +25,10 @@ turtle.right(90)
 turtle.forward(100)
 turtle.done()
 ```
+
+Mamy dodatkowo do dyspozycji narzędzia do manipulacji stylem rysowania:
+- `penup`; `up` / `pendown`; `down` - podniesienie lub opuszczenie pióra (po podniesieniu pióra żółw porusza się, ale nie rysuje linii)
+- `pencolor` - ustawia kolor pióra na podany. Aby ustawić kolor należy wpisać jego nazwę, np. `"red"`, `"yellow"`, `"blue"` itp. lub kod hex.
 
 
 ## Ćwiczenia:
