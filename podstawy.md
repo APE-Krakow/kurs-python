@@ -8,7 +8,11 @@ theme: jekyll-theme-tactile
 
 ## Tryby działania
 ### Tryb interaktywny
-W tryb interaktywny wchodzimy poprzez polecenie `python`(Windows)/`python3`(Linux). Aby z niego wyjść używamy funkcji `exit()`
+Aby zapoznać się z działaniem Pythona, możemy uruchomić tryb interaktywny, w którym Python będzie wykonywał każde polecenie natychmiast po tym jak je wpiszemy. Python nie posiada własnej grafiki, dlatego przesyła się do niego tekst używając terminala:
+- powershell, cmd (Windows)
+- terminal (Linux/Mac)
+
+W tryb interaktywny wchodzimy poprzez wpisanie polecenia `python`. Będąc w trybie interaktywnym widzimy znak zachęty `>>>`. Aby z niego wyjść używamy funkcji `exit()`
 W tym trybie działają wszystkie polecenia, takie jak:
 
 - utworzenie nowej zmiennej `a=5`
@@ -25,7 +29,7 @@ W tym trybie działają wszystkie polecenia, takie jak:
 Aby przyspieszyć działanie pythona, można spisać wszystkie polecenia do pliku z rozszerzeniem `.py` a następnie wywołać pythona z katalogu w którym znajduje się plik poleceniem `python plik.py`. Można również podać bezpośrednią ścieżkę do pliku.
 Windows: `python C:\Users\username\plik.py`
 
-Linux: `python3 /home/user/plik.py`
+Linux: `python /home/user/plik.py`
 
 ## Typy danych
 Dane wprowadzane do programu są przechowywane w pamięci w różny sposób, w zależności od tego jakiego rodzaju wartość reprezentują. Wyróżniamy następujące podstawowe typy (oczywiście jest ich dużo więcej, oraz użytkownik może tworzyć swoje własne, ale te są najprostsze w rozpoznaniu)
@@ -119,4 +123,5 @@ Aby sprawdzić jednocześnie kilka warunków, możemy je połączyć za pomocą 
 2. Stwórz program który pobierze od użytkownika dane osobowe, a następnie wypisze dla tego użytkownika powitanie. Pamiętaj aby forma powitania zgadzała się z zaimkami jakie ta osoba poda!
 
 3. Stwórz program przeprowadzający test kompetencji. Część pytań powinna akceptować odpowiedź tekstową a część w formie liczb. Za prawidłową odpowiedź użytkownik powinien dostawać punkt, a na koniec powinien otrzymać pochwałę jeżeli otrzymał pewną ilość punktów.
+Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
 
