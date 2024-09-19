@@ -6,6 +6,9 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+## Główna biblioteka Pythona
+<https://docs.python.org/3/library/index.html>
+
 ## Konwencje nazw
 Aby już po samej nazwie obiektu można było się zorientować co zawiera, przyjęły się określone zasady nazywania obiektów w programie. Co do zasady wszystkie dokumenty związane z programowaniem powinny być w języku angielskim 
 
@@ -73,7 +76,7 @@ w zależności od typu zmiennej używane są specjalne sposoby do sformatowania 
 * liczba zmiennoprzecinkowa `x`, z dwoma miejscami po przecinku i znakiem: `{x:+.2}`
 
 ## Dodatkowe sposoby zapisu
-Aby rozbić jednolinijkowy tekst na kilka linijek można połączyć je nawiasami:
+Aby rozbić jednolinijkowy tekst na kilka linijek w kodzie, można połączyć je nawiasami:
 
 ```python
 tekst = ("jedna "
@@ -82,7 +85,7 @@ tekst = ("jedna "
          "tekstu")
 ```
 
-Aby rozbić wielolinijkowy tekst na kilka linii, można użyć potrójnego cudzysłowu:
+Aby rozbić wielolinijkowy tekst na kilka linijek w kodzie, można użyć potrójnego cudzysłowu:
 
 ```python
 tekst = """Tekst posiadający

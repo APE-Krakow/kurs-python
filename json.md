@@ -6,6 +6,8 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+<https://docs.python.org/3/library/json.html>
+
 ## Pliki JSON
 Aby wyeksportować dane które będą łatwe do odczytania, należy zapisać je w pliku tekstowym. Służy do tego specjalny format plików o nazwie JavaScript Object Notation. Został on stworzony do zapisu obiektów JavaScript, ale równie dobrze nadaje się do Pythona. Aby móc go używać należy skorzystać z modułu `json`. W takim pliku można zapisywać **podstawowe** struktury danych Pythona, takie jak liczby całkowite i zmiennoprzecinkowe, ciągi znaków, listy i słowniki. Przykładowy plik JSON:
 

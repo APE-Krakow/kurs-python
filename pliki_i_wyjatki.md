@@ -6,6 +6,9 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+<https://docs.python.org/3/library/functions.html#open>
+<https://docs.python.org/3/library/exceptions.html>
+
 ## Pliki
 ### Otwieranie pliku
 Aby móc zapisywać dane do pliku, plik należy najpierw otworzyć za pomocą funkcji `open(nazwa_pliki, tryb_dostępu)`. Po otwarciu pliku otrzymujemy *uchwyt* do pliku, czyli wskaźnik na dane miejsce w pliku, które pozwala na odczytywanie lub zapisywanie do niego. Uchwyt do pliku można traktować jako kursor. Każda operacja przesuwa ten wskaźnik o tyle znaków ile zostało użytych w poleceniu. Tryb dostępu określa w jaki sposób będzie zachowywał się plik i w którym miejscu zostanie umieszczony uchwyt:

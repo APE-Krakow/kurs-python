@@ -6,6 +6,8 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+<https://docs.python.org/3/library/turtle.html>
+
 ## Moduł Turtle
 Aby usprawnić naukę programowania, możemy dodać do naszych programów elementy tworzenia grafiki, ruchu i animacji. Uproszczony interfejs graficzny przeznaczony do nauki programowania oferuje moduł Turtle - wzorowany na języku *logo* z lat 80.
 Pozwala on na stworzenie okna graficznego z wirtualną ikoną "żółwia", a następnie poruszanie tym "żółwiem". Poruszający się żółw pozostawia za sobą linię, co pozwala rysować kształty geometryczne.

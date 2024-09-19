@@ -120,8 +120,10 @@ Aby sprawdzić jednocześnie kilka warunków, możemy je połączyć za pomocą 
 ## Zadania:
 1. Stwórz program który będzie realizował dowolne działanie matematyczne: zapyta użytkownika o dwie liczby, wykona działanie i wypisze wynik.
 
-2. Stwórz program który pobierze od użytkownika dane osobowe, a następnie wypisze dla tego użytkownika powitanie. Pamiętaj aby forma powitania zgadzała się z zaimkami jakie ta osoba poda!
+2. Stwórz program który pozwala zrealizować jedno z dwóch działań: dodawanie lub odejmowanie [online](https://parsons.problemsolving.io/puzzle/a46fd0aa513042d08e623eedbfb8e1c1)
 
-3. Stwórz program przeprowadzający test kompetencji. Część pytań powinna akceptować odpowiedź tekstową a część w formie liczb. Za prawidłową odpowiedź użytkownik powinien dostawać punkt, a na koniec powinien otrzymać pochwałę jeżeli otrzymał pewną ilość punktów.
+3. Stwórz program który pobierze od użytkownika dane osobowe, a następnie wypisze dla tego użytkownika powitanie. Pamiętaj aby forma powitania zgadzała się z zaimkami jakie ta osoba poda!
+
+4. Stwórz program przeprowadzający test kompetencji. Część pytań powinna akceptować odpowiedź tekstową a część w formie liczb. Za prawidłową odpowiedź użytkownik powinien dostawać punkt, a na koniec powinien otrzymać pochwałę jeżeli otrzymał pewną ilość punktów.
 Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
 

@@ -6,6 +6,8 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+<https://docs.python.org/3/library/stdtypes.html#mapping-types-dict>
+
 ## Tworzenie słownika (*dictionary*)
 Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza w nawiasie kwadratowym. Aby utworzyć nowy wpis w słowniku wystarczy użyć nawiasów kwadratowych i dodać zawartość nowego elementu.
 

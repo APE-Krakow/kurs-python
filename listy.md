@@ -6,6 +6,8 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
+<https://docs.python.org/3/library/stdtypes.html#list>
+
 ## Tworzenie list
 Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą funkcji `list()`
 
