@@ -34,7 +34,30 @@ Mamy dodatkowo do dyspozycji narzędzia do manipulacji stylem rysowania:
 
 Ponadto możemy stworzyć wielokąty, posługując się metodą `begin_poly()` i `end_poly()`.
 
+## Pętla
+Pętla pozwala wykonać jedno polecenie wiele razy. Wykonuje ona polecenia tak długo, dopóki jest spełniony warunek podany w poleceniu.
+
+```python
+i = 0
+while i < 3:
+    turtle.forward(100)
+    turtle.right(60)
+    i += 1
+```
+
+Szczególnym przypadkiem jest nieskończona pętla `while`, tworzona z warunku który jest zawsze prawdziwy (np. `True`):
+
+```python
+while True:
+    decyzja = input("Czy chcesz zakończyć program?/n")
+    if decyzja == "Tak" or decyzja == "tak":
+        break
+```
 
 ## Ćwiczenia:
-1. Stwórz program który narysuje kwadrat
-2. Stwórz program który pozwoli użytkownikowi wybrać jaki kształt ma zostać narysowany.
+1. Stwórz program który narysuje kwadrat, zwyczajnie i przy użyciu pętli.
+2. Stwórz program który narysuje inne kształty (np. sześciokąt, ośmiokąt itp.).
+3. Stwórz program który pozwoli użytkownikowi wybrać jaki kształt ma zostać narysowany.
+4. Stwórz przy pomocy modułu `Turtle` nieskończoną spiralę wychodzącą ze środka ekranu [online](https://parsons.problemsolving.io/puzzle/0bee1e5988cb419faf5b971df0098bc9)
+5. Wspólnie stwórzmy rysunek za pomocą turtle [codeshare](https://codeshare.io).
+
