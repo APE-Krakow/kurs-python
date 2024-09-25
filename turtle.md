@@ -32,7 +32,7 @@ Mamy dodatkowo do dyspozycji narzędzia do manipulacji stylem rysowania:
 - `penup`; `up` / `pendown`; `down` - podniesienie lub opuszczenie pióra (po podniesieniu pióra żółw porusza się, ale nie rysuje linii)
 - `pencolor` - ustawia kolor pióra na podany. Aby ustawić kolor należy wpisać jego nazwę, np. `"red"`, `"yellow"`, `"blue"` itp. lub kod hex.
 
-Ponadto możemy stworzyć wielokąty, posługując się metodą `begin_poly()` i `end_poly()`.
+Ponadto możemy wypełnić kształt kolorem, posługując się metodą `begin_fill()` i `end_fill()`.
 
 ## Pętla
 Pętla pozwala wykonać jedno polecenie wiele razy. Wykonuje ona polecenia tak długo, dopóki jest spełniony warunek podany w poleceniu.
@@ -59,5 +59,6 @@ while True:
 2. Stwórz program który narysuje inne kształty (np. sześciokąt, ośmiokąt itp.).
 3. Stwórz program który pozwoli użytkownikowi wybrać jaki kształt ma zostać narysowany.
 4. Stwórz przy pomocy modułu `Turtle` nieskończoną spiralę wychodzącą ze środka ekranu [online](https://parsons.problemsolving.io/puzzle/0bee1e5988cb419faf5b971df0098bc9)
-5. Wspólnie stwórzmy rysunek za pomocą turtle [codeshare](https://codeshare.io).
+5. Narysuj gwiazdę wypełniona na niebiesko [online](https://parsons.problemsolving.io/puzzle/efa14f6e0c7f4bbca450b1ec2cb631b9)
+6. Wspólnie stwórzmy rysunek za pomocą turtle [codeshare](https://codeshare.io).
 
