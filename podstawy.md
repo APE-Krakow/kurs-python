@@ -38,7 +38,6 @@ Dane wprowadzane do programu są przechowywane w pamięci w różny sposób, w z
 - liczba rzeczywista (zmiennoprzecinkowa) `float`
 - dane tekstowe `str`
 - zmienna logiczna (`True`/`False` **wartości logiczne zaczynają się z wielkiej litery**) `bool`
-- liczba zespolona `complex`
 
 Aby dowiedzieć się jakiego typu jest zmienna `x`, używamy funkcji `type(x)`
 
@@ -51,15 +50,13 @@ b = 3
 print(a + str(b))
 ```
 
-Istnieje również wiele innych sposobów na które można łączyć dane i tekst (więcej o formatowaniu tekstu w dodatku na końcu):
+Istnieje również lepszy sposób łączenia zmiennych z programu z tekstem: *format string*. Działa on jak tworzenie zwykłego napisu, ale jeżeli przez cudzysłowem dodamy znak `f`, możemy wewnątrz tekstu umieszczać zmienne programu wewnątrz nawiasów klamrowych '{}'.
 
 ```python
-a = 5
-b = "hello"
-print("Write ", b, " " , str(a))
-print("Write " + b + str(a))
-print("Write {} {}".format(b, str(a)))
-print(f"Write {b} {str(a)}")
+a = "numer"
+b = 3
+print(f"Twój {a} to {b}")
+# Twój numer to 3
 ```
 
 ## Odczytywanie danych od użytkowników
@@ -77,7 +74,7 @@ liczba = int(input("Podaj liczbę"))
 
 ## Podejmowanie decyzji w programie
 ### Testy warunkowe
-Stwierdzeniem logicznym jest takie wyrażenie, które może być skonwertowane do typu logicznego bool (`True` albo `False`). Podstawowym typem testu warunkowego jest porównanie wartości zmiennych. W tym celu używa się następujących operatorów:
+Stwierdzeniem logicznym jest takie wyrażenie, które może być skonwertowane do typu logicznego `bool` (`True` albo `False`). Podstawowym typem testu warunkowego jest porównanie wartości zmiennych. W tym celu używa się następujących operatorów:
 
 - sprawdzenie równości `==`
 - sprawdzenie nierówności `!=`
@@ -116,6 +113,30 @@ else:
 
 ### Łączenie warunków
 Aby sprawdzić jednocześnie kilka warunków, możemy je połączyć za pomocą operatorów logicznych **i** oraz **lub** (`and`/`or`).
+
+## Test:
+Co wypiszą na ekranie poniższe programy, o ile nie zatrzymają się z powodu błędu?
+
+```python
+from datetime import datetime
+
+name = input("Podaj imię\n")
+condition = "True"
+
+if condition:
+    print(f"Dzień dobry {name}, jest {datetime.now()}")
+```
+
+```python
+x = input("podaj pierwszą liczbę\n")
+y = input("podaj drugą liczbę\n")
+operation = input("Podaj działanie\n")
+
+if operation == '+':
+    print(int(x+y))
+elif operation == '-':
+    print(int(x-y))
+```
 
 ## Zadania:
 1. Stwórz program który będzie realizował dowolne działanie matematyczne: zapyta użytkownika o dwie liczby, wykona działanie i wypisze wynik.
