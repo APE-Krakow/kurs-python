@@ -148,3 +148,5 @@ elif operation == '-':
 4. Stwórz program przeprowadzający test kompetencji. Część pytań powinna akceptować odpowiedź tekstową a część w formie liczb. Za prawidłową odpowiedź użytkownik powinien dostawać punkt, a na koniec powinien otrzymać pochwałę jeżeli otrzymał pewną ilość punktów.
 Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
 
+5. Napisz program, który oceni czy dany rok (podany przez użytkownika) jest rokiem przestępnym czy nie. Rok jest przestępny, jeżeli jest podzielny przez 4 i nie jest podzielny przez 100, lub jeżeli jest podzielny przez 400.
+
