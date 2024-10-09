@@ -31,6 +31,7 @@ turtle.done()
 Mamy dodatkowo do dyspozycji narzędzia do manipulacji stylem rysowania:
 - `penup`; `up` / `pendown`; `down` - podniesienie lub opuszczenie pióra (po podniesieniu pióra żółw porusza się, ale nie rysuje linii)
 - `pencolor` - ustawia kolor pióra na podany. Aby ustawić kolor należy wpisać jego nazwę, np. `"red"`, `"yellow"`, `"blue"` itp. lub kod hex.
+- `speed` - ustawia prędkość żółwia, dostępne wartości to `fastest`, `fast`, `normal`, `slow`, `slowest`. Tryb `fastest` oznacza że ruch jest natychmiastowy.
 
 Ponadto możemy wypełnić kształt kolorem, posługując się metodą `begin_fill()` i `end_fill()`.
 
