@@ -54,7 +54,34 @@ while True:
     if decyzja == "Tak" or decyzja == "tak":
         break
 ```
+## Test:
+Co narysuja na ekranie poniższe programy, o ile nie zatrzymają się z powodu błędu? Czy pętla jest skonsrtuowana prawidłowo?
 
+```python
+import turtle
+
+answer = int(input("Ile kółek narysować?\n"))
+x = 0
+while answer >= x:
+    turtle.circle(20)
+    turtle.fd(40)
+    x = x - 1
+
+turtle.done()
+```
+
+```python
+import turtle
+
+turtle.speed("fast")
+while True:
+    turtle.forward(400)
+    turtle.left(175)
+    if abs(turtle.pos()) < 1:
+        break 
+
+turtle.done()
+```
 ## Ćwiczenia:
 1. Stwórz program który narysuje kwadrat, zwyczajnie i przy użyciu pętli.
 2. Stwórz program który narysuje inne kształty (np. sześciokąt, ośmiokąt itp.).
