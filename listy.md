@@ -107,23 +107,6 @@ numbers = [1, 2, 5, 8, 10, 13]
 parzyste = [number for number in numbers if number % 2 == 0]
 ```
 
-## Wycinki listy
-Można uzyskać dostęp do fragmentu listy, wskazując pierwszy element i element za ostatnim elementem wycinka:
-
-```python
-wycinek = lista[2:5]
-```
-
-Polecenie to utworzy wycinek od trzeciego do piątego elementu listy (elementy o numerach 2-4, ale musimy pamiętać że pierwszy element ma numer 0)
-
-Można pozostawić jeden koniec wycinka otwarty:
-
-```python
-wycinek = lista [2:]
-```
-
-W ten sposób powstał wycinek od trzeciego elementu do końca.
-
 ## Kopiowanie listy
 Aby skopiować listę nie wystarczy użyć przypisania `nowa_lista = stara_lista`, ponieważ w ten sposób nadal istnieje jedna lista, ale o dwóch nazwach. Aby skopiować listę należy utworzyć wycinek od początku do końca listy `nowa_lista = stara_lista[:]`, lub skorzystać z metody `copy()`
 
@@ -133,24 +116,55 @@ Krotka jest konstrukcją podobną do listy, ale jej elementy nie mogą być mody
 ```python
 krotka = (2, 5, 7)
 krotka2 = tuple((2, 5, 7))
-print(krotka[0]) #2
-krotka[2] = 8 #niedozwolone
+print(krotka[0]) # 2
+krotka[2] = 8 # niedozwolone
 ```
 
 ## Ćwiczenia:
 1. Stwórz kilka list z dowolnymi danymi i spróbuj wypisać pierwszy, drugi, ostatni i przedostatni element.
 
+## Test:
+Czy poniższe programy prawidłowo usuną liczby parzyste z listy? Jeżeli nie, to co się stanie z listą?
+
+```python
+data = [1, 2, 3, 4, 5, 6]
+
+for i in data:
+    if i%2 == 0:
+        del i
+```
+```python
+data = [1, 2, 3, 4, 5, 6]
+
+data = [n for n in data if n%2 != 0]
+```
+
+```python
+data = [1, 2, 2, 2, 3, 4, 5, 6]
+
+x = 0
+while x < len(data):
+    if data[x]%2 == 2:
+        del data[x]
+    x += 1
+```
+
 ## Zadania:
+1. Wypisz wszystkie liczby z zakresu od 1 do 1000000
+2. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
+3. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze
+4. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
+    - znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
+    - wypisz pewną liczbę kolejnych potęg dwójki
+    - z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+    - policz liczbę spacji w zdaniu
+    - znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+    
+### Rośliny
 1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
 2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
 3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
 4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
 5. Usuń z listy co drugi element, zaczynając od pierwszego.
 6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
-7. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
-8. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
-    1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
-    2. wypisz pewną liczbę kolejnych potęg dwójki
-    3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
-    5. policz liczbę spacji w zdaniu
-    6. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+

@@ -126,3 +126,20 @@ Operacje porównania:
 - `__gt__(self, other)` wynik porównania *greater than* `>`
 - `__le__(self, other)` wynik porównania *less or equal* `<=`
 - `__ge__(self, other)` wynik porównania *greater or equal* `>=`
+
+## Wycinki listy
+Można uzyskać dostęp do fragmentu listy, wskazując pierwszy element i element za ostatnim elementem wycinka:
+
+```python
+wycinek = lista[2:5]
+```
+
+Polecenie to utworzy wycinek od trzeciego do piątego elementu listy (elementy o numerach 2-4, ale musimy pamiętać że pierwszy element ma numer 0)
+
+Można pozostawić jeden koniec wycinka otwarty:
+
+```python
+wycinek = lista [2:]
+```
+
+W ten sposób powstał wycinek od trzeciego elementu do końca.
