@@ -9,11 +9,10 @@ theme: jekyll-theme-tactile
 <https://docs.python.org/3/library/stdtypes.html#list>
 
 ## Tworzenie list
-Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych lub za pomocą funkcji `list()`
+Za pomocą listy można stworzyć jedną zmienną przechowującą wiele danych. Listę tworzymy za pomocą nawiasów kwadratowych
 
 ```python
 dane = ["adres", "numer", "imię"]
-dane = list( ("adres", "numer", "imię") )
 ```
 
 Aby odczytać zawartość listy, należy podać adres elementu który chcemy odczytać w nawiasach kwadratowych, np. `dane[0]` odczytują pierwszy obiekt z listy, a `dane[2] = "nazwisko"` zmienia zawartość trzeciego obiektu.
@@ -51,18 +50,9 @@ Aby usunąć z listy znany element używamy metody `remove()`:
 Długość listy, czyli ilość elementów która się na niej znajduje, możemy odczytać funkcją `len()`, a sumę wszystkich elementów policzy funkcja `sum()`
 
 ```python
-dane = list(1,2,3,4,5)
+dane = [1,2,3,4,5]
 len(dane) # 5
 sum(dane) # 15
-```
-
-### Łączenie list
-Aby połączyć dwie listy możemy użyć operatora `+` lub metody `extend()`:
-
-```python
-lista_c = lista_a + lista_b
-lista_a.extend(lista_b)
-lista_c == lista_a
 ```
 
 ### Inne operacje
@@ -85,8 +75,7 @@ Aby wynik funkcji range zamienić na listę, należy użyć polecenia `list(rang
 Aby wykonać jakąś operację na każdym elemencie listy, nieważne jaka jest jej długość, używamy pętli for.
 
 ```python
-lista_liczb = list(range(1,11))
-for liczba in lista_liczb:
+for liczba in range(1,11):
     print(liczba**2)
 ```
 Nie deklarujemy wartości zmiennej `liczba`, jest to zmienna pomocnicza. Przyjmuje ona po kolei wartość wszystkich zmiennych z listy `lista_liczb`, i wykonuje polecenia zawarte w pętli for.
@@ -122,9 +111,31 @@ krotka[2] = 8 # niedozwolone
 
 ## Ćwiczenia:
 1. Stwórz kilka list z dowolnymi danymi i spróbuj wypisać pierwszy, drugi, ostatni i przedostatni element.
+2. Wygeneruj kilka ciągów liczbowych za pomocą funkcji `range`.
+
+## Zadania:
+1. Wypisz wszystkie liczby z zakresu od 1 do 1000000, a następnie policz ich średnią wartość
+2. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
+3. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze
+## Listy składane:
+Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
+1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
+2. wypisz pewną liczbę kolejnych potęg dwójki
+3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+4. policz liczbę spacji w zdaniu
+5. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+    
+### Rośliny
+1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
+2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
+3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
+4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
+5. Usuń z listy co drugi element, zaczynając od pierwszego.
+6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
 
 ## Test:
 Czy poniższe programy prawidłowo usuną liczby parzyste z listy? Jeżeli nie, to co się stanie z listą?
+Może przydać się do tego [Python tutor](https://pythontutor.com)
 
 ```python
 data = [1, 2, 3, 4, 5, 6]
@@ -144,27 +155,7 @@ data = [1, 2, 2, 2, 3, 4, 5, 6]
 
 x = 0
 while x < len(data):
-    if data[x]%2 == 2:
+    if data[x]%2 == 0:
         del data[x]
     x += 1
 ```
-
-## Zadania:
-1. Wypisz wszystkie liczby z zakresu od 1 do 1000000
-2. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
-3. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze
-4. Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
-    - znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
-    - wypisz pewną liczbę kolejnych potęg dwójki
-    - z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
-    - policz liczbę spacji w zdaniu
-    - znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
-    
-### Rośliny
-1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
-2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
-3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
-4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
-5. Usuń z listy co drugi element, zaczynając od pierwszego.
-6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
-
