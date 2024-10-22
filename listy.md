@@ -30,21 +30,17 @@ Aby dodać element w dowolnym miejscu listy, używamy metody `insert()`, dodają
 `dane.insert(2, "numer telefonu")`
 
 ### Usuwanie elementów
-Aby usunąć element z końca listy, używamy metody `pop()`. Funkcja ta zwraca element który został usunięty:
-
-`a = dane.pop()`
-
-Możemy również sprecyzować który element chcemy "zdjąć" z listy:
-
-`a = dane.pop(2)`
-
 Aby usunąć element z listy znając jego miejsce, używamy polecenia `del`:
 
 `del dane[2]`
 
-Aby usunąć z listy znany element używamy metody `remove()`:
+Słowo kluczowe `del` może służyć też do usuwania całych obiektów albo funkcji:
 
-`dane.remove("imię")`
+```python
+data = [1, 2, 3, 4, 5]
+del data
+len(data) # error!
+```
 
 ### Statystyki listy
 Długość listy, czyli ilość elementów która się na niej znajduje, możemy odczytać funkcją `len()`, a sumę wszystkich elementów policzy funkcja `sum()`
@@ -56,8 +52,10 @@ sum(dane) # 15
 ```
 
 ### Inne operacje
-Aby posortować listę możemy użyć metody `sort()`. Po użyciu tej metody elementy w liście zostaną przeniesione na nowe miejsca. Jeżeli chcemy posortować listę tylko tymczasowo, możemy użyć funkcji `sorted()`, która tworzy kopię listy i ją sortuje. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna.
-Aby odwrócić kolejność elementów na liście używa się tej samej techniki. Metoda `reverse()` odwraca utworzoną listę, a funkcja `reversed()` odwraca ją tymczasowo.
+Aby posortować listę możemy użyć **metody** `sort()`. Po użyciu tej metody elementy w liście zostaną przeniesione na nowe miejsca. Jeżeli chcemy posortować listę tylko tymczasowo, możemy użyć **funkcji** `sorted()`, która tworzy kopię listy i ją sortuje. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna.
+Aby odwrócić kolejność elementów na liście używa się tej samej techniki. **Metoda** `reverse()` odwraca utworzoną listę, a **funkcja** `reversed()` odwraca ją tymczasowo.
+
+Metoda różni się od funkcji tym, że metody są zawsze zarejestrowane tylko dla obiektów danej klasy, np. metoda dla `reverse()` dla list, metoda `lower()` dla stringów itp., a wywołuje się je używając kropki. Funkcje są elementem niezależnym, i wywołuje się je bez kropki.
 
 ```python
 lista2 = lista1.copy()
@@ -80,6 +78,14 @@ for liczba in range(1,11):
 ```
 Nie deklarujemy wartości zmiennej `liczba`, jest to zmienna pomocnicza. Przyjmuje ona po kolei wartość wszystkich zmiennych z listy `lista_liczb`, i wykonuje polecenia zawarte w pętli for.
 
+## Dostęp do numeru iteracji
+Czasem musimy wiedzieć, na którym aktualnie elemencie listy się znajdujemy. W takim wypadku pomoże nam funkcja `enumerate()`, która dodaje do kolejnych elementów listy numery z oznaczeniem ich miejsca
+
+```python
+for n, i in enumerate([4, 7, 2, 8, 9, 0]):
+    print(f"element {n} listy to {i}")
+```
+
 ## Lista składana
 Listy składane to sposób na uproszczenie zapisu poprzez stworzenie listy bezpośrednio w wyrażeniu for, i jednoczesnym wykorzystaniu zmiennej pomocniczej:
 
@@ -97,7 +103,7 @@ parzyste = [number for number in numbers if number % 2 == 0]
 ```
 
 ## Kopiowanie listy
-Aby skopiować listę nie wystarczy użyć przypisania `nowa_lista = stara_lista`, ponieważ w ten sposób nadal istnieje jedna lista, ale o dwóch nazwach. Aby skopiować listę należy utworzyć wycinek od początku do końca listy `nowa_lista = stara_lista[:]`, lub skorzystać z metody `copy()`
+Aby skopiować listę nie wystarczy użyć przypisania `nowa_lista = stara_lista`, ponieważ w ten sposób nadal istnieje jedna lista, ale o dwóch nazwach. Aby skopiować listę należy skorzystać z metody `copy()`
 
 ## Krotki (*tuple*)
 Krotka jest konstrukcją podobną do listy, ale jej elementy nie mogą być modyfikowane. Tworzy się ją za pomocą okrągłych nawiasów lub funkcji `tuple`. Główną funkcją krotki jest przechowywanie stałych i niezmiennych wartości.
@@ -118,8 +124,8 @@ krotka[2] = 8 # niedozwolone
 2. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
 3. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze. [dostępne kolory](https://htmlcolorcodes.com/color-names/)
 
-### Listy składane:
-Aby poćwiczyć tworzenie list składanych rozwiąż z pomocą tej metody następujące zadania:
+### Trening generowania list
+Aby poćwiczyć tworzenie list, rozwiąż następujące zadania. W miarę możliwości skorzystaj z list składanych.
 1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
 2. wypisz pewną liczbę kolejnych potęg dwójki
 3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
@@ -145,6 +151,7 @@ for i in data:
     if i%2 == 0:
         del i
 ```
+
 ```python
 data = [1, 2, 3, 4, 5, 6]
 
