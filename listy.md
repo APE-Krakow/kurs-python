@@ -43,7 +43,7 @@ len(data) # error!
 ```
 
 ### Statystyki listy
-Długość listy, czyli ilość elementów która się na niej znajduje, możemy odczytać funkcją `len()`, a sumę wszystkich elementów policzy funkcja `sum()`
+Długość listy, czyli ilość elementów która się na niej znajduje, możemy odczytać funkcją `len()`, a sumę wszystkich elementów policzy funkcja `sum()`. Dostępne są także funkcje `min()` i `max()` (najmniejszy i największy element).
 
 ```python
 dane = [1,2,3,4,5]
@@ -120,17 +120,19 @@ krotka[2] = 8 # niedozwolone
 2. Wygeneruj kilka ciągów liczbowych za pomocą funkcji `range`.
 
 ## Zadania:
-1. Wypisz wszystkie liczby z zakresu od 1 do 1000000, a następnie policz ich średnią wartość. [online](https://parsons.problemsolving.io/puzzle/3cee48da763d4a3ea5e10934812f3eb0)
-2. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
-3. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze. [dostępne kolory](https://htmlcolorcodes.com/color-names/)
+1. Stwórz progam który będzie zawierał listę imion wszystkich uczestników warsztatów, a następnie usuń swoje imię i dodaj je na końcu.
+2. Stwórz listę z dowolnymi liczbami i znajdź największą z nich bez używania funkcji `max()`.
+3. Wypisz wszystkie liczby z zakresu od 1 do 1000000, a następnie policz ich średnią wartość. [online](https://parsons.problemsolving.io/puzzle/3cee48da763d4a3ea5e10934812f3eb0)
+4. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
+5. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze. [dostępne kolory](https://htmlcolorcodes.com/color-names/)
 
 ### Trening generowania list
 Aby poćwiczyć tworzenie list, rozwiąż następujące zadania. W miarę możliwości skorzystaj z list składanych.
 1. znajdź wszystkie liczby od 1 do 1000 podzielne przez 7
 2. wypisz pewną liczbę kolejnych potęg dwójki
-3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego
+3. z listy zawierającej różne typy danych odfiltruj tylko dane typu całkowitego (funkcja `type()`)
 4. policz liczbę spacji w zdaniu
-5. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery
+5. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery (przydatna metoda `split()`)
     
 ### Rośliny
 1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
