@@ -25,10 +25,6 @@ Aby dodać element na końcu listy używamy metody `append()`:
 
 `dane.append("wzrost")`
 
-Aby dodać element w dowolnym miejscu listy, używamy metody `insert()`, dodając miejsce na liście na które chcemy dodać dane:
-
-`dane.insert(2, "numer telefonu")`
-
 ### Usuwanie elementów
 Aby usunąć element z listy znając jego miejsce, używamy polecenia `del`:
 
@@ -52,6 +48,9 @@ sum(dane) # 15
 ```
 
 ### Inne operacje
+Inne operacje jakie możemy wykonywać na liście to: `insert()`, `pop()`, `remove()`, `clear()`, `sort()`, `copy()`, `extend()`. Ich opis można znaleźć w dokumentacji.
+
+### Funkcje a metody
 Aby posortować listę możemy użyć **metody** `sort()`. Po użyciu tej metody elementy w liście zostaną przeniesione na nowe miejsca. Jeżeli chcemy posortować listę tylko tymczasowo, możemy użyć **funkcji** `sorted()`, która tworzy kopię listy i ją sortuje. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna.
 Aby odwrócić kolejność elementów na liście używa się tej samej techniki. **Metoda** `reverse()` odwraca utworzoną listę, a **funkcja** `reversed()` odwraca ją tymczasowo.
 
@@ -117,10 +116,10 @@ krotka[2] = 8 # niedozwolone
 
 ## Ćwiczenia:
 1. Stwórz kilka list z dowolnymi danymi i spróbuj wypisać pierwszy, drugi, ostatni i przedostatni element.
-2. Wygeneruj kilka ciągów liczbowych za pomocą funkcji `range`.
+2. Wygeneruj kilka ciągów liczbowych za pomocą funkcji `range()`.
 
 ## Zadania:
-1. Stwórz progam który będzie zawierał listę imion wszystkich uczestników warsztatów, a następnie usuń swoje imię i dodaj je na końcu.
+1. Stwórz program który będzie zawierał listę imion wszystkich uczestników warsztatów, a następnie usuń swoje imię i dodaj je na końcu.
 2. Stwórz listę z dowolnymi liczbami i znajdź największą z nich bez używania funkcji `max()`.
 3. Wypisz wszystkie liczby z zakresu od 1 do 1000000, a następnie policz ich średnią wartość. [online](https://parsons.problemsolving.io/puzzle/3cee48da763d4a3ea5e10934812f3eb0)
 4. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
@@ -135,7 +134,7 @@ Aby poćwiczyć tworzenie list, rozwiąż następujące zadania. W miarę możli
 5. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery (przydatna metoda `split()`)
     
 ### Rośliny
-1. Stwórz listę która będzie przechowywać nazwy trzech roślin. Następnie dodaj do niej dwie nowe rośliny, jedną na końcu a drugą na początku listy.
+1. Stwórz pustą listę która będzie przechowywać nazwy roślin. Następnie pozwól użytkownikowi aby wpisał kilka swoich roślin. Nowe rośliny dopisuj na początek listy, zamiast na koniec.
 2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
 3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
 4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
