@@ -13,25 +13,23 @@ Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-v
 
 ```python
 slownik = {"numer": 5, "litera": "a"}
-slownik2 = dict(numer=5, nazwa="test")
 slownik["slowo"] = "test"
 
 # slownik {"numer": 5, "litera "a", "slowo": "test"}
-# slownik2 {"numer": 5, "nazwa": "test"}
 ```
 
 ## Iteracja przez słownik
 Aby dokonać iteracji przez słownik, musimy zdefiniować czy chcemy iterować po kluczach (`keys()`), po wartościach (`values()`) czy po parach (`items()`).
 
 ```python
-for k, v in slownik.items():
-    print(f"klucz: {k} wartość: {v}")
+for key, value in slownik.items():
+    print(f"klucz: {key} wartość: {value}")
 
 for k in slownik.keys():
-    print(f"klucz: {k}")
+    print(f"klucz: {key}")
 
 for v in slownik.values():
-    print(f"wartość: {v}")
+    print(f"wartość: {value}")
 ```
 
 ## Słowniki składane
@@ -39,7 +37,7 @@ Podobnie jak listy, słowniki można tworzyć w momencie ich deklaracji. Aby to 
 
 ```python
 # słownik łączący liczby i ich kwadraty
-{x: x ** 2 for x in range(10)}
+{x: x**2 for x in range(10)}
 ```
 
 ## Zbiory (*set*)
@@ -47,9 +45,8 @@ Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Ele
 
 ```python
 zbior = {"serce", "mózg", "wątroba", "serce"}
-zbior2 = set("nerki", "śledziona", "serce")
+
 # zbior {"serce", "mózg", "wątroba"}
-# zbior2 {"nerki", "śledziona", "serce"}
 ```
 
 Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()`.

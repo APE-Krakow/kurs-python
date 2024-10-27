@@ -121,7 +121,7 @@ krotka[2] = 8 # niedozwolone
 ## Zadania:
 1. Stwórz program który będzie zawierał listę imion wszystkich uczestników warsztatów, a następnie usuń swoje imię i dodaj je na końcu.
 2. Stwórz listę z dowolnymi liczbami i znajdź największą z nich bez używania funkcji `max()`.
-3. Wypisz wszystkie liczby z zakresu od 1 do 1000000, a następnie policz ich średnią wartość. [online](https://parsons.problemsolving.io/puzzle/3cee48da763d4a3ea5e10934812f3eb0)
+3. Policz średnią wartość wszystkich liczb z zakresu od 1 do 1000000. [online](https://parsons.problemsolving.io/puzzle/5d6f43383c1943a6bd2639e2f4267254)
 4. Stwórz program który zapyta użytkownika o dwie liczby, a następnie policzy sumę wszystkich liczb parzystych pomiędzy nimi. [online](https://parsons.problemsolving.io/puzzle/e8d62b4044a1477f8921d75b4537a037)
 5. Za pomocą moduły `turtle` stwórz wielokolorową figurę która każdy bok będzie miała w innym kolorze. [dostępne kolory](https://htmlcolorcodes.com/color-names/)
 
