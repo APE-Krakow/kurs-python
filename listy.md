@@ -48,7 +48,7 @@ sum(dane) # 15
 ```
 
 ### Inne operacje
-Inne operacje jakie możemy wykonywać na liście to: `insert()`, `pop()`, `remove()`, `clear()`, `sort()`, `copy()`, `extend()`. Ich opis można znaleźć w dokumentacji.
+Inne metody jakie możemy wykonywać na liście to: `insert()`, `pop()`, `remove()`, `clear()`, `sort()`, `copy()`, `extend()`. Ich opis można znaleźć w dokumentacji. Istnieją też bardziej zaawansowane funkcje, tj. `enumerate()`, `zip()`, `filter()` i `map()`, ich opis można znaleźć w dodatku.
 
 ### Funkcje a metody
 Aby posortować listę możemy użyć **metody** `sort()`. Po użyciu tej metody elementy w liście zostaną przeniesione na nowe miejsca. Jeżeli chcemy posortować listę tylko tymczasowo, możemy użyć **funkcji** `sorted()`, która tworzy kopię listy i ją sortuje. Użycie zmiennej `reverse=True` sprawia że sortowanie będzie w odwrotnej kolejności niż domyślna.
@@ -77,14 +77,6 @@ for liczba in range(1,11):
 ```
 Nie deklarujemy wartości zmiennej `liczba`, jest to zmienna pomocnicza. Przyjmuje ona po kolei wartość wszystkich zmiennych z listy `lista_liczb`, i wykonuje polecenia zawarte w pętli for.
 
-## Dostęp do numeru iteracji
-Czasem musimy wiedzieć, na którym aktualnie elemencie listy się znajdujemy. W takim wypadku pomoże nam funkcja `enumerate()`, która dodaje do kolejnych elementów listy numery z oznaczeniem ich miejsca
-
-```python
-for n, i in enumerate([4, 7, 2, 8, 9, 0]):
-    print(f"element {n} listy to {i}")
-```
-
 ## Lista składana
 Listy składane to sposób na uproszczenie zapisu poprzez stworzenie listy bezpośrednio w wyrażeniu for, i jednoczesnym wykorzystaniu zmiennej pomocniczej:
 
@@ -99,6 +91,14 @@ W wyrażeniu listy składanej można również umieścić wyrażenia warunkowe:
 ```python
 numbers = [1, 2, 5, 8, 10, 13]
 parzyste = [number for number in numbers if number % 2 == 0]
+```
+
+## Sprawdzenie listy
+Aby sprawdzić czy dany element znajduje się na liście lub nie, użyjemy słowa kluczowego `in` w inny sposób. Może ono tworzyć wyrażenie logiczne w połączeniu z listą.
+
+```python
+5 in range(1, 10) # True
+"cztery" in ["raz", "dwa", "trzy"] # False
 ```
 
 ## Kopiowanie listy
@@ -134,12 +134,36 @@ Aby poćwiczyć tworzenie list, rozwiąż następujące zadania. W miarę możli
 5. znajdź wszystkie wyrazy w danym zdaniu które mają mniej niż 4 litery (przydatna metoda `split()`)
     
 ### Rośliny
-1. Stwórz pustą listę która będzie przechowywać nazwy roślin. Następnie pozwól użytkownikowi aby wpisał kilka swoich roślin. Nowe rośliny dopisuj na początek listy, zamiast na koniec.
-2. Stwórz program który dla każdej rośliny znajdującej się na liście wypisze komunikat informujący że znajduje się ona w kolekcji.
-3. Stwórz kopię listy roślin, posortuj ją i policz rośliny których nazwa zaczyna się od litery "a".
-4. Stwórz program który będzie wypisywał wszystkie rośliny których nazwa zaczyna się od samogłoski.
-5. Usuń z listy co drugi element, zaczynając od pierwszego.
-6. Policz która litera występuje najczęściej wśród wszystkich liter w nazwach na liście. 
+```python
+[
+    "Aloe Vera", "Snake Plant", "Spider Plant", "Peace Lily", "ZZ Plant", 
+    "Monstera Deliciosa", "Pothos", "Philodendron", "Rubber Plant", "Bird's Nest Fern", 
+    "Boston Fern", "Chinese Money Plant", "Jade Plant", "Fiddle Leaf Fig", "Areca Palm", 
+    "Dracaena", "Calathea", "Peperomia", "Dieffenbachia", "English Ivy", 
+    "Cast Iron Plant", "Swiss Cheese Plant", "Croton", "String of Pearls", "Elephant Ear", 
+    "Dumb Cane", "Oxalis", "Heartleaf Philodendron", "Golden Pothos", "Anthurium", 
+    "Prayer Plant", "Air Plant", "Hoya", "Kentia Palm", "Christmas Cactus", 
+    "Dwarf Banana Plant", "Rex Begonia", "Asparagus Fern", "Bromeliad", "Zebra Plant", 
+    "Umbrella Plant", "Arrowhead Plant", "African Violet", "Maranta", "Parlor Palm", 
+    "Rubber Tree", "Lady Palm", "Alocasia", "Chinese Evergreen", "Kalanchoe", 
+    "Silver Queen", "Lucky Bamboo", "Peace Lily", "Variegated Rubber Plant", "Bird of Paradise", 
+    "Moth Orchid", "Corn Plant", "Guzmania", "Lipstick Plant", "Golden Barrel Cactus", 
+    "Crown of Thorns", "Baby Rubber Plant", "Silver Satin Pothos", "Rattlesnake Plant", 
+    "Echeveria", "Pilea", "Spiderwort", "Ming Aralia", "Succulent Mix", 
+    "Fatsia Japonica", "Indian Fern", "Yucca", "Flamingo Lily", "Fishbone Cactus", 
+    "Desert Rose", "Split Leaf Philodendron", "Golden Cane Palm", "Blue Star Fern", 
+    "Coral Cactus", "White Bird of Paradise", "Senecio", "Money Tree", "Snake Plant Laurentii", 
+    "Chinese Fan Palm", "Velvet Leaf Philodendron", "Chain of Hearts", "Silver Nerve Plant", 
+    "Staghorn Fern", "Purple Passion Plant", "String of Bananas", "Kangaroo Paw Fern", 
+    "Wax Plant", "Grape Ivy", "Watermelon Peperomia", "Olive Plant", 
+    "Crassula Ovata", "Tiger Aloe", "Arrowhead Vine", "Moses in the Cradle", 
+    "Pink Anthurium", "Green Shamrock Plant", "Dwarf Umbrella Tree", "Sago Palm"
+]
+```
+1. Skopiuj powyższą listę roślin, i zamień wszystkie nazwy na pisane małymi literami.
+2. Policz rośliny których nazwa zaczyna się na 'a'.
+3. Wypisz wszystkie rośliny których nazwa zaczyna się od samogłoski i wypisz je posortowane.
+4. Pobierz od użytkownika nazwę rośliny i sprawdź czy znajduje się na liście.
 
 ## Test:
 Czy poniższe programy prawidłowo usuną liczby parzyste z listy? Jeżeli nie, to co się stanie z listą?
