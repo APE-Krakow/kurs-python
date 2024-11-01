@@ -143,3 +143,8 @@ wycinek = lista [2:]
 ```
 
 W ten sposób powstał wycinek od trzeciego elementu do końca.
+
+## Specjalne funkcje dla list
+Istnieje kilka zaawansowanych metod które można używać w połączeniu z listami aby uprościć działanie programu
+
+`enumerate()`, `zip()`, `filter()` i `map()`

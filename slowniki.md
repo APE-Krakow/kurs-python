@@ -73,20 +73,6 @@ Zbiór | {} | `set()` | × | × | ×
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
 3. Dodaj opcję aby to użytkownik wpisywał nazwy składników jakie chce umieścić na pizzy, i na tej podstawie będą one usuwane z magazynu. Jeżeli danego składnika już nie ma, wyświetl odpowiedni komunikat.
 
-### Lotniska
-Stwórz program analizujący lotniska światowe. W tym celu:
-1. Wczytaj dane na temat lotnisk dostarczone z tym zadaniem.
-2. Przetwórz je na słownik grupujący nazwy lotnisk z liczbą pasów startowych które posiadają (liczba pasów powinna być kluczem).
-
-```python
-[("Warszawa", 2),
-("Wiedeń", 2),
-("Frankfurt", 4),
-("Londyn", 2),
-("Madryt", 4),
-("Radom", 1)]
-```
-
 ### Ćwiczenia ze słowników składanych:
 Za pomocą słowników składanych rozwiąż następujące zadania:
 1. Stwórz słownik łączący słowo z liczbą jego wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
@@ -99,6 +85,32 @@ Za pomocą słowników składanych rozwiąż następujące zadania:
 ("mleko", 4.50),
 ("kwiaty", 12),
 ("pomidor", 5.20)]
+```
+
+### Lotniska
+Stwórz program analizujący lotniska światowe. W tym celu:
+1. Wczytaj dane na temat lotnisk dostarczone z tym zadaniem (zawiera on nazwę lotniska, jego kod, państwo i długość pasa startowego).
+2. Przetwórz je na słownik grupujący nazwy lotnisk z długością jego pasa startowego.
+3. Znajdź średnią długość pasa startowego, i nazwę lotniska którego pas ma długość najbliżej średniej.
+
+```python
+[
+    ("Hartsfield-Jackson Atlanta International Airport", "KATL", "United States", "Atlanta", 3962),
+    ("Beijing Capital International Airport", "ZBAA", "China", "Beijing", 3800),
+    ("Dubai International Airport", "OMDB", "United Arab Emirates", "Dubai", 4000),
+    ("Tokyo Haneda Airport", "RJTT", "Japan", "Tokyo", 3000),
+    ("Los Angeles International Airport", "KLAX", "United States", "Los Angeles", 3682),
+    ("Heathrow Airport", "EGLL", "United Kingdom", "London", 3660),
+    ("Charles de Gaulle Airport", "LFPG", "France", "Paris", 4200),
+    ("Sydney Kingsford Smith Airport", "YSSY", "Australia", "Sydney", 3962),
+    ("São Paulo-Guarulhos International Airport", "SBGR", "Brazil", "São Paulo", 3700),
+    ("Frankfurt Airport", "EDDF", "Germany", "Frankfurt", 4000),
+    ("Indira Gandhi International Airport", "VIDP", "India", "Delhi", 4430),
+    ("O'Hare International Airport", "KORD", "United States", "Chicago", 3962),
+    ("Madrid-Barajas Adolfo Suárez Airport", "LEMD", "Spain", "Madrid", 3500),
+    ("Singapore Changi Airport", "WSSS", "Singapore", "Singapore", 4000),
+    ("Incheon International Airport", "RKSI", "South Korea", "Seoul", 3750)
+]
 ```
 
 ### System polecania filmów
