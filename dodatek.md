@@ -145,6 +145,21 @@ wycinek = lista [2:]
 W ten sposób powstał wycinek od trzeciego elementu do końca.
 
 ## Specjalne funkcje dla list
-Istnieje kilka zaawansowanych metod które można używać w połączeniu z listami aby uprościć działanie programu
+Istnieje kilka zaawansowanych funkcji które można używać w połączeniu z listami aby uprościć działanie programu
 
-`enumerate()`, `zip()`, `filter()` i `map()`
+### Dostęp do numeru iteracji
+Czasem musimy wiedzieć, na którym aktualnie elemencie listy się znajdujemy. W takim wypadku pomoże nam funkcja `enumerate()`, która dodaje do kolejnych elementów listy numery z oznaczeniem ich miejsca
+
+```python
+for n, i in enumerate([4, 7, 2, 8, 9, 0]):
+    print(f"element {n} listy to {i}")
+```
+
+### Iteracja dwóch list jednocześnie
+`zip()`
+
+### Usunięcie określonych elementów listy
+`filter()`
+
+### Nałożenie danej funkcji na całą listę
+`map()`
