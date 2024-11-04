@@ -9,7 +9,7 @@ theme: jekyll-theme-tactile
 <https://docs.python.org/3/library/stdtypes.html#mapping-types-dict>
 
 ## Tworzenie słownika (*dictionary*)
-Słownik jest tworzony przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych lub funkcji `dict()`. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza w nawiasie kwadratowym. Aby utworzyć nowy wpis w słowniku wystarczy użyć nawiasów kwadratowych i dodać zawartość nowego elementu.
+Słownik tworzony jest przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza w nawiasie kwadratowym. Aby utworzyć nowy wpis w słowniku wystarczy użyć nawiasów kwadratowych i dodać zawartość nowego elementu.
 
 ```python
 slownik = {"numer": 5, "litera": "a"}
@@ -32,6 +32,10 @@ for v in slownik.values():
     print(f"wartość: {value}")
 ```
 
+## Metody słowników
+Słowniki, podobnie jak listy, zawierają dużo wbudowanych metod pozawalających usprawnić prace. Są to: `clear()`, `copy()`, `get()`, `items()`, `keys()`, `pop()`, `popitem()`, `setdefault()`, `update()`, `values()`.
+Ich działanie również można znaleźc w dokumentacji.
+
 ## Słowniki składane
 Podobnie jak listy, słowniki można tworzyć w momencie ich deklaracji. Aby to zrobić należy użyć tego samego sposobu co przy listach składanych, ale z nawiasami klamrowymi. Należy rozdzielić klucz i wartość słownika dwukropkiem.
 
@@ -41,7 +45,7 @@ Podobnie jak listy, słowniki można tworzyć w momencie ich deklaracji. Aby to 
 ```
 
 ## Zbiory (*set*)
-Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Elementy nie mogą się powtarzać i ich kolejność nie ma znaczenia. Elementów zbioru nie można edytować, ale można je usunąć lub dodać nowe. Zbiory również tworzy się korzystając z nawiasów klamrowych, można też użyć funkcji `set()`.
+Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Elementy nie mogą się powtarzać i ich kolejność nie ma znaczenia. Elementów zbioru nie można edytować, ale można je usunąć lub dodać nowe. Zbiory również tworzy się korzystając z nawiasów klamrowych.
 
 ```python
 zbior = {"serce", "mózg", "wątroba", "serce"}
@@ -49,8 +53,10 @@ zbior = {"serce", "mózg", "wątroba", "serce"}
 # zbior {"serce", "mózg", "wątroba"}
 ```
 
-Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()`.
+Unikalną funkcjonalnością zbiorów jest możliwość odnalezienia części wspólnej lub różnicy za pomocą metod `intersection()` i `difference()` lub `symmetric_difference()`.
 Można również sprawdzić czy dany zbiór jest podzbiorem (`issubset()`), nadzbiorem (`issuperset()`), czy może zbiorem rozłącznym (`isdisjoint()`) innego zbioru.
+
+Dodatkowo zbiory pozwalają na inne operacje: `add()`, `remove()`, `discard()`, `pop()`, `clear()`, `update()`.
 
 ```python
 czesc_wspolna = zbior.intersection(zbior2)
@@ -75,7 +81,7 @@ Zbiór | {} | `set()` | × | × | ×
 
 ### Ćwiczenia ze słowników składanych:
 Za pomocą słowników składanych rozwiąż następujące zadania:
-1. Stwórz słownik łączący słowo z liczbą jego wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
+1. Stwórz słownik łączący litery z liczbą ich wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
 2. Dla listy osób zatrudnionych w firmie, przypisz każdej osobie domyślną wypłatę podaną przez użytkownika.
 3. Przekształć listę produktów i ich cen na słownik zawierający każdy produkt i jego cenę.
 
