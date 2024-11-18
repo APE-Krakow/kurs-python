@@ -119,6 +119,33 @@ Stwórz program analizujący lotniska światowe. W tym celu:
 ]
 ```
 
+### Licznik plików
+Stwórz program który policzy różne rodzaje plików znajdujące się w podanym przez ciebie katalogu. Poniżej zamieszczono kod programu który wygeneruje listę plików. Wklej go na początku programu:
+
+```python
+import os
+
+def get_file_names_from_directory(directory):
+    try:
+        # List all files in the specified directory
+        files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
+        return files
+    except FileNotFoundError:
+        print("Taki katalog nie istnieje")
+        return []
+    except PermissionError:
+        print("Nie masz uprawnień aby otworzyć ten katalog")
+        return []
+```
+
+Następnie użyj następujących instrukcji aby uzyskać listę plików:
+```python
+# Example usage
+directory_path = input("Podaj ścieżkę do katalogu który będzie przeskanowany: ")
+file_names = get_file_names_from_directory(directory_path)
+```
+Następnie stwórz słownik który pogrupuje pliki według ich rozszerzenia, np. mp3, mp4, pdf, txt, py i tak dalej. Na końcu wypisz raport który podsumuje ile plików danego typu znajdowało się w katalogu.
+
 ### System polecania filmów
 Na pewnym portalu użytkownicy mogą oceniać filmy w skali od 1 do 5. Na podstawie tych ocen chcemy tworzyć rekomendacje filmów. Uważamy, że dwóch użytkowników ma podobny gust filmowy, jeśli obaj ocenili ten sam film na 4 lub 5.
 
