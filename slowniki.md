@@ -76,26 +76,14 @@ Zbiór | {} | `set()` | × | × | ×
 ## Ćwiczenia
 1. Stwórz przykładowy słownik z ucznimi i ocenami, dodaj do niego nowego ucznia, usuń jakiegoś ucznia i innemu zmień ocenę.
 2. Przećwicz użycie jednej z zaawansowanych metod opisanych w dokumentacji.
+3. Na koniec programu znajdź ucznia z najwyższą oceną i policz średnią ocen.
 
 ## Zadania:
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
-3. Dodaj opcję aby to użytkownik wpisywał nazwy składników jakie chce umieścić na pizzy, i na tej podstawie będą one usuwane z magazynu. Jeżeli danego składnika już nie ma, wyświetl odpowiedni komunikat.
-
-### Ćwiczenia ze słowników składanych:
-Za pomocą słowników składanych rozwiąż następujące zadania:
-1. Stwórz słownik łączący litery z liczbą ich wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
-2. Dla listy osób zatrudnionych w firmie, przypisz każdej osobie domyślną wypłatę podaną przez użytkownika.
-3. Przekształć listę produktów i ich cen na słownik zawierający każdy produkt i jego cenę.
-
-```python
-[("chleb", 5.50),
-("pasta", 12.50),
-("mleko", 4.50),
-("kwiaty", 12),
-("pomidor", 5.20)]
-```
+3. Stwórz drugi słownik który będzie zawierał te same nazwy składników oraz emoji które je przedstawiają.
+4. Kiedy użytkownik wybierze składniki na swoją pizzę, wyświetl mu ją za pomocą emoji np. (🍕🍍🍄‍🟫)
 
 ### Lotniska
 Stwórz program analizujący lotniska światowe. W tym celu:
@@ -121,6 +109,20 @@ Stwórz program analizujący lotniska światowe. W tym celu:
     ("Singapore Changi Airport", "WSSS", "Singapore", "Singapore", 4000),
     ("Incheon International Airport", "RKSI", "South Korea", "Seoul", 3750)
 ]
+```
+
+### Ćwiczenia ze słowników składanych:
+Za pomocą słowników składanych rozwiąż następujące zadania:
+1. Stwórz słownik łączący litery z liczbą ich wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
+2. Dla listy osób zatrudnionych w firmie, przypisz każdej osobie domyślną wypłatę podaną przez użytkownika.
+3. Przekształć listę produktów i ich cen na słownik zawierający każdy produkt i jego cenę.
+
+```python
+[("chleb", 5.50),
+("pasta", 12.50),
+("mleko", 4.50),
+("kwiaty", 12),
+("pomidor", 5.20)]
 ```
 
 ### Licznik plików
