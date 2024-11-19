@@ -73,6 +73,10 @@ Krotka | () | `tuple()` | × | ✓ | ✓
 Słownik | {} | `dict()` | ✓ | ×| ×
 Zbiór | {} | `set()` | × | × | ×
 
+## Ćwiczenia
+1. Stwórz przykładowy słownik z ucznimi i ocenami, dodaj do niego nowego ucznia, usuń jakiegoś ucznia i innemu zmień ocenę.
+2. Przećwicz użycie jednej z zaawansowanych metod opisanych w dokumentacji.
+
 ## Zadania:
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
