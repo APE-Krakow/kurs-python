@@ -74,16 +74,22 @@ Słownik | {} | `dict()` | ✓ | ×| ×
 Zbiór | {} | `set()` | × | × | ×
 
 ## Ćwiczenia
+### Słownik
 1. Stwórz przykładowy słownik z ucznimi i ocenami, dodaj do niego nowego ucznia, usuń jakiegoś ucznia i innemu zmień ocenę.
 2. Przećwicz użycie jednej z zaawansowanych metod opisanych w dokumentacji.
 3. Na koniec programu znajdź ucznia z najwyższą oceną i policz średnią ocen.
+### Zbiór
+1. Utwórz zbiory przedstawiające ulubione miasta trzech różnych osób.
+2. Znajdź miasta które są lubiane przez wszystkie trzy osoby.
+3. Znajdź miasta które lubi tylko jedna z trzech osób.
+
 
 ## Zadania:
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
 3. Stwórz drugi słownik który będzie zawierał te same nazwy składników oraz emoji które je przedstawiają.
-4. Kiedy użytkownik wybierze składniki na swoją pizzę, wyświetl mu ją za pomocą emoji np. (🍕🍍🍄‍🟫)
+4. Kiedy użytkownik wybierze składniki na swoją pizzę, wyświetl mu ją za pomocą emoji np. (🍕🍍🧀🍅🍕)
 
 ### Lotniska
 Stwórz program analizujący lotniska światowe. W tym celu:
