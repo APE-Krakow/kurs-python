@@ -116,7 +116,8 @@ krotka[2] = 8 # niedozwolone
 
 ## Ćwiczenia:
 1. Stwórz kilka list z dowolnymi danymi i spróbuj wypisać pierwszy, drugi, ostatni i przedostatni element.
-2. Wygeneruj kilka ciągów liczbowych za pomocą funkcji `range()`.
+2. Przetestuj działanie jednej z dodatkowych funkcji działających na listach, opisanych w dokumentacji.
+3. Wygeneruj kilka ciągów liczbowych za pomocą funkcji `range()`.
 
 ## Zadania:
 1. Stwórz program który będzie zawierał listę imion wszystkich uczestników warsztatów, a następnie usuń swoje imię i dodaj je na końcu.

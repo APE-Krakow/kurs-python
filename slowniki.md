@@ -49,6 +49,7 @@ Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Ele
 
 ```python
 zbior = {"serce", "mózg", "wątroba", "serce"}
+zbior2 = {"nerki", "płuca", "serce"}
 
 # zbior {"serce", "mózg", "wątroba"}
 ```
@@ -66,12 +67,12 @@ print(zbior.isdisjoint(zbior2)) # False
 
 ## Powtórzenie
 
-Nazwa | Znak | Polecenie | Edytowalne | Powtarzalne | Uporządkowane
----|---|---|---|---|---
-Lista | [] | `list()` | ✓ | ✓ | ✓
-Krotka | () | `tuple()` | × | ✓ | ✓
-Słownik | {} | `dict()` | ✓ | ×| ×
-Zbiór | {} | `set()` | × | × | ×
+Nazwa   | Znak | Polecenie | Edytowalne | Powtarzalne
+--------|------|-----------|------------|------------
+Lista   |  []  |  `list()` |      ✓     |      ✓
+Krotka  |  ()  | `tuple()` |      ×     |      ✓
+Słownik |  {:} |  `dict()` |      ✓     |      ×
+Zbiór   |  {}  |   `set()` |      ×     |      ×
 
 ## Ćwiczenia
 ### Słownik
@@ -82,7 +83,6 @@ Zbiór | {} | `set()` | × | × | ×
 1. Utwórz zbiory przedstawiające ulubione miasta trzech różnych osób.
 2. Znajdź miasta które są lubiane przez wszystkie trzy osoby.
 3. Znajdź miasta które lubi tylko jedna z trzech osób.
-
 
 ## Zadania:
 ### Pizzeria:

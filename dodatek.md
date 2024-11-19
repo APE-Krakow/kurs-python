@@ -156,10 +156,25 @@ for n, i in enumerate([4, 7, 2, 8, 9, 0]):
 ```
 
 ### Iteracja dwóch list jednocześnie
-`zip()`
+Aby połączyć iterowanie po dwóch listach jednocześnie, możemy użyć funkcji `zip()`. Przyjmuje ona dwie listy, a jej wynikiem jest lista krotek. Każda kolejna krotka zawiera parę elementów z listy pierwszej i drugiej.
+
+```python
+people = ["Anne", "Bart", "Cecilia", "Dennis"]
+cities = ["Rome", "Oslo", "Hamburg", "Warsaw"]
+
+for person, city in zip(people, cities):
+    print(f"{person} lives in {city}")
+```
 
 ### Usunięcie określonych elementów listy
-`filter()`
+Odfiltrowanie za pomocą `filter()` pozwala na stworzenie nowej listy, której elementy spełniają określony warunek. Warunek musi być określony w osobnej funkcji, która zwraca `True` lub `False`.
+
+```python
+def isEven(number: int) -> bool:
+    return num%2 == 0
+
+evens = list(filter(isEven, range(1, 10))
+```
 
 ### Nałożenie danej funkcji na całą listę
 `map()`
