@@ -78,13 +78,27 @@ Zbiór   |  {}  |   `set()` |      ×     |      ×
 ### Słownik
 1. Stwórz przykładowy słownik z ucznimi i ocenami, dodaj do niego nowego ucznia, usuń jakiegoś ucznia i innemu zmień ocenę.
 2. Przećwicz użycie jednej z zaawansowanych metod opisanych w dokumentacji.
-3. Na koniec programu znajdź ucznia z najwyższą oceną i policz średnią ocen.
+
 ### Zbiór
-1. Utwórz zbiory przedstawiające ulubione miasta trzech różnych osób.
-2. Znajdź miasta które są lubiane przez wszystkie trzy osoby.
-3. Znajdź miasta które lubi tylko jedna z trzech osób.
+1. Stwórz dowolny zbiór zawierający liczby.
+2. Dodaj do niego jakąś liczbę i usuń inną.
 
 ## Zadania:
+1. Wpisz do programu poniższy słownik z ocenami. Policz średnią ocen dla całej klasy [online](https://parsons.problemsolving.io/puzzle/41f3e8ba0e284cd7bc19271341c2dc20), i wygeneruj listę uczniów którzy otrzymali stopień wyższy niż 2 [online](https://parsons.problemsolving.io/puzzle/6d6f37d75b93440fa0e28c9e73948ca1).
+
+```python
+grades = {"Ania": 5, "Bartek": 2, "Celina": 1, "Darek": 3, "Eugeniusz": 4, "Franciszka": 5, "Grzegorz": 4}
+```
+
+2.  Wpisz do programu zbiory przedstawiające ulubione miasta trzech różnych osób.
+Znajdź miasta które są lubiane przez wszystkie trzy osoby.
+Znajdź miasta które lubi tylko jedna z trzech osób [online](https://parsons.problemsolving.io/puzzle/b8ab0103fbc84098932dc5d6a858d1d1)
+```python
+a = {"Kraków", "Wrocław", "Gdańsk"}
+b = {"Warszawa", "Kielce", "Radom", "Kraków"}
+c = {"Warszawa", "Kraków", "Gdańsk"}
+```
+
 ### Pizzeria:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
@@ -156,7 +170,7 @@ Następnie użyj następujących instrukcji aby uzyskać listę plików:
 directory_path = input("Podaj ścieżkę do katalogu który będzie przeskanowany: ")
 file_names = get_file_names_from_directory(directory_path)
 ```
-Następnie stwórz słownik który pogrupuje pliki według ich rozszerzenia, np. mp3, mp4, pdf, txt, py i tak dalej. Na końcu wypisz raport który podsumuje ile plików danego typu znajdowało się w katalogu.
+Następnie stwórz słownik który pogrupuje pliki według ich rozszerzenia, np. `mp3`, `mp4`, `pdf`, `txt`, `py` i tak dalej. Na końcu wypisz raport który podsumuje ile plików danego typu znajdowało się w katalogu.
 
 ### System polecania filmów
 Na pewnym portalu użytkownicy mogą oceniać filmy w skali od 1 do 5. Na podstawie tych ocen chcemy tworzyć rekomendacje filmów. Uważamy, że dwóch użytkowników ma podobny gust filmowy, jeśli obaj ocenili ten sam film na 4 lub 5.
