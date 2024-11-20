@@ -93,6 +93,7 @@ grades = {"Ania": 5, "Bartek": 2, "Celina": 1, "Darek": 3, "Eugeniusz": 4, "Fran
 2.  Wpisz do programu zbiory przedstawiające ulubione miasta trzech różnych osób.
 Znajdź miasta które są lubiane przez wszystkie trzy osoby.
 Znajdź miasta które lubi tylko jedna z trzech osób [online](https://parsons.problemsolving.io/puzzle/b8ab0103fbc84098932dc5d6a858d1d1)
+
 ```python
 a = {"Kraków", "Wrocław", "Gdańsk"}
 b = {"Warszawa", "Kielce", "Radom", "Kraków"}

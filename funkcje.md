@@ -6,31 +6,31 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
-Często jeden fragment programu trzeba wykorzystać więcej niż jeden raz. Aby za każdym razem nie musieć pisać tych samych poleceń, możemy stworzyć funkcję i wywoływać ją za każdym razem kiedy chcemy skorzystać z jej działania. Funkcje tworzy się za pomocą słowa kluczowego `def`, a po nazwie funkcji muszą wystąpić okrągłe nawiasy:
+Często jeden fragment programu trzeba wykorzystać więcej niż jeden raz. Aby za każdym razem nie musieć pisać tych samych poleceń, możemy stworzyć funkcję i wywoływać ją za każdym razem kiedy chcemy skorzystać z jej działania. Funkcja jest nazwanym podprogramem który można uruchomić wielokrotnie. Funkcje tworzy się za pomocą słowa kluczowego `def` (definition), a po nazwie funkcji muszą wystąpić okrągłe nawiasy:
 
 ```python
-def powitanie():
-    imie = input("podaj swoje imię")
-    print(f"witaj {imie}")
+def greet():
+    name = input("podaj swoje imię ")
+    print(f"witaj {name}")
 
-powitanie()
-powitanie()
+greet()
+greet()
 ```
 
-Aby stworzyć pustą funkcję (np. do wypełnienia później), zamiast jej ciała należy wpisać słowo kluczowe `pass`
+Aby stworzyć pustą funkcję (np. do wypełnienia później), zamiast jej treści należy wpisać słowo kluczowe `pass`, które nic nie robi.
 
 ## Argumenty funkcji
 Funkcje mogą przyjmować od użytkownika dane (argumenty), które wykorzystają w swoim działaniu. Argumenty te należy umieścić w okrągłym nawiasie:
 
 ```python
-def powitanie(imie, urodziny):
-    if not urodziny:
-        print(f"witaj {imie}")
+def greet(name, birthday):
+    if not birthday:
+        print(f"witaj {name}")
     else:
-        print(f"wszystkiego najlepszego {imie}")
+        print(f"wszystkiego najlepszego {name}")
 
-powitanie("Maciek", True)
-powitanie("Ania", False)
+greet("Maciek", True)
+greet("Ania", False)
 ```
 
 ## Argumenty domyślne
@@ -40,55 +40,55 @@ Niektóre argumenty mogą posiadać wartości domyślne, które zostaną przyję
 Możliwe jest również wywołanie funkcji poprzez nazwanie wszystkich argumentów, nie muszą one wtedy być w odpowiedniej kolejności.
 
 ```python
-def powitanie(imie, urodziny=False):
-    if not urodziny:
-        print(f"witaj {imie}")
+def greet(name, birthday=False):
+    if not birthday:
+        print(f"witaj {name}")
     else:
-        print(f"wszystkiego najlepszego {imie}")
+        print(f"wszystkiego najlepszego {name}")
 
-powitanie(urodziny=True, imie="Maciek")
-powitanie("Ania")
+greet(birthday=True, name="Maciek")
+greet("Ania")
 ```
 
 ## Zwracanie wartości
 Po zakończeniu działania funkcji możliwe jest przekazanie informacji zwrotnej na temat jej działania za pomocą słowa kluczowego `return`.
 
 ```python
-def srednia(lista):
-    return sum(lista) / len(lista)
+def mean(data):
+    return sum(data) / len(data)
 
-oceny = [2, 5, 6, 3, 2, 4]
-print(srednia(oceny))
+grades = [2, 5, 6, 3, 2, 4]
+print(mean(grades))
 ```
 
 ## Zwracanie więcej niż jednej wartości
 Funkcja może zwrócić wyłącznie jeden obiekt po zakończeniu działania. Aby ominąć to ograniczenie, funkcja może zwrócić krotkę zawierającą więcej niż jedną wartość. Aby odczytać te wartości można użyć funkcjonalności zwanej *rozpakowywaniem krotki*:
 
 ```python
-czas = (15, 30)
-(godzina, minuta) = czas
-print(godzina) #15
-print(minuta) #30
+time = (15, 30)
+(hour, minute) = time
+print(hour) #15
+print(minute) #30
 ```
 
 ```python
-def podaj godzine():
+def read_time():
     return (15, 30)
 
-(godzina, minuta) = podaj_godzine()
+(hour, minute) = read_time()
 ```
 
 ## Rekurencja i iteracja
 Aby funkcja mogła wykonać wiele operacji, można zastosować podejście rekurencyjne albo iteracyjne. Iteracja polega na stworzeniu wewnątrz funkcji pętli `for` lub `while`, wykonującej polecenia taką ilość razy jaka jest potrzebna. Podejście rekurencyjne polega na wywoływaniu funkcji przez samą siebie, w celu znalezienia ostatecznego wyniku.
 
 ```python
-def silnia(x):
+def factorial(x):
     if x==0:
         return 1
     elif x==1:
         return 1
     else:
-        return x * silnia(x-1)
+        return x * factorial(x-1)
 ```
 
 ## Importowanie
@@ -99,7 +99,6 @@ Nie wszystkie funkcje są dostępne jako standardowe funkcje Pythona. Brakuje ch
 import math
 math.sqrt(16)
 ```
-
 ### Import poszczególnych funkcji
 Polecenie `from math import sqrt` pozwoli nam używać tej funkcji bez przedrostka `math`. Aby zaimportować więcej funkcji można wymienić je po przecinku, np. `from math import sqrt, factorial, abs`. Przy importowaniu można nadać funkcji nową nazwę (alias) za pomocą słowa kluczowego `as`. Na przykład `from X import Y as Z`. Od tej pory funkcja Y jest dostępna, ale wyłącznie pod nazwą Z.
 
