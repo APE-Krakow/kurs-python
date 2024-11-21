@@ -66,7 +66,7 @@ Funkcja może zwrócić wyłącznie jeden obiekt po zakończeniu działania. Aby
 
 ```python
 time = (15, 30)
-(hour, minute) = time
+hour, minute = time
 print(hour) #15
 print(minute) #30
 ```
@@ -75,20 +75,30 @@ print(minute) #30
 def read_time():
     return (15, 30)
 
-(hour, minute) = read_time()
+hour, minute = read_time()
 ```
 
 ## Rekurencja i iteracja
-Aby funkcja mogła wykonać wiele operacji, można zastosować podejście rekurencyjne albo iteracyjne. Iteracja polega na stworzeniu wewnątrz funkcji pętli `for` lub `while`, wykonującej polecenia taką ilość razy jaka jest potrzebna. Podejście rekurencyjne polega na wywoływaniu funkcji przez samą siebie, w celu znalezienia ostatecznego wyniku.
+Aby funkcja mogła wykonać wiele operacji, można zastosować podejście rekurencyjne albo iteracyjne. Iteracja polega na stworzeniu wewnątrz funkcji pętli `for` lub `while`, wykonującej polecenia taką ilość razy jaka jest potrzebna. Podejście rekurencyjne polega na wywoływaniu funkcji przez samą siebie, w celu znalezienia ostatecznego wyniku. Najważniejsze w funkcji iteracyjnej jest zamieszczenie warunku stopu - warunku który pozwoli przestać wywoływać funkcję w nieskończoność.
+
+Poniżej zamieszczono przykład rekurencyjnego o i iteracyjnego obliczania silni z danej liczby. W wypadku funkcji rekurencyjnej najważniejszy jest warunek `0` i `1`.
+Dla tych wartości silnia jest znana z definicji i one oznaczają zakończenie wywoływania funkcji.
+
+Funkcje rekurencyjne często mogą działać wolniej, jednak są prostsze w projektowaniu w przypadku zaawansowanych algorytmów i struktur danyuch typu np. drzewo, graf itp.
 
 ```python
 def factorial(x):
-    if x==0:
-        return 1
-    elif x==1:
+    if x == 0 or x == 1:
         return 1
     else:
         return x * factorial(x-1)
+```
+```python
+def factorial(x):
+    sum = 1
+    for i in range(1, x+1):
+        sum *= i
+    return sum
 ```
 
 ## Importowanie
@@ -144,3 +154,8 @@ Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i 
 1, 1, 2, 3, 5, 8, 13, 21, ...
 
 6. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie poprosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować liczbę z jakiegoś przedziału, należy użyć funkcji `randrange(start, end+1)` z biblioteki `random`. `start` i `end` to krawędzie przedziału z którego ma być wylosowana liczba.
+
+7. Stwórz program rysujący na zawołanie w `turtle`. Dodaj do niego funkcje rysujące wybrane kształty, np. wielokąt, gwiazdę, owal itp.
+Pozwól aby użytkownik wybierał gdzie kształty będa się znajdować na ekranie.
+Możesz komunikowac się z użytkownikiem za pomocą funkcji `turtle.textinput()` albo `turtle.numinput()` które pozwalają tworzyć wyskakujące okienka pytające o daną liczbę.
+Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
