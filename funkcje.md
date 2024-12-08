@@ -51,7 +51,17 @@ greet("Ania")
 ```
 
 ## Zwracanie wartości
-Po zakończeniu działania funkcji możliwe jest przekazanie informacji zwrotnej na temat jej działania za pomocą słowa kluczowego `return`.
+Podobnie jak funkcje matematyczne zawsze dają wynik, np. `f(x) = 4x + 2` dla argumentu `x = 5` zwraca wartość `22` podobnie funkcje w programowaniu funkcje zawsze zwracają jakąś wartość, która może być dowolnego typu.
+Jeżeli jej nie sprecyzujemy, to będzie ona `None`.
+Możliwe jest sprecyzowanie jaka to ma być wartość za pomocą słowa kluczowego `return`.
+Na przykład funkcja z początku tego akapitu w Pythonie brzmiałaby:
+
+```python
+def fun(x):
+    return 4 * x + 2
+```
+
+Inny przykład funkcji w Pythonie:
 
 ```python
 def mean(data):

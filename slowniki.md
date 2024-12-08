@@ -101,6 +101,7 @@ c = {"Warszawa", "Kraków", "Gdańsk"}
 ```
 
 ### Pizzeria:
+Przygotuj bota do automatycznej obsługi pizzerii:
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
 3. Stwórz drugi słownik który będzie zawierał te same nazwy składników oraz emoji które je przedstawiają.
