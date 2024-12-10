@@ -94,7 +94,7 @@ Aby funkcja mogła wykonać wiele operacji, można zastosować podejście rekure
 Poniżej zamieszczono przykład rekurencyjnego o i iteracyjnego obliczania silni z danej liczby. W wypadku funkcji rekurencyjnej najważniejszy jest warunek `0` i `1`.
 Dla tych wartości silnia jest znana z definicji i one oznaczają zakończenie wywoływania funkcji.
 
-Funkcje rekurencyjne często mogą działać wolniej, jednak są prostsze w projektowaniu w przypadku zaawansowanych algorytmów i struktur danyuch typu np. drzewo, graf itp.
+Funkcje rekurencyjne często mogą działać wolniej, jednak są prostsze w projektowaniu w przypadku zaawansowanych algorytmów i struktur danych typu np. drzewo, graf itp.
 
 ```python
 def factorial(x):
@@ -153,19 +153,24 @@ def how_many_grater_than(data: list, value: int) -> int:
 ## Zadania:
 1. Napisz funkcję która przyjmuje krotkę będącą przedziałem liczbowym oraz inną liczbę, i sprawdza czy liczba ta mieści się w przedziale. [online](https://parsons.problemsolving.io/puzzle/9f8dae21faa4421da15e7d8ce1420ce0)
 
-2. Napisz funkcję która przyjmuje kilka danych na temat użytkownika, i zwraca słownik zawierający te dane. W wypadku jeżeli użytkownik nie poda jakiejś informacji, pole powinno być wypełnione przez "brak danych". [online](https://parsons.problemsolving.io/puzzle/aef21ea7087c4e2b90e61b510a61153f)
+2. Napisz funkcję które będzie przyjmować listę liczb, usuwać z niej wszystkie zduplikowane wartości i zwraca wyczyszczoną listę.
+[online](https://parsons.problemsolving.io/puzzle/2e0f6d990f0c4e919833c1221dd59b6d)
 
-3. Napisz funkcję które będzie przyjmować listę liczb, usuwać z niej wszystkie zduplikowane wartości i zwraca wyczyszczoną listę.
+3. Napisz funkcję która przyjmuje kilka danych na temat użytkownika, i zwraca słownik zawierający te dane. W wypadku jeżeli użytkownik nie poda jakiejś informacji, pole powinno być wypełnione przez "brak danych". [online](https://parsons.problemsolving.io/puzzle/6173528edabc46f38f898d8fe59762fa)
 
-4. Napisz funkcje które będą mogły obsługiwać szyfr Cezara (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Nasz program powinien obsługiwać wiadomości będące liczbami list. Jedna funkcja powinna umożliwiać zaszyfrowanie listy (powinna przyjmować listę oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowaną listę oraz liczbę o jaką trzeba wrócić).
-Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i odszyfrowaniu ciąg liczb jest taki sam.
+4. Napisz funkcje które będą mogły obsługiwać szyfr Cezara (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Jedna funkcja powinna umożliwiać zaszyfrowanie teksu (powinna przyjmować tekst oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowany tekst oraz liczbę o jaką trzeba wrócić).
+Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i odszyfrowaniu tekst jest taki sam.
+
+Do zamieniania znaków na liczby przyda się funkcja `ord()` oraz działająca odwrotnie funkcja `chr()`.
 
 5. Napisz funkcję rekurencyjną i iteracyjną wypisującą kolejne elementy ciągu Fibonacciego. Ciąg ten składa się z liczb, z których każda jest sumą dwóch poprzednich, a dwiema pierwszymi liczbami ciągu są jedynki.
 1, 1, 2, 3, 5, 8, 13, 21, ...
 
 6. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie poprosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować liczbę z jakiegoś przedziału, należy użyć funkcji `randrange(start, end+1)` z biblioteki `random`. `start` i `end` to krawędzie przedziału z którego ma być wylosowana liczba.
 
-7. Stwórz program rysujący na zawołanie w `turtle`. Dodaj do niego funkcje rysujące wybrane kształty, np. wielokąt, gwiazdę, owal itp.
-Pozwól aby użytkownik wybierał gdzie kształty będa się znajdować na ekranie.
-Możesz komunikowac się z użytkownikiem za pomocą funkcji `turtle.textinput()` albo `turtle.numinput()` które pozwalają tworzyć wyskakujące okienka pytające o daną liczbę.
+7. Stwórz program odwrotny do gry w zgadywanie. Niech tym razem to program zgaduje jaką liczbę wymyślił sobie użytkownik. Postaraj się aby program mógł odczytywać wiele możliwych odpowiedzi użytkownika, np. "Większa", "Więcej", "za dużo" itp. za pomoca osobnej funkcji.
+
+8. Stwórz program rysujący na zawołanie w `turtle`. Dodaj do niego funkcje rysujące wybrane kształty, np. wielokąt, gwiazdę, owal itp.
+Pozwól aby użytkownik wybierał gdzie kształty będą się znajdować na ekranie.
+Możesz komunikować się z użytkownikiem za pomocą funkcji `turtle.textinput()` albo `turtle.numinput()` które pozwalają tworzyć wyskakujące okienka pytające o daną liczbę.
 Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
