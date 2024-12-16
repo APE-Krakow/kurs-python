@@ -160,7 +160,6 @@ def how_many_grater_than(data: list, value: int) -> int:
 
 4. Napisz funkcje które będą mogły obsługiwać szyfr Cezara (szyfr polegający na tym że kolejne liczby w wiadomości są przesunięte do przodu lub do tyłu o daną liczbę). Jedna funkcja powinna umożliwiać zaszyfrowanie teksu (powinna przyjmować tekst oraz liczbę o jaką trzeba przesunąć zawartość), a druga funkcja powinna odszyfrowywać (powinna przyjmować zaszyfrowany tekst oraz liczbę o jaką trzeba wrócić).
 Aby sprawdzić czy funkcje działają, trzeba sprawdzić czy po zaszyfrowaniu i odszyfrowaniu tekst jest taki sam.
-
 Do zamieniania znaków na liczby przyda się funkcja `ord()` oraz działająca odwrotnie funkcja `chr()`.
 
 5. Napisz funkcję rekurencyjną i iteracyjną wypisującą kolejne elementy ciągu Fibonacciego. Ciąg ten składa się z liczb, z których każda jest sumą dwóch poprzednich, a dwiema pierwszymi liczbami ciągu są jedynki.
@@ -174,3 +173,12 @@ Do zamieniania znaków na liczby przyda się funkcja `ord()` oraz działająca o
 Pozwól aby użytkownik wybierał gdzie kształty będą się znajdować na ekranie.
 Możesz komunikować się z użytkownikiem za pomocą funkcji `turtle.textinput()` albo `turtle.numinput()` które pozwalają tworzyć wyskakujące okienka pytające o daną liczbę.
 Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
+
+## Projekt
+Dzięki funkcjom możemy rozdzeilić często używane elementy programu i wykorzystywac je jako funkcje.
+
+1. Rozdziel do osobnych funkcji części związane z wyświetlaniem mapy, powitania, zakończenia, walki itp. Dzięki temu pozostanie nam jedynie główna pętla, w której będą znajdować się wywołania funkcji.
+
+2. Dodaj system menu, który w każdej lokacji pozwala wybrać różne aktywności.
+
+3. Przenieś kod funkcji związanych z graczem do osobnego pliku, np. `player.py` a z lokacjami do `locations.py`, i importuj tylko te które sa potrzebne.

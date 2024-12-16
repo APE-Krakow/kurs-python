@@ -90,3 +90,12 @@ del koniec
 2. Zmień działanie poprzedniej klasy, tak żeby podanie wartości produktów danego typu odbywało się z poziomu obiektu (poprzez metodę wbudowaną)
 
 3. Stwórz klasę reprezentującą sklep, która będzie zawierała zbiór przedmiotów dostępnych do zakupu. Poprzez metody powinna być możliwość sprawdzenia stanu magazynu (najlepiej w formie tabeli), oraz zakupu jakiegoś przedmiotu. Uwaga - funkcja powinna być odporna na kogoś kto chciałby kupić więcej przedmiotów niż jest w magazynie, kupić ujemną ilość przedmiotów itp.
+
+## Projekt
+Dodaj interfejsy obiektowe do często używanych komponentów aby uprościć korzystanie z nich.
+
+1. Zmień wszystkie funkcje związane z graczem na klasę `Player` z atrybutami takimi jak imię, klasa, hp, zebrane przedmioty itp.
+
+2. Zmień funkcje związane z lokacjami na klasę `Location`. Lokacje moga zawierać w sobie listy przedmiotów, wrogów, itp.
+
+3. Dodaj nową klase `Enemy`, która będzie posiadała swoją własną nazwę, hp, nagrodę za pokonanie itp. Rozmieść kilku wrogów w różnych lokacjach i dodaj funkcję która będzie odpowiadała za przeprowadzenie walki.

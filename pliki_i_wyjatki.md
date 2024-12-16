@@ -154,3 +154,10 @@ Na końcu bloku `with` nie ma potrzeby zamykać pliku gdyż dzieje się to autom
 1. Stwórz własne klasy które będą reprezentować zajezdnię tramwajową oraz tramwaje. Przeciąż metody `__add__` i `__sub__` aby móc dodawać i zabierać tramwaje z zajezdni. Opis przeciążania dodawania i odejmowania znajduje się [tutaj](dodatek.md).
 2. Dodaj obsługę wyjątków która zapewni że nie będzie można wykonać niemożliwych operacji matematycznych.
 
+## Projekt
+Do gry możemy dodac system umożliwiający zapamiętanie np. najwyższej ilości punktów zdobytych przez gracza.
+
+1. Dodaj system który będzie przyznawał punkty na zakończenie gry, np. za zcas przejścia, ilośc przedmiotów, zachowane hp.
+2. Stwórz plik w którym będzie przechowywana rekordowa liczba punktów zdobyta w grze. Po zakończeniu gry sprawdź czy nowa ilośc punktów nie przewyższyła starej i zapisz ją.
+3. Stwórz system radzenia sobie z wyjątkami, np. w wypadku braku pliku.
+

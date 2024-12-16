@@ -183,3 +183,15 @@ while x < len(data):
         del data[x]
     x += 1
 ```
+
+## Projekt
+Za pomoca list możemy stworzyć system podróżowania i zdobywania przedmiotów.
+
+1. Stwórz listę miejsc które gracz może odwiedzić. Następnie dodaj możliwość by gracz wpisywał do której lokalizacji z mapy chce sie przenieść.
+
+2. Przy wejściu do niektórych lokalizacji dodaj możliwość zdobycia przedmiotu, np. jeżeli gracz wejdzie do lasu, to otrzymuje napój leczący, jeżeli wejdzie do jaskini otrzymuje klucz itp.
+Przedmioty gracza powinny być przechowywane również na liście.
+
+3. Wejście do zamku powinno być mozliwe tylko jeżeli gracz posiada klucz, i wtedy rozgrywa się walka z bossem.
+
+4. Do każdej z lokalizacji możesz dodac też inne wydarzenia, minibossy, postaci dodatkowe itp.

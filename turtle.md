@@ -90,3 +90,10 @@ turtle.done()
 5. Narysuj gwiazdę wypełniona na niebiesko [online](https://parsons.problemsolving.io/puzzle/efa14f6e0c7f4bbca450b1ec2cb631b9)
 6. Wspólnie stwórzmy rysunek za pomocą turtle [codeshare](https://codeshare.io)
 7. Stwórz program który narysuje dany kształt kilkukrotnie, tworząc np. wzór z gwiazdek
+
+## Projekt
+Za pomoca modułu Turtle możemy narysować mapę na której gracz zobaczy swoje położenie.
+
+1. Narysuj za pomocą niewidzialnego żółwia mapę złożoną z kwadratowej siatki.
+2. Za pomoca poleceń `turtle.write()` umieść na mapie napisy, np. "Las", "Jaskinia", "Zamek" itp.
+3. Ustaw "żółwia" na pozycji z której będzie zaczynał gracz.

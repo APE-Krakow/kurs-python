@@ -71,3 +71,11 @@ with open("zajezdnie.json") as zajezdnie_plik:
 3. W wypadku błędnej operacji dodaj mechanizm wyjątków który zapobiegnie wykonaniu niemożliwej operacji bankowej.
 4. Dodaj system autoryzacji, który przed wykonaniem każdego przelewu będzie wymagał od użytkownika podania hasła. Hasło powinno być ustawiane w momencie utworzenia konta użytkownika. Procedurę wpisywania hasła zabezpiecz poprzez wyjątek.
 
+## Projekt
+Za pomocą plików JSON możemy tworzyć scenariusze do gry, oraz tworzyć zapisy stanów gry.
+
+1. Stwórz strukturę pliku JSON która mogłaby posłużyć do wygenerowania całej gry: lokacji, przedmiotów, wrogów itp.
+2. Dodaj do struktury JSON przechowywanie bieżącego stanu gracza, oraz jego postępów w grze, lokalizacji itp.
+3. Dodaj możliwość aby stan gry był możliwy do wczytania na początku.
+4. Stwórz kilka scenraiuszy, np. łatwy i trudny do wyboru.
+

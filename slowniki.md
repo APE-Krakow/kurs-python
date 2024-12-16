@@ -194,3 +194,9 @@ Proponowany zbiór danych:
 "Kasia": {"Avatar": 3, "Matrix": 4, "Shrek": 5, "Titanic": 5, "Lśnienie": 5, "Prestiż": 5, "Incepcja": 3, "Batman": 4, "Interstellar": 4, "Kiler": 4, "Challengers": 2, "Diuna": 3}}
 ```
 
+## Projekt
+Za pomoca słowników dodamy zaawansowany system lokalizacji i statystyk gracza.
+
+1. Zmień sposób działania lokalizacji na słowniki: kluczem w słowniku będzie nazwa lokalizacji, a wartością lista z przedmiotami i postaciami które się tam znajdują. Dzięki temu w jednej lokalizacji może znajdować sie więcej przedmiotów.
+
+2. Zmień przechowywanie informacji gracza również na sposób słownikowy, w ten sposób możemy przechowywać również hp, klasę postaci, przedmioty gracza również mogą znajdowac się w tym słowniku.

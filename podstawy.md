@@ -150,3 +150,13 @@ Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.
 
 5. Napisz program, który oceni czy dany rok (podany przez użytkownika) jest rokiem przestępnym czy nie. Rok jest przestępny, jeżeli jest podzielny przez 4 i nie jest podzielny przez 100, lub jeżeli jest podzielny przez 400.
 
+## Projekt
+Po każdym module kursu korzystając ze świeżo zdobytej wiedzy, możemy tworzyć części większego projektu, np. gry RPG. Na koniec kursu będziemy posiadać gotową grę.
+
+Pierwszym elementem gry może być system uruchamiania i symulacja walki z bossem zadającym zagadki.
+
+1. Stwórz ekran tytułowy gry np. za pomocą ASCII art. Poczekaj aż użytkownik naciśnie jakiś przycisk, a następnie wyczyść ekran (można to zrobić za pomocą `print(\033c)`)
+2. Poproś użytkownika o podanie nazwy użytkownika itp., a następnie znów wyczyść ekran.
+3. Wyświetl informację o rozpoczęciu wyprawy lub przygody.
+4. Zasymuluj walkę z przeciwnikiem, który zadaje graczowi zagadki.
+5. Jeżeli użytkownik odpowiedział poprawnie, wyświetl komunikat o wygraniu gry.
