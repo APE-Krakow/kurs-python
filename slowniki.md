@@ -8,7 +8,8 @@ theme: jekyll-theme-tactile
 
 <https://docs.python.org/3/library/stdtypes.html#mapping-types-dict>
 
-## Tworzenie słownika (*dictionary*)
+## Tworzenie słownika (_dictionary_)
+
 Słownik tworzony jest przez podanie dowolnej ilości par klucz-wartość (key-value). Słownik tworzy się za pomocą nawiasów klamrowych. Do poszczególnych elementów słownika otrzymujemy dostęp poprzez podanie odpowiedniego klucza w nawiasie kwadratowym. Aby utworzyć nowy wpis w słowniku wystarczy użyć nawiasów kwadratowych i dodać zawartość nowego elementu.
 
 ```python
@@ -19,6 +20,7 @@ slownik["slowo"] = "test"
 ```
 
 ## Iteracja przez słownik
+
 Aby dokonać iteracji przez słownik, musimy zdefiniować czy chcemy iterować po kluczach (`keys()`), po wartościach (`values()`) czy po parach (`items()`).
 
 ```python
@@ -33,10 +35,12 @@ for v in slownik.values():
 ```
 
 ## Metody słowników
+
 Słowniki, podobnie jak listy, zawierają dużo wbudowanych metod pozawalających usprawnić prace. Są to: `clear()`, `copy()`, `get()`, `items()`, `keys()`, `pop()`, `popitem()`, `setdefault()`, `update()`, `values()`.
 Ich działanie również można znaleźc w dokumentacji.
 
 ## Słowniki składane
+
 Podobnie jak listy, słowniki można tworzyć w momencie ich deklaracji. Aby to zrobić należy użyć tego samego sposobu co przy listach składanych, ale z nawiasami klamrowymi. Należy rozdzielić klucz i wartość słownika dwukropkiem.
 
 ```python
@@ -44,7 +48,8 @@ Podobnie jak listy, słowniki można tworzyć w momencie ich deklaracji. Aby to 
 {x: x**2 for x in range(10)}
 ```
 
-## Zbiory (*set*)
+## Zbiory (_set_)
+
 Zbiór jest konstrukcją pozwalającą na przechowywanie zestawu elementów. Elementy nie mogą się powtarzać i ich kolejność nie ma znaczenia. Elementów zbioru nie można edytować, ale można je usunąć lub dodać nowe. Zbiory również tworzy się korzystając z nawiasów klamrowych.
 
 ```python
@@ -67,23 +72,27 @@ print(zbior.isdisjoint(zbior2)) # False
 
 ## Powtórzenie
 
-Nazwa   | Znak | Polecenie | Edytowalne | Powtarzalne
---------|------|-----------|------------|------------
-Lista   |  []  |  `list()` |      ✓     |      ✓
-Krotka  |  ()  | `tuple()` |      ×     |      ✓
-Słownik |  {:} |  `dict()` |      ✓     |      ×
-Zbiór   |  {}  |   `set()` |      ×     |      ×
+| Nazwa   | Znak | Polecenie | Edytowalne | Powtarzalne |
+| ------- | ---- | --------- | ---------- | ----------- |
+| Lista   | []   | `list()`  | ✓          | ✓           |
+| Krotka  | ()   | `tuple()` | ×          | ✓           |
+| Słownik | {:}  | `dict()`  | ✓          | ×           |
+| Zbiór   | {}   | `set()`   | ×          | ×           |
 
 ## Ćwiczenia
+
 ### Słownik
+
 1. Stwórz przykładowy słownik z ucznimi i ocenami, dodaj do niego nowego ucznia, usuń jakiegoś ucznia i innemu zmień ocenę.
 2. Przećwicz użycie jednej z zaawansowanych metod opisanych w dokumentacji.
 
 ### Zbiór
+
 1. Stwórz dowolny zbiór zawierający liczby.
 2. Dodaj do niego jakąś liczbę i usuń inną.
 
 ## Zadania:
+
 1. Wpisz do programu poniższy słownik z ocenami. Policz średnią ocen dla całej klasy [online](https://parsons.problemsolving.io/puzzle/41f3e8ba0e284cd7bc19271341c2dc20), i wygeneruj listę uczniów którzy otrzymali stopień wyższy niż 2 [online](https://parsons.problemsolving.io/puzzle/6d6f37d75b93440fa0e28c9e73948ca1).
 
 ```python
@@ -91,8 +100,8 @@ grades = {"Ania": 5, "Bartek": 2, "Celina": 1, "Darek": 3, "Eugeniusz": 4, "Fran
 ```
 
 2.  Wpisz do programu zbiory przedstawiające ulubione miasta trzech różnych osób.
-Znajdź miasta które są lubiane przez wszystkie trzy osoby.
-Znajdź miasta które lubi tylko jedna z trzech osób [online](https://parsons.problemsolving.io/puzzle/b8ab0103fbc84098932dc5d6a858d1d1)
+    Znajdź miasta które są lubiane przez wszystkie trzy osoby.
+    Znajdź miasta które lubi tylko jedna z trzech osób [online](https://parsons.problemsolving.io/puzzle/b8ab0103fbc84098932dc5d6a858d1d1)
 
 ```python
 a = {"Kraków", "Wrocław", "Gdańsk"}
@@ -101,14 +110,18 @@ c = {"Warszawa", "Kraków", "Gdańsk"}
 ```
 
 ### Pizzeria:
+
 Przygotuj bota do automatycznej obsługi pizzerii:
+
 1. Stwórz słownik zawierający listę składników na pizzę i ilość tych składników w zapasie.
 2. Stwórz program zadający pytanie użytkownikowi na temat każdego składnika którego pozostaje przynajmniej jedna sztuka w magazynie, a jeżeli użytkownik chce go mieć na pizzy to zmniejsza jego ilość w magazynie.
 3. Stwórz drugi słownik który będzie zawierał te same nazwy składników oraz emoji które je przedstawiają.
 4. Kiedy użytkownik wybierze składniki na swoją pizzę, wyświetl mu ją za pomocą emoji np. (🍕🍍🧀🍅🍕)
 
 ### Lotniska
+
 Stwórz program analizujący lotniska światowe. W tym celu:
+
 1. Wczytaj dane na temat lotnisk dostarczone z tym zadaniem (zawiera on nazwę lotniska, jego kod, państwo i długość pasa startowego).
 2. Przetwórz je na słownik grupujący nazwy lotnisk z długością jego pasa startowego.
 3. Znajdź średnią długość pasa startowego, i nazwę lotniska którego pas ma długość najbliżej średniej.
@@ -134,7 +147,9 @@ Stwórz program analizujący lotniska światowe. W tym celu:
 ```
 
 ### Ćwiczenia ze słowników składanych:
+
 Za pomocą słowników składanych rozwiąż następujące zadania:
+
 1. Stwórz słownik łączący litery z liczbą ich wystąpień w tekście. (Generator tekstu: [Lorem Ipsum](https://www.lipsum.com/))
 2. Dla listy osób zatrudnionych w firmie, przypisz każdej osobie domyślną wypłatę podaną przez użytkownika.
 3. Przekształć listę produktów i ich cen na słownik zawierający każdy produkt i jego cenę.
@@ -148,6 +163,7 @@ Za pomocą słowników składanych rozwiąż następujące zadania:
 ```
 
 ### Licznik plików
+
 Stwórz program który policzy różne rodzaje plików znajdujące się w podanym przez ciebie katalogu. Poniżej zamieszczono kod programu który wygeneruje listę plików. Wklej go na początku programu:
 
 ```python
@@ -167,17 +183,21 @@ def get_file_names_from_directory(directory):
 ```
 
 Następnie użyj następujących instrukcji aby uzyskać listę plików:
+
 ```python
 # Example usage
 directory_path = input("Podaj ścieżkę do katalogu który będzie przeskanowany: ")
 file_names = get_file_names_from_directory(directory_path)
 ```
+
 Następnie stwórz słownik który pogrupuje pliki według ich rozszerzenia, np. `mp3`, `mp4`, `pdf`, `txt`, `py` i tak dalej. Na końcu wypisz raport który podsumuje ile plików danego typu znajdowało się w katalogu.
 
 ### System polecania filmów
+
 Na pewnym portalu użytkownicy mogą oceniać filmy w skali od 1 do 5. Na podstawie tych ocen chcemy tworzyć rekomendacje filmów. Uważamy, że dwóch użytkowników ma podobny gust filmowy, jeśli obaj ocenili ten sam film na 4 lub 5.
 
 Film należy polecić użytkownikowi jeśli:
+
 - Nie ocenił jeszcze danego filmu
 - Użytkownik o podobnym guście ocenił film na 4 lub 5
 
@@ -195,6 +215,7 @@ Proponowany zbiór danych:
 ```
 
 ## Projekt
+
 Za pomoca słowników dodamy zaawansowany system lokalizacji i statystyk gracza.
 
 1. Zmień sposób działania lokalizacji na słowniki: kluczem w słowniku będzie nazwa lokalizacji, a wartością lista z przedmiotami i postaciami które się tam znajdują. Dzięki temu w jednej lokalizacji może znajdować sie więcej przedmiotów.

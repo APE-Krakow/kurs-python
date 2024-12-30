@@ -24,6 +24,7 @@ print(nowe_wspolrzedne.x)
 ```
 
 ## Metody
+
 Metody to funkcje które są wbudowane w klasę i mogą być wywoływane na jej obiektach. Wywołana metoda ma dostęp do pól klasy za pomocą obiektu `self`. Obiekt ten jest odwołaniem do obiektu na którym jest wywołana metoda. Obiekt `self` musi być zawsze pierwszym argumentem metody klasy.
 
 ```python
@@ -43,6 +44,7 @@ print(nowe_wspolrzedne.x)
 ```
 
 ## Konstruktor
+
 Aby mieć wpływ na tworzenie obiektu, możemy edytować specjalną funkcję `__init__()`, która jest wywoływana przy tworzeniu każdego obiekty klasy. Ta funkcja nazywana jest konstruktorem. Jeżeli jakieś pole klasy zostaje zainicjowane w konstruktorze, to nie ma już później potrzeby deklarować go osobno.
 
 ```python
@@ -60,6 +62,7 @@ print(nowe_wspolrzedne.suma())
 ```
 
 ## Dodatkowe funkcje obiektów
+
 Każdy obiekt może być usunięty za pomocą słowa kluczowego `del`
 
 ```python
@@ -69,14 +72,17 @@ del koniec
 ```
 
 ## Ćwiczenia:
+
 1. Stwórz klasę przechowującą dane o jakiejś roślinie. Może zawierać takie informacje jak gatunek, wiek, ile dni temu była podlana, itp.
 2. Dodaj do klasy `Roslina` metodę obliczającą, czy należy ją ponownie podlać.
 3. Dodaj metodę `podlej`, która wyzeruje ilość dni od ostatniego podlania.
-3. Zmień tworzenie obiektu `Roslina` na metodę `__init__()`.
-4. Dodaj funkcję globalną `zraszacz()`, która przyjmie całą listę roślin i podleje każdą z nich.
+4. Zmień tworzenie obiektu `Roslina` na metodę `__init__()`.
+5. Dodaj funkcję globalną `zraszacz()`, która przyjmie całą listę roślin i podleje każdą z nich.
 
 ## Zadania:
+
 ### Szkoła
+
 1. Utwórz klasy reprezentującą nauczycieli i uczniów. Mogą one zawierać takie dane jak imię, nazwisko, wiek. Dodatkowo nauczyciel może posiadać listę przedmiotów których może uczyć, a uczeń klasę do której chodzi i listę swoich ocen. Dodaj metodę do obliczenia średniej ocen ucznia.
 
 2. Stwórz klasę reprezentującą klasę szkolną. Może ona zawierać listę uczniów i wychowawcę oraz słownik zawierający poszczególne dni i frekwencję klasy na dany dzień. Dodaj metody pozwalające np. wypisać listę uczniów i średnią ocen klasy. Dodaj też metodę pozwalającą nauczycielowi sprawdzić obecność i zapisać frekwencję klasy.
@@ -84,7 +90,9 @@ del koniec
 3. Stwórz klasę reprezentującą szkołę. Szkołą powinna składać się z listy klas. Dodaj możliwość sprawdzenia średniej ocen dla całej szkoły oraz frekwencję w całej szkole dla danego dnia, oraz dla całego kalendarza.
 
 ### Sklep
+
 [shop.py](https://github.com/APE-Krakow/tasks/blob/main/shop.py)
+
 1. Stwórz klasę która będzie reprezentować przedmiot w sklepie (posiada nazwę, cenę, dostępną ilość). Wartości powinny być inicjalizowane w konstruktorze. Stwórz kilka obiektów tej klasy. Następnie stwórz funkcję, która poda wartość dla podanej ilości produktów.
 
 2. Zmień działanie poprzedniej klasy, tak żeby podanie wartości produktów danego typu odbywało się z poziomu obiektu (poprzez metodę wbudowaną)
@@ -92,6 +100,7 @@ del koniec
 3. Stwórz klasę reprezentującą sklep, która będzie zawierała zbiór przedmiotów dostępnych do zakupu. Poprzez metody powinna być możliwość sprawdzenia stanu magazynu (najlepiej w formie tabeli), oraz zakupu jakiegoś przedmiotu. Uwaga - funkcja powinna być odporna na kogoś kto chciałby kupić więcej przedmiotów niż jest w magazynie, kupić ujemną ilość przedmiotów itp.
 
 ## Projekt
+
 Dodaj interfejsy obiektowe do często używanych komponentów aby uprościć korzystanie z nich.
 
 1. Zmień wszystkie funkcje związane z graczem na klasę `Player` z atrybutami takimi jak imię, klasa, hp, zebrane przedmioty itp.

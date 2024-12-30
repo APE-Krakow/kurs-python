@@ -9,11 +9,13 @@ theme: jekyll-theme-tactile
 <https://docs.python.org/3/library/turtle.html>
 
 ## Moduł Turtle
-Aby usprawnić naukę programowania, możemy dodać do naszych programów elementy tworzenia grafiki, ruchu i animacji. Uproszczony interfejs graficzny przeznaczony do nauki programowania oferuje moduł Turtle - wzorowany na języku *logo* z lat 80.
+
+Aby usprawnić naukę programowania, możemy dodać do naszych programów elementy tworzenia grafiki, ruchu i animacji. Uproszczony interfejs graficzny przeznaczony do nauki programowania oferuje moduł Turtle - wzorowany na języku _logo_ z lat 80.
 Pozwala on na stworzenie okna graficznego z wirtualną ikoną "żółwia", a następnie poruszanie tym "żółwiem". Poruszający się żółw pozostawia za sobą linię, co pozwala rysować kształty geometryczne.
 
 Aby użyć modułu turtle musimy go zaimportować komendą `import`, a następnie każde polecenie powiązane z tą biblioteką musimy zaczynać od `turtle`.
 Podstawowe komendy służące do poruszania się po ekranie to:
+
 - `forward()`; `fd()` / `backward()`; `bk()` - porusza się naprzód lub do tyłu o określoną liczbę kroków
 - `left()`; `lt()` / `right()`; `rt()` - obraca się w lewo lub w prawo o określony kąt w stopniach
 
@@ -29,6 +31,7 @@ turtle.done()
 ```
 
 Mamy dodatkowo do dyspozycji narzędzia do manipulacji stylem rysowania:
+
 - `penup()`; `up()` / `pendown()`; `down()` - podniesienie lub opuszczenie pióra (po podniesieniu pióra żółw porusza się, ale nie rysuje linii)
 - `pencolor()` - ustawia kolor pióra na podany. Aby ustawić kolor należy wpisać jego nazwę, np. `"red"`, `"yellow"`, `"blue"` itp. lub kod hex.
 - `speed()` - ustawia prędkość żółwia, dostępne wartości to `"fastest"`, `"fast"`, `"normal"`, `"slow"`, `"slowest"`. Tryb `"fastest"` oznacza że ruch jest natychmiastowy.
@@ -36,6 +39,7 @@ Mamy dodatkowo do dyspozycji narzędzia do manipulacji stylem rysowania:
 Ponadto możemy wypełnić kształt kolorem, posługując się metodą `begin_fill()` i `end_fill()`.
 
 ## Pętla
+
 Pętla pozwala wykonać jedno polecenie wiele razy. Wykonuje ona polecenia tak długo, dopóki jest spełniony warunek podany w poleceniu.
 
 ```python
@@ -54,7 +58,9 @@ while True:
     if decyzja == "Tak" or decyzja == "tak":
         break
 ```
+
 ## Test:
+
 Co narysuja na ekranie poniższe programy, o ile nie zatrzymają się z powodu błędu? Czy pętla jest skonsrtuowana prawidłowo?
 
 ```python
@@ -78,11 +84,13 @@ while True:
     turtle.forward(400)
     turtle.left(175)
     if abs(turtle.pos()) < 1:
-        break 
+        break
 
 turtle.done()
 ```
+
 ## Ćwiczenia:
+
 1. Stwórz program który narysuje kwadrat, zwyczajnie i przy użyciu pętli.
 2. Stwórz program który narysuje inne kształty (np. sześciokąt, ośmiokąt itp.).
 3. Stwórz program który pozwoli użytkownikowi wybrać jaki kształt ma zostać narysowany.
@@ -92,6 +100,7 @@ turtle.done()
 7. Stwórz program który narysuje dany kształt kilkukrotnie, tworząc np. wzór z gwiazdek
 
 ## Projekt
+
 Za pomoca modułu Turtle możemy narysować mapę na której gracz zobaczy swoje położenie.
 
 1. Narysuj za pomocą niewidzialnego żółwia mapę złożoną z kwadratowej siatki.

@@ -35,8 +35,9 @@ Aby zainstalować Pythona należy wejść na stronę [python.org](https://www.py
 **Należy zaznaczyć checkbox 'add to system path'**
 
 ## Edytor
-Aby edytować programy można korzystać z dowolnego edytora tekstu, na
-przykład:
+
+Aby edytować programy można korzystać z dowolnego edytora tekstu, na przykład:
+
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Sublime Text](https://www.sublimetext.com/)
@@ -44,4 +45,3 @@ przykład:
 
 Na początek najwygodniejszy może być Thonny - nie ma zbyt wiele funkcji które rozpraszają użytkownika:
 [Thonny](https://thonny.org/)
-
