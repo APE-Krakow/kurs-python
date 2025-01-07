@@ -182,7 +182,7 @@ def how_many_grater_than(data: list, value: int) -> int:
 
 6. Napisz grę w zgadywanie. Program powinien wylosować jakąś liczbę, a następnie poprosić użytkownika o podanie wartości. Potem powinien informować użytkownika czy liczba którą podał jest za duża, czy za mała, tak długo aż użytkownik nie trafi na właściwą liczbę. Aby wylosować liczbę z jakiegoś przedziału, należy użyć funkcji `randrange(start, end+1)` z biblioteki `random`. `start` i `end` to krawędzie przedziału z którego ma być wylosowana liczba.
 
-7. Stwórz program odwrotny do gry w zgadywanie. Niech tym razem to program zgaduje jaką liczbę wymyślił sobie użytkownik. Postaraj się aby program mógł odczytywać wiele możliwych odpowiedzi użytkownika, np. "Większa", "Więcej", "za dużo" itp. za pomoca osobnej funkcji.
+7. Stwórz program odwrotny do gry w zgadywanie. Niech tym razem to program zgaduje jaką liczbę wymyślił sobie użytkownik. Postaraj się aby program mógł odczytywać wiele możliwych odpowiedzi użytkownika, np. "Większa", "Więcej", "za dużo" itp. za pomocą osobnej funkcji.
 
 8. Stwórz program rysujący na zawołanie w `turtle`. Dodaj do niego funkcje rysujące wybrane kształty, np. wielokąt, gwiazdę, owal itp.
    Pozwól aby użytkownik wybierał gdzie kształty będą się znajdować na ekranie.
@@ -203,9 +203,11 @@ calculate(2, 3, 4, c=4, e=2)
 ```python
 def arithmetic_sum(x):
     return x + arithmetic_sum(x-1)
+
+print(arithmetic_sum(50))
 ```
 
-`assert` to słowo kluczowe używane do wykrywania błędów, jeżeli wartość logiczna przy `assert` to `False`, program kończy się z błędem.
+`assert` to słowo kluczowe używane do wykrywania błędów, jeżeli wartość logiczna przy `assert` ma wartość `False`, program kończy się z błędem.
 
 ```python
 x = 5
