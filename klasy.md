@@ -6,21 +6,22 @@ theme: jekyll-theme-tactile
 
 [Wróć do strony głównej](index.md)
 
-Często istnieje potrzeba przechowywania danych o bardziej skomplikowanej strukturze niż na to pozwalają domyślnie wbudowane typy. W tym celu można stworzyć własne typy danych (nazywane klasami) i ich obiekty. Klasę tworzy się za pomocą słowa kluczowego `class` oraz stworzenie pól klasy przechowujących dane.
+Często istnieje potrzeba przechowywania danych o bardziej skomplikowanej strukturze niż na to pozwalają domyślnie wbudowane typy danych, takie jak `int` czy `str`. W tym celu można stworzyć własne typy danych (nazywane klasami) i ich obiekty. Klasę tworzy się za pomocą słowa kluczowego `class` oraz stworzenie pól klasy przechowujących dane.
 
 ```python
-class Wspolrzedne:
+class Coordinates:
     x = 0
     y = 0
     z = 0
 ```
 
-Klasa jest jednak tylko wzorcem na podstawie którego można tworzyć obiekty. Dopiero po stworzeniu obiektu danej klasy można odczytać wartość jego pól. Na podstawie jednej klasy można stworzyć dowolną ilość obiektów, z których każdy może przyjąć inne wartości pól.
+Klasa jest jednak tylko wzorcem na podstawie którego można tworzyć obiekty, tak samo jak `int` nie ma zdefiniowanej wartości. Dopiero po stworzeniu obiektu danej klasy można odczytać wartość jego pól. Na podstawie jednej klasy można stworzyć dowolną ilość obiektów, z których każdy może przyjąć inne wartości pól.
 
 ```python
-nowe_wspolrzedne = Wspolrzedne()
-nowe_wspolrzedne.x = 5
-print(nowe_wspolrzedne.x)
+my_coordinates = Coordinates()
+my_coordinates.x = 5
+new_coordinates = Coordinates()
+new_coordinates.x = 10
 ```
 
 ## Metody
@@ -28,19 +29,19 @@ print(nowe_wspolrzedne.x)
 Metody to funkcje które są wbudowane w klasę i mogą być wywoływane na jej obiektach. Wywołana metoda ma dostęp do pól klasy za pomocą obiektu `self`. Obiekt ten jest odwołaniem do obiektu na którym jest wywołana metoda. Obiekt `self` musi być zawsze pierwszym argumentem metody klasy.
 
 ```python
-class Wspolrzedne:
+class Coordinates:
     x = 0
     y = 0
     z = 0
 
-    def ustaw_wspolrzedne(self, x, y, z):
+    def set_coordinates(self, x, y, z):
         self.x = x
         self.y = y
         self.z = z
 
-nowe_wspolrzedne = Wspolrzedne()
-nowe_wspolrzedne.ustaw_wspolrzedne(1,2,3)
-print(nowe_wspolrzedne.x)
+my_coordinates = Coordinates()
+my_coordinates.set_coordinates(1, 2, 3)
+print(my_coordinates.x)
 ```
 
 ## Konstruktor
@@ -48,17 +49,17 @@ print(nowe_wspolrzedne.x)
 Aby mieć wpływ na tworzenie obiektu, możemy edytować specjalną funkcję `__init__()`, która jest wywoływana przy tworzeniu każdego obiekty klasy. Ta funkcja nazywana jest konstruktorem. Jeżeli jakieś pole klasy zostaje zainicjowane w konstruktorze, to nie ma już później potrzeby deklarować go osobno.
 
 ```python
-class Wspolrzedne:
+class Coordinates:
     def __init__(self, x, y, z):
         self.x = x
         self.y = y
         self.z = z
 
-    def suma(self):
+    def sum(self):
         return self.x + self.y + self.z
 
-nowe_wspolrzedne = Wspolrzedne(1,2,3)
-print(nowe_wspolrzedne.suma())
+my_coordinates = Coordinates(1,2,3)
+print(my_coordinates.sum())
 ```
 
 ## Dodatkowe funkcje obiektów
@@ -66,28 +67,28 @@ print(nowe_wspolrzedne.suma())
 Każdy obiekt może być usunięty za pomocą słowa kluczowego `del`
 
 ```python
-start = Wspolrzedne(0, 0, 0)
-koniec = Wspolrzedne(23, 78, 56)
-del koniec
+start = Coordinates(0, 0, 0)
+end = Coordinates(23, 78, 56)
+del end
 ```
 
 ## Ćwiczenia:
 
-1. Stwórz klasę przechowującą dane o jakiejś roślinie. Może zawierać takie informacje jak gatunek, wiek, ile dni temu była podlana, itp.
-2. Dodaj do klasy `Roslina` metodę obliczającą, czy należy ją ponownie podlać.
-3. Dodaj metodę `podlej`, która wyzeruje ilość dni od ostatniego podlania.
-4. Zmień tworzenie obiektu `Roslina` na metodę `__init__()`.
-5. Dodaj funkcję globalną `zraszacz()`, która przyjmie całą listę roślin i podleje każdą z nich.
+[online](https://parsons.problemsolving.io/puzzle/75acbab3ba1a449e81c8cac4381a71e5)
+
+1. Stwórz klasę `Plant` przechowującą dane o jakiejś roślinie. Może zawierać takie informacje jak gatunek, wiek, ile dni temu była podlana, ile razy łącznie była podlana itp.
+2. Dodaj metodę `water`, która wyzeruje ilość dni od ostatniego podlania i zwiększy licznik podlań.
+3. Dodaj do klasy `Plant` metodę `needs_water` obliczającą, czy należy ją ponownie podlać.
+4. Zmień tworzenie obiektu `Plant` na metodę `__init__()`.
+5. Dodaj funkcję globalną `sprinkler()`, która przyjmie całą listę roślin i podleje każdą która tego wymaga.
 
 ## Zadania:
 
-### Szkoła
+### Książka kucharska
 
-1. Utwórz klasy reprezentującą nauczycieli i uczniów. Mogą one zawierać takie dane jak imię, nazwisko, wiek. Dodatkowo nauczyciel może posiadać listę przedmiotów których może uczyć, a uczeń klasę do której chodzi i listę swoich ocen. Dodaj metodę do obliczenia średniej ocen ucznia.
-
-2. Stwórz klasę reprezentującą klasę szkolną. Może ona zawierać listę uczniów i wychowawcę oraz słownik zawierający poszczególne dni i frekwencję klasy na dany dzień. Dodaj metody pozwalające np. wypisać listę uczniów i średnią ocen klasy. Dodaj też metodę pozwalającą nauczycielowi sprawdzić obecność i zapisać frekwencję klasy.
-
-3. Stwórz klasę reprezentującą szkołę. Szkołą powinna składać się z listy klas. Dodaj możliwość sprawdzenia średniej ocen dla całej szkoły oraz frekwencję w całej szkole dla danego dnia, oraz dla całego kalendarza.
+1. Przygotuj system cyfrowej książki kucharskiej. Różne przepisy mogą być reprezentowane w klasie `Recipe`. Klasa ta może posiadać listę składników, listę ocen danej potrawy, nazwę itp.
+2. Dodaj metodę która pozwala dodać nową ocenę oraz metodę która wyświetla średnią ocen danej potrawy.
+3. Stwórz funkcję która porówna dwie potrawy i wypisze jakie składniki występują w obu przepisach.
 
 ### Sklep
 
@@ -107,4 +108,27 @@ Dodaj interfejsy obiektowe do często używanych komponentów aby uprościć kor
 
 2. Zmień funkcje związane z lokacjami na klasę `Location`. Lokacje moga zawierać w sobie listy przedmiotów, wrogów, itp.
 
-3. Dodaj nową klase `Enemy`, która będzie posiadała swoją własną nazwę, hp, nagrodę za pokonanie itp. Rozmieść kilku wrogów w różnych lokacjach i dodaj funkcję która będzie odpowiadała za przeprowadzenie walki.
+3. Dodaj nową klasę `Enemy`, która będzie posiadała swoją własną nazwę, hp, nagrodę za pokonanie itp. Rozmieść kilku wrogów w różnych lokacjach i dodaj funkcję która będzie odpowiadała za przeprowadzenie walki.
+
+## Test
+
+Czy poniższe programy zadziałają, a jeżeli nie to z jakiego powodu, i co można w nich poprawić?
+
+```python
+class Liquid:
+    def __init__(self, volume, density):
+        mass = volume * density
+
+water = Liquid(5, 1000)
+print(water.mass)
+```
+
+```python
+class Greeter:
+    def greet():
+        return "Hello"
+    def supergreet():
+        return "Hello hello hello!"
+
+print(Greeter.supergreet)
+```

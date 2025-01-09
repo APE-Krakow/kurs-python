@@ -189,6 +189,18 @@ def how_many_grater_than(data: list, value: int) -> int:
    Możesz komunikować się z użytkownikiem za pomocą funkcji `turtle.textinput()` albo `turtle.numinput()` które pozwalają tworzyć wyskakujące okienka pytające o daną liczbę.
    Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
 
+````
+
+## Projekt
+
+Dzięki funkcjom możemy rozdzielić często używane elementy programu i wykorzystywać je jako funkcje.
+
+1. Rozdziel do osobnych funkcji części związane z wyświetlaniem mapy, powitania, zakończenia, walki itp. Dzięki temu pozostanie nam jedynie główna pętla, w której będą znajdować się wywołania funkcji.
+
+2. Dodaj system menu, który w każdej lokacji pozwala wybrać różne aktywności.
+
+3. Przenieś kod funkcji związanych z graczem do osobnego pliku, np. `player.py` a z lokacjami do `locations.py`, i importuj tylko te które sa potrzebne.
+
 ## Test
 
 Czy poniższe programy zadziałają, a jeżeli nie to z jakiego powodu, i co można w nich poprawić?
@@ -198,7 +210,7 @@ def calculate(a, b, c, d = 5, e = 8):
     return (a+b) / (c*d + e)
 
 calculate(2, 3, 4, c=4, e=2)
-```
+````
 
 ```python
 def arithmetic_sum(x):
@@ -222,13 +234,3 @@ assert get_x() == 5
 set_x(20)
 assert x == 20
 ```
-
-## Projekt
-
-Dzięki funkcjom możemy rozdzielić często używane elementy programu i wykorzystywać je jako funkcje.
-
-1. Rozdziel do osobnych funkcji części związane z wyświetlaniem mapy, powitania, zakończenia, walki itp. Dzięki temu pozostanie nam jedynie główna pętla, w której będą znajdować się wywołania funkcji.
-
-2. Dodaj system menu, który w każdej lokacji pozwala wybrać różne aktywności.
-
-3. Przenieś kod funkcji związanych z graczem do osobnego pliku, np. `player.py` a z lokacjami do `locations.py`, i importuj tylko te które sa potrzebne.
