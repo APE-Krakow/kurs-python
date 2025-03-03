@@ -146,14 +146,10 @@ mysqrt(16) # funkcja sqrt z mymath
 
 Każdy plik stworzony przez użytkownika jest traktowany jako osobny moduł, więc można je importować tak samo jak moduły Pythona, o ile znajdują się w tym samym katalogu. Na przykład aby zaimportować funkcję `show()` z pliku `graphics.py` należy skorzystać z `from graphics import show`.
 
-## Typy zmiennych
+## Sugestie typów
+Python jest językiem typowanym, ale typy zmiennych są dynamicznie ustalane dopiero po uruchomieniu programu. Często jednak chcemy aby określona funkcja działała tylko dla zmiennych niektórych typów, np. funkcja sprawdzająca parzystość powinna przyjmować tylko typy `int`.
 
-Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przekazać do funkcji, można wskazać sugerowany typ w definicji funkcji. Nie ma to żadnego wpływu na działanie programu, jest jedynie sugestią dla innych programistów jak z niej korzystać. Można też wskazać jaki typ jest zwracany przez daną funkcję.
-
-```python
-def how_many_grater_than(data: list, value: int) -> int:
-    return len([i for i in data if i > value])
-```
+Nie ma możliwości aby wymusić na Pythonie sprawdzanie typów zmiennych przed uruchomieniem programu, ale można zostawiać tzw. _type hints_, ułatwiające pracę innym np. dzięki temu że edytory tekstu mogą sugerować odpowiednie typy. Szczegółowe zastosowanie _type hints_ opisano w [dodatku](dodatek.md).
 
 ## Ćwiczenia:
 
@@ -188,8 +184,6 @@ def how_many_grater_than(data: list, value: int) -> int:
    Pozwól aby użytkownik wybierał gdzie kształty będą się znajdować na ekranie.
    Możesz komunikować się z użytkownikiem za pomocą funkcji `turtle.textinput()` albo `turtle.numinput()` które pozwalają tworzyć wyskakujące okienka pytające o daną liczbę.
    Program można stworzyć wspólnie korzystając z [codeshare](https://codeshare.io).
-
-````
 
 ## Projekt
 

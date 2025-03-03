@@ -204,3 +204,23 @@ evens = list(filter(isEven, range(1, 10))
 ### Nałożenie danej funkcji na całą listę
 
 `map()`
+
+## Sugestie typów zmiennych
+
+Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przekazać do funkcji, można wskazać sugerowany typ w definicji funkcji. Nie ma to żadnego wpływu na działanie programu, jest jedynie sugestią dla innych programistów jak z niej korzystać. Można też wskazać jaki typ jest zwracany przez daną funkcję, pisząc to po strzałce `->`.
+
+Oprócz podstawowych typów wymienionych w rozdziale [podstawy](podstawy.md), możemy korzystać z sugestii typów `list`, `tuple`, `dict` i `set`. Dodatkowymi specjalnymi typami są `Any` i `None`, które sugerują dowolny typ lub brak obiektu.
+
+Specjalnym przypadkiem jest np. argument opcjonalny, lub możliwość podania kilku typów. Należy wtedy deklaracje typów rozdzielić znakiem `|`.
+
+```python
+def send_email(
+    address: str | list[str],
+    sender: str,
+    cc: list[str] | None,
+    bcc: list[str] | None,
+    subject: str = '',
+    body: list[str] | None = None,
+) -> bool:
+    ...
+```
