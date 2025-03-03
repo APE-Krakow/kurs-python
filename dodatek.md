@@ -33,7 +33,10 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 - jeżeli jakaś klasa jest tylko interfejsem po którym pozostałe klasy mają dziedziczyć, na początku jego nazwy można dodać "I", np. `IGamePlayer`
 - podobnie jak we wszystkich pozostałych obiektach, im bardziej powszechnie używana jest klasa, jej nazwa powinna być bardziej szczegółowa
 
-## Formatowanie tekstu
+## Formatowanie kodu źródłowego
+Aby tekst programu pozostawał czytelny i łatwo współpracowało się z innymi twórcami, powinno się przestrzegać jednolitego formatowania tekstu programu. Dotyczy to m.in. ilości spacji, szerokości wcięć, kolejności importowania itp. Nie trzeba tego robić ręcznie, powinno się korzystać raczej z zewnętrznego narzędzia, np. [Ruff](https://docs.astral.sh/ruff/). Po skonfigurowaniu i uruchomieniu autoformatowania wszystko będzie się wykonywało automatycznie - należy jedynie pilnować aby wszystkie osoby uczestniczące w projekcie korzystały z tych samych ustawień.
+
+## Formatowanie wyjścia
 
 Formatować tekst można za pomocą funkcji `format()` albo za pomocą tzw. _format stringów_ (stringów typu `f""`). Obie metody są równoznaczne i stanowią po prostu różne formy zapisu tego samego.
 
