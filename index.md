@@ -2,8 +2,6 @@
 title: Kurs Pythona w Autonomicznej Przestrzeni Edukacyjnej
 ---
 
-wtorki 18:00, Pracownia Młodych, ul. Krakusa 7
-
 ## Spis tematów w kursie podstawowym:
 
 [Instalacja](instalacja.md)
