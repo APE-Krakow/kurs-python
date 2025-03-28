@@ -34,6 +34,7 @@ Aby już po samej nazwie obiektu można było się zorientować co zawiera, przy
 - podobnie jak we wszystkich pozostałych obiektach, im bardziej powszechnie używana jest klasa, jej nazwa powinna być bardziej szczegółowa
 
 ## Formatowanie kodu źródłowego
+
 Aby tekst programu pozostawał czytelny i łatwo współpracowało się z innymi twórcami, powinno się przestrzegać jednolitego formatowania tekstu programu. Dotyczy to m.in. ilości spacji, szerokości wcięć, kolejności importowania itp. Nie trzeba tego robić ręcznie, powinno się korzystać raczej z zewnętrznego narzędzia, np. [Ruff](https://docs.astral.sh/ruff/). Po skonfigurowaniu i uruchomieniu autoformatowania wszystko będzie się wykonywało automatycznie - należy jedynie pilnować aby wszystkie osoby uczestniczące w projekcie korzystały z tych samych ustawień.
 
 ## Formatowanie wyjścia
@@ -203,7 +204,16 @@ evens = list(filter(isEven, range(1, 10))
 
 ### Nałożenie danej funkcji na całą listę
 
-`map()`
+Korzystając z `map()` możemy 'zmapować' funkcję na dany zbiór wartości.
+Oznacza to że na każdym elemencie zbioru zostanie wykonana podana funkcja.
+Powiedzmy że mamy funkcję `translate()` która tłumaczy dane słowo, w następujący sposób możemy przetłumaczyć całą listę.
+
+Pamiętaj że podając funkcję jako argument do innej funkcji, podajemy tylko jej nazwę bez `()`.
+
+```python
+words = ["hello", "world", "testing"]
+translated_words = list(map(translate, words))
+```
 
 ## Sugestie typów zmiennych
 
@@ -212,6 +222,8 @@ Aby przekazać innym użytkownikom programu jakiego typu argumenty powinni przek
 Oprócz podstawowych typów wymienionych w rozdziale [podstawy](podstawy.md), możemy korzystać z sugestii typów `list`, `tuple`, `dict` i `set`. Dodatkowymi specjalnymi typami są `Any` i `None`, które sugerują dowolny typ lub brak obiektu.
 
 Specjalnym przypadkiem jest np. argument opcjonalny, lub możliwość podania kilku typów. Należy wtedy deklaracje typów rozdzielić znakiem `|`.
+Na przykład argument może przyjąć wartość `int` lub `None`, a domyślną wartością jest `None`, w takim przypadku deklaracja wygląda następująco:
+`var: int | None - None`
 
 ```python
 def send_email(
